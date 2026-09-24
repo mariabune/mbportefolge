@@ -126,7 +126,7 @@ function Index() {
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
           <section className="relative pt-16 pb-14 sm:pt-24">
-            <div className="anim-drift absolute -top-2 right-4 size-16 rounded-full bg-cyan/80 sm:size-24" />
+
             <p className="label-mono anim-rise text-ink-soft">
               Multimedia designer — København
             </p>
