@@ -139,7 +139,7 @@ function Index() {
               — from a multimedia design student
             </p>
 
-            <div className="mt-10 grid items-end gap-10 md:grid-cols-12">
+            <div className="mt-10 grid items-start gap-10 md:grid-cols-12">
               <div className="anim-rise [animation-delay:200ms] md:col-span-7">
                 <p className="max-w-[46ch] text-lg leading-relaxed sm:text-xl">
                   I'm <span className="font-bold">Maria</span> — a multimedia
