@@ -155,10 +155,8 @@
     );
 }
 
-/* Photocopy / riso grain overlay */
+/* Photocopy / riso grain overlay (element must be positioned itself) */
 @utility grain {
-  position: relative;
-
   &::after {
     content: "";
     position: absolute;
