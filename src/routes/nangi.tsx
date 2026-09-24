@@ -51,6 +51,8 @@ function Nangi() {
       <div className="ruled grain pointer-events-none fixed inset-0 -z-10" />
 
 
+
+
       {/* To-do list menu along the red margin line */}
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
         <Link to="/" className="font-display text-sm tracking-tight text-ink">
@@ -84,7 +86,7 @@ function Nangi() {
         <span className="label-mono mt-auto text-ink-soft/60">2026</span>
       </aside>
 
-      </aside>
+
 
       <header className="sticky top-0 z-40 border-b border-margin/50 bg-paper/95 px-5 py-3 backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
