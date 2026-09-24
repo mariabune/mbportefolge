@@ -97,7 +97,7 @@ function Nangi() {
         </div>
       </header>
 
-      <main className="relative md:pl-14">
+      <main className="relative md:pl-44">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
           <section id="about" className="relative pt-16 pb-14 sm:pt-24">
