@@ -50,7 +50,7 @@
   --color-rule: var(--rule);
   --color-tape: var(--tape);
 
-  --font-display: "Archivo Black", sans-serif;
+  --font-display: "Fraunces", serif;
   --font-body: "Space Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
   --font-hand: "Caveat", cursive;
@@ -116,6 +116,11 @@
     color: var(--color-foreground);
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Fraunces display: soft serif, medium weight — no heavy black */
+  .font-display {
+    font-weight: 500;
   }
 
   ::selection {
