@@ -76,8 +76,9 @@ const NAV = [
 
 function Index() {
   return (
-    <div className="min-h-screen bg-paper text-ink">
-      {/* Red notebook margin line + ruled paper run under everything */}
+    <div className="min-h-screen text-ink">
+      {/* Ruled notebook lines + margin line run under everything */}
+
       <div className="ruled grain pointer-events-none fixed inset-0 -z-10" />
       <div className="pointer-events-none fixed inset-y-0 left-14 z-10 hidden w-px bg-margin/50 md:block" />
 
@@ -164,7 +165,7 @@ function Index() {
 
               {/* Taped portrait with handwritten sticker note */}
               <div className="anim-rise [animation-delay:280ms] md:col-span-5">
-                <div className="relative mx-auto max-w-[280px] -rotate-2">
+                <div className="relative mx-auto max-w-[250px] -rotate-2">
                   <div className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-2" />
                   <div className="tape absolute -top-2 right-2 z-10 -rotate-6" />
                   <img
