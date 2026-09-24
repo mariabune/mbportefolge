@@ -118,6 +118,11 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Fraunces display: soft serif, medium weight — no heavy black */
+  .font-display {
+    font-weight: 500;
+  }
+
   ::selection {
     background: var(--sun);
     color: var(--ink);
