@@ -50,7 +50,7 @@
   --color-rule: var(--rule);
   --color-tape: var(--tape);
 
-  --font-display: "Archivo Black", sans-serif;
+  --font-display: "Fraunces", serif;
   --font-body: "Space Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
   --font-hand: "Caveat", cursive;

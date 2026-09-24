@@ -160,10 +160,13 @@ function Nangi() {
           {/* ---------- NOTES ---------- */}
           <section id="notes" className="border-t-2 border-ink py-14">
             <div className="mb-9">
-              <p className="label-mono text-flame">— notes</p>
+              <p className="label-mono text-flame">— from the notebook</p>
               <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
-                From the notebook
+                notes
               </h2>
+              <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
+                loose pages & half-thoughts
+              </p>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               {NOTES.map((n) => (

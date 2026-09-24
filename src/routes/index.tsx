@@ -187,10 +187,13 @@ function Index() {
           <section id="cases" className="border-t-2 border-ink py-14">
             <div className="mb-9 flex items-end justify-between">
               <div>
-                <p className="label-mono text-flame">(a) — cases</p>
+                <p className="label-mono text-flame">(a) — selected work</p>
                 <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
-                  Selected work
+                  cases
                 </h2>
+                <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
+                  pinned while the ink is still wet
+                </p>
               </div>
               <span className="label-mono hidden text-ink-soft sm:block">
                 04 pieces
@@ -239,10 +242,15 @@ function Index() {
 
           {/* ---------- CV ---------- */}
           <section id="cv" className="border-t-2 border-ink py-14">
-            <p className="label-mono text-flame">(b) — cv</p>
-            <h2 className="mt-2 mb-10 font-display text-4xl tracking-tight sm:text-5xl">
-              The record
-            </h2>
+            <div className="mb-10">
+              <p className="label-mono text-flame">(b) — education & experience</p>
+              <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
+                cv
+              </h2>
+              <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
+                just for the record
+              </p>
+            </div>
 
             <div className="grid gap-12 md:grid-cols-2">
               <div>
