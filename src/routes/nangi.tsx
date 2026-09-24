@@ -48,6 +48,8 @@ function Nangi() {
   return (
     <div className="min-h-screen text-ink">
       {/* Ruled notebook lines + margin line run under everything */}
+      <div className="ruled grain pointer-events-none fixed inset-0 -z-10" />
+
 
       <div className="pointer-events-none fixed inset-y-0 left-14 z-10 hidden w-px bg-margin/50 md:block" />
 
