@@ -58,8 +58,9 @@
 
 :root {
   --radius: 0.5rem;
-  --paper: oklch(0.963 0.018 88);
-  --paper-deep: oklch(0.93 0.022 85);
+  --paper: oklch(0.962 0.011 92);
+  --paper-deep: oklch(0.937 0.013 92);
+
   --ink: oklch(0.235 0.02 80);
   --ink-soft: oklch(0.45 0.02 80);
   --flame: oklch(0.63 0.216 32.5);

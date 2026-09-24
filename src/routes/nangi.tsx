@@ -51,14 +51,15 @@ function Nangi() {
       <div className="ruled grain pointer-events-none fixed inset-0 -z-10" />
 
 
-      <div className="pointer-events-none fixed inset-y-0 left-14 z-10 hidden w-px bg-margin/50 md:block" />
 
-      {/* Left margin menu, matching the main notebook */}
-      <aside className="fixed inset-y-0 left-0 z-40 hidden w-14 flex-col items-center justify-between border-r border-margin/60 bg-paper/95 py-6 md:flex">
+
+      {/* To-do list menu along the red margin line */}
+      <aside className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
         <Link to="/" className="font-display text-sm tracking-tight text-ink">
           m.b.
         </Link>
-        <nav className="flex flex-col items-center gap-8">
+        <p className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
+        <nav className="mt-4 flex flex-col gap-4">
           {[
             { label: "about", href: "#about" },
             { label: "notes", href: "#notes" },
@@ -66,21 +67,26 @@ function Nangi() {
             <a
               key={item.label}
               href={item.href}
-              className="label-mono text-ink-soft transition-colors hover:text-flame"
-              style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+              className="group flex items-center gap-2.5 label-mono text-ink-soft transition-colors hover:text-flame"
             >
+              <span className="size-3.5 shrink-0 border-2 border-ink/50 transition-colors group-hover:border-flame group-hover:bg-flame/80" />
               {item.label}
             </a>
           ))}
+          <Link
+            to="/"
+            className="group flex items-center gap-2.5 label-mono text-flame transition-colors hover:text-ink"
+          >
+            <span className="flex size-3.5 shrink-0 items-center justify-center border-2 border-flame text-[9px] font-bold leading-none text-flame transition-colors group-hover:text-ink">
+              ✓
+            </span>
+            back
+          </Link>
         </nav>
-        <Link
-          to="/"
-          className="label-mono text-flame transition-colors hover:text-ink"
-          style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
-        >
-          back
-        </Link>
+        <span className="label-mono mt-auto text-ink-soft/60">2026</span>
       </aside>
+
+
 
       <header className="sticky top-0 z-40 border-b border-margin/50 bg-paper/95 px-5 py-3 backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
@@ -93,7 +99,7 @@ function Nangi() {
         </div>
       </header>
 
-      <main className="relative md:pl-14">
+      <main className="relative md:pl-44">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
           <section id="about" className="relative pt-16 pb-14 sm:pt-24">
