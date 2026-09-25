@@ -126,9 +126,9 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-margin/50 bg-paper/95 px-5 py-3 backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
           <Link to="/" aria-label="m.b. — home" className="w-fit">
-            <img src={logoMb} alt="" width={200} height={64} className="h-7 w-auto shrink-0" />
+            <img src={logoMb} alt="" width={200} height={64} className="h-6 w-auto shrink-0" />
           </Link>
-          <nav aria-label="Main" className="flex items-center gap-3">
+          <nav aria-label="Main" className="flex items-center gap-2">
             {NAV.map((item) => (
               <a
                 key={item.label}
