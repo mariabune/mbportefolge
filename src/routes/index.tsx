@@ -86,10 +86,11 @@ const CASES = [
 ] as const;
 
 const NAV = [
-  { label: "cases", href: "#cases" },
-  { label: "cv", href: "#cv" },
-  { label: "nangi", href: "/nangi" },
-  { label: "contact", href: "#contact" },
+  { label: "HELLO", href: "#hello" },
+  { label: "CASES", href: "#cases" },
+  { label: "NANGI", href: "/nangi" },
+  { label: "CV", href: "#cv" },
+  { label: "CONTACT", href: "#contact" },
 ] as const;
 
 function Index() {
@@ -143,7 +144,7 @@ function Index() {
       <main id="main" tabIndex={-1} className="relative outline-none md:pl-44">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
-          <section aria-labelledby="hero-title" className="relative pt-16 pb-14 sm:pt-24">
+          <section id="hello" aria-labelledby="hero-title" className="relative pt-16 pb-14 sm:pt-24">
 
             <p className="label-mono anim-rise text-ink-soft">
               Multimedia designer — København

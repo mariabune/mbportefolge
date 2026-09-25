@@ -2,6 +2,14 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import nangiCover from "@/assets/nangi-cover.png";
 
+const NAV = [
+  { label: "HELLO", href: "/#hello" },
+  { label: "CASES", href: "/#cases" },
+  { label: "NANGI", href: "/nangi" },
+  { label: "CV", href: "/#cv" },
+  { label: "CONTACT", href: "/#contact" },
+] as const;
+
 export const Route = createFileRoute("/nangi")({
   head: () => ({
     meta: [
@@ -88,10 +96,7 @@ function Nangi() {
         </Link>
         <p aria-hidden="true" className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
         <nav aria-label="Main" className="mt-4 flex flex-col gap-4">
-          {[
-            { label: "about", href: "#about" },
-            { label: "notes", href: "#notes" },
-          ].map((item) => (
+          {NAV.map((item) => (
             <a
               key={item.label}
               href={item.href}
@@ -101,15 +106,6 @@ function Nangi() {
               {item.label}
             </a>
           ))}
-          <Link
-            to="/"
-            className="group flex items-center gap-2.5 label-mono text-flame transition-colors hover:text-ink"
-          >
-            <span aria-hidden="true" className="flex size-3.5 shrink-0 items-center justify-center border-2 border-flame text-[9px] font-bold leading-none text-flame transition-colors group-hover:text-ink">
-              ✓
-            </span>
-            back
-          </Link>
         </nav>
         <span className="label-mono mt-auto text-ink-soft/60">2026</span>
       </aside>
@@ -121,9 +117,17 @@ function Nangi() {
           <Link to="/" aria-label="m.b. — home" className="font-display text-lg text-ink">
             m.b.
           </Link>
-          <Link to="/" className="label-mono text-flame">
-            <span aria-hidden="true">← </span>back to portefolio
-          </Link>
+          <nav aria-label="Main" className="flex items-center gap-4">
+            {NAV.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="label-mono text-ink-soft hover:text-flame"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
         </div>
       </header>
 
