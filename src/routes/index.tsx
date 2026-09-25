@@ -101,7 +101,7 @@ function Index() {
       <div aria-hidden="true" className="ruled grain pointer-events-none fixed inset-0 -z-10" />
 
       {/* To-do list menu along the red margin line */}
-      <aside aria-label="Site menu" className="fixed inset-y-0 left-0 z-40 hidden w-[224px] flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
+      <aside aria-label="Site menu" className="fixed inset-y-0 left-0 z-40 hidden w-[232px] flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 pr-2 md:flex">
         <Link to="/" aria-label="m.b. — home" className="w-fit">
           <img src={logoMb} alt="" width={200} height={64} className="h-auto w-[200px]" />
         </Link>
@@ -142,7 +142,7 @@ function Index() {
         </div>
       </header>
 
-      <main id="main" tabIndex={-1} className="relative outline-none md:pl-[224px]">
+      <main id="main" tabIndex={-1} className="relative outline-none md:pl-[232px]">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
           <section id="hello" aria-labelledby="hero-title" className="relative pt-16 pb-14 sm:pt-24">
