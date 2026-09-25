@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { AccessibilityPanel } from "../components/AccessibilityPanel";
 
 function NotFoundComponent() {
   return (
@@ -77,6 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "author", content: "m.b." },
+      { name: "theme-color", content: "#f4f1e8" },
+      { property: "og:site_name", content: "m.b. — Portefolio" },
+      { property: "og:locale", content: "en_GB" },
     ],
     links: [
       {
@@ -124,8 +129,15 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:rounded-full focus:bg-ink focus:px-5 focus:py-3 focus:font-mono focus:text-sm focus:text-paper"
+      >
+        Skip to content
+      </a>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
+      <AccessibilityPanel />
     </QueryClientProvider>
   );
 }
