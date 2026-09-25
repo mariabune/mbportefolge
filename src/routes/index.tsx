@@ -10,11 +10,13 @@ import nangiCover from "@/assets/nangi-cover.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
+      { title: "m.b. — Portefolio of a multimedia design student in København" },
       {
-        title: "m.b. — Portefolio",
-        description:
-          "The notebook portfolio of a multimedia design student in Copenhagen — cases, CV and the personal brand nangi.",
+        name: "description",
+        content:
+          "The notebook portfolio of a multimedia design student in Copenhagen — selected cases in print, motion and identity, a CV and the design company nangi.",
       },
+      { property: "og:url", content: "/" },
       { property: "og:title", content: "m.b. — Portefolio" },
       {
         property: "og:description",
@@ -23,6 +25,22 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Maria",
+          alternateName: "m.b.",
+          jobTitle: "Multimedia design student",
+          email: "mailto:hej@mb.dk",
+          address: { "@type": "PostalAddress", addressLocality: "København", addressCountry: "DK" },
+          knowsAbout: ["Multimedia design", "Print", "Motion design", "Visual identity", "Editorial design"],
+        }),
+      },
     ],
   }),
   component: Index,
@@ -78,22 +96,22 @@ function Index() {
   return (
     <div className="min-h-screen text-ink">
       {/* Ruled notebook lines run under everything */}
-      <div className="ruled grain pointer-events-none fixed inset-0 -z-10" />
+      <div aria-hidden="true" className="ruled grain pointer-events-none fixed inset-0 -z-10" />
 
       {/* To-do list menu along the red margin line */}
-      <aside className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
-        <Link to="/" className="font-display text-sm tracking-tight text-ink">
+      <aside aria-label="Site menu" className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
+        <Link to="/" aria-label="m.b. — home" className="font-display text-sm tracking-tight text-ink">
           m.b.
         </Link>
-        <p className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
-        <nav className="mt-4 flex flex-col gap-4">
+        <p aria-hidden="true" className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
+        <nav aria-label="Main" className="mt-4 flex flex-col gap-4">
           {NAV.map((item) => (
             <a
               key={item.label}
               href={item.href}
               className="group flex items-center gap-2.5 label-mono text-ink-soft transition-colors hover:text-flame"
             >
-              <span className="size-3.5 shrink-0 border-2 border-ink/50 transition-colors group-hover:border-flame group-hover:bg-flame/80" />
+              <span aria-hidden="true" className="size-3.5 shrink-0 border-2 border-ink/50 transition-colors group-hover:border-flame group-hover:bg-flame/80" />
               {item.label}
             </a>
           ))}
@@ -105,10 +123,10 @@ function Index() {
       {/* Mobile header */}
       <header className="sticky top-0 z-40 border-b border-margin/50 bg-paper/95 px-5 py-3 backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-display text-lg text-ink">
+          <Link to="/" aria-label="m.b. — home" className="font-display text-lg text-ink">
             m.b.
           </Link>
-          <nav className="flex items-center gap-4">
+          <nav aria-label="Main" className="flex items-center gap-4">
             {NAV.map((item) => (
               <a
                 key={item.label}
@@ -122,16 +140,16 @@ function Index() {
         </div>
       </header>
 
-      <main className="relative md:pl-44">
+      <main id="main" tabIndex={-1} className="relative outline-none md:pl-44">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
-          <section className="relative pt-16 pb-14 sm:pt-24">
+          <section aria-labelledby="hero-title" className="relative pt-16 pb-14 sm:pt-24">
 
             <p className="label-mono anim-rise text-ink-soft">
               Multimedia designer — København
             </p>
             <div className="mt-4 max-w-3xl">
-              <h1 className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
+              <h1 id="hero-title" className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
                 Portefolio
               </h1>
             </div>
@@ -166,11 +184,11 @@ function Index() {
               {/* Taped portrait with handwritten sticker note */}
               <div className="anim-rise [animation-delay:280ms] md:col-span-5">
                 <div className="relative mx-auto max-w-[250px] -rotate-2">
-                  <div className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-2" />
-                  <div className="tape absolute -top-2 right-2 z-10 -rotate-6" />
+                  <div aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-2" />
+                  <div aria-hidden="true" className="tape absolute -top-2 right-2 z-10 -rotate-6" />
                   <img
                     src={portrait}
-                    alt="Sketch portrait of Maria"
+                    alt="Hand-drawn sketch portrait of Maria, the designer behind this portfolio"
                     width={1024}
                     height={1536}
                     className="w-full rounded-sm bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
@@ -184,11 +202,11 @@ function Index() {
           </section>
 
           {/* ---------- CASES ---------- */}
-          <section id="cases" className="border-t-2 border-ink py-14">
+          <section id="cases" aria-labelledby="cases-title" className="border-t-2 border-ink py-14">
             <div className="mb-9 flex items-end justify-between">
               <div>
                 <p className="label-mono text-flame">(a) — selected work</p>
-                <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
+                <h2 id="cases-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                   cases
                 </h2>
                 <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
@@ -200,17 +218,17 @@ function Index() {
               </span>
             </div>
 
-            <div className="grid gap-8 sm:grid-cols-2">
+            <ul className="grid gap-8 sm:grid-cols-2">
               {CASES.map((c) => (
+                <li key={c.title}>
                 <article
-                  key={c.title}
                   className={`group relative ${c.rotate} transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
                 >
-                  <div className="tape absolute -top-3 left-8 z-10 rotate-2" />
+                  <div aria-hidden="true" className="tape absolute -top-3 left-8 z-10 rotate-2" />
                   <div className="relative bg-paper p-3 shadow-[0_12px_28px_rgb(0_0_0/0.16)] ring-1 ring-ink/10">
                     <img
                       src={c.img}
-                      alt={c.title}
+                      alt={`Cover image for the case ${c.title}`}
                       width={1024}
                       height={768}
                       loading="lazy"
@@ -231,20 +249,22 @@ function Index() {
                     </div>
                   </div>
                   <span
+                    aria-label={`Note: ${c.note}`}
                     className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Motion" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
                   >
                     {c.note}
                   </span>
                 </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           {/* ---------- CV ---------- */}
-          <section id="cv" className="border-t-2 border-ink py-14">
+          <section id="cv" aria-labelledby="cv-title" className="border-t-2 border-ink py-14">
             <div className="mb-10">
               <p className="label-mono text-flame">(b) — education & experience</p>
-              <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
+              <h2 id="cv-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                 cv
               </h2>
               <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
@@ -291,7 +311,7 @@ function Index() {
 
               <div>
                 <h3 className="label-mono mb-4 text-ink-soft">Tools</h3>
-                <div className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-2">
                   {[
                     "Figma",
                     "After Effects",
@@ -300,7 +320,7 @@ function Index() {
                     "Procreate",
                     "Premiere Pro",
                   ].map((tool, i) => (
-                    <span
+                    <li
                       key={tool}
                       className={`label-mono rounded-full px-3 py-1.5 ${
                         i === 0
@@ -313,9 +333,9 @@ function Index() {
                       }`}
                     >
                       {tool}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
 
                 <h3 className="label-mono mt-10 mb-4 text-ink-soft">
                   Achievements
@@ -339,11 +359,11 @@ function Index() {
           </section>
 
           {/* ---------- NANGI TEASER ---------- */}
-          <section className="border-t-2 border-ink py-14">
+          <section aria-labelledby="nangi-title" className="border-t-2 border-ink py-14">
             <div className="grid items-center gap-10 md:grid-cols-12">
               <div className="md:col-span-7">
                 <p className="label-mono text-cyan">(c) — my company</p>
-                <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
+                <h2 id="nangi-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                   nangi
                 </h2>
                 <p className="hand mt-3 text-2xl text-ink-soft">
@@ -363,10 +383,10 @@ function Index() {
               </div>
               <div className="md:col-span-5">
                 <div className="relative mx-auto max-w-[280px] rotate-2">
-                  <div className="tape absolute -top-3 left-6 z-10 -rotate-3" />
+                  <div aria-hidden="true" className="tape absolute -top-3 left-6 z-10 -rotate-3" />
                   <img
                     src={nangiCover}
-                    alt="Collage artwork for nangi"
+                    alt="Colourful collage artwork representing nangi, my design company"
                     width={1024}
                     height={1024}
                     loading="lazy"
@@ -381,9 +401,9 @@ function Index() {
           </section>
 
           {/* ---------- CONTACT ---------- */}
-          <section id="contact" className="border-t-2 border-ink py-16 text-center">
+          <footer id="contact" aria-labelledby="contact-title" className="border-t-2 border-ink py-16 text-center">
             <p className="label-mono text-flame">(d) — contact</p>
-            <h2 className="mx-auto mt-3 max-w-[16ch] font-display text-[clamp(2.5rem,8vw,5rem)] leading-[0.9] tracking-tight">
+            <h2 id="contact-title" className="mx-auto mt-3 max-w-[16ch] font-display text-[clamp(2.5rem,8vw,5rem)] leading-[0.9] tracking-tight">
               Let's make something loud.
             </h2>
             <p className="hand mt-4 text-2xl text-ink-soft">
@@ -395,21 +415,22 @@ function Index() {
             >
               hej@mb.dk
             </a>
-            <div className="mt-8 flex justify-center gap-6">
+            <ul aria-label="Social profiles" className="mt-8 flex justify-center gap-6">
               {["Instagram", "Behance", "LinkedIn"].map((s) => (
-                <a
-                  key={s}
-                  href="#contact"
-                  className="label-mono transition-colors hover:text-flame"
-                >
-                  {s}
-                </a>
+                <li key={s}>
+                  <a
+                    href="#contact"
+                    className="label-mono inline-flex min-h-11 items-center transition-colors hover:text-flame"
+                  >
+                    {s}
+                  </a>
+                </li>
               ))}
-            </div>
-            <p className="label-mono mt-14 text-ink-soft/70">
+            </ul>
+            <p className="label-mono mt-14 text-ink-soft">
               © 2026 m.b. — made in København, on actual paper first
             </p>
-          </section>
+          </footer>
         </div>
       </main>
     </div>

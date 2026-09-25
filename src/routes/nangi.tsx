@@ -5,11 +5,13 @@ import nangiCover from "@/assets/nangi-cover.png";
 export const Route = createFileRoute("/nangi")({
   head: () => ({
     meta: [
+      { title: "nangi — the design company of m.b. in København" },
       {
-        title: "nangi — the personal space of m.b.",
-        description:
+        name: "description",
+        content:
           "nangi is my little design company: experiments, process notes and the things I learn along the way.",
       },
+      { property: "og:url", content: "/nangi" },
       { property: "og:title", content: "nangi — the personal space of m.b." },
       {
         property: "og:description",
@@ -18,6 +20,32 @@ export const Route = createFileRoute("/nangi")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/nangi" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "nangi",
+          description: "A one-woman design company in København.",
+          email: "mailto:hej@mb.dk",
+          founder: { "@type": "Person", name: "Maria", alternateName: "m.b." },
+          foundingDate: "2024",
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Portefolio", item: "/" },
+            { "@type": "ListItem", position: 2, name: "nangi", item: "/nangi" },
+          ],
+        }),
+      },
     ],
   }),
   component: Nangi,
@@ -48,18 +76,18 @@ function Nangi() {
   return (
     <div className="min-h-screen text-ink">
       {/* Ruled notebook lines + margin line run under everything */}
-      <div className="ruled grain pointer-events-none fixed inset-0 -z-10" />
+      <div aria-hidden="true" className="ruled grain pointer-events-none fixed inset-0 -z-10" />
 
 
 
 
       {/* To-do list menu along the red margin line */}
-      <aside className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
-        <Link to="/" className="font-display text-sm tracking-tight text-ink">
+      <aside aria-label="Site menu" className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
+        <Link to="/" aria-label="m.b. — back to portefolio" className="font-display text-sm tracking-tight text-ink">
           m.b.
         </Link>
-        <p className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
-        <nav className="mt-4 flex flex-col gap-4">
+        <p aria-hidden="true" className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
+        <nav aria-label="Main" className="mt-4 flex flex-col gap-4">
           {[
             { label: "about", href: "#about" },
             { label: "notes", href: "#notes" },
@@ -69,7 +97,7 @@ function Nangi() {
               href={item.href}
               className="group flex items-center gap-2.5 label-mono text-ink-soft transition-colors hover:text-flame"
             >
-              <span className="size-3.5 shrink-0 border-2 border-ink/50 transition-colors group-hover:border-flame group-hover:bg-flame/80" />
+              <span aria-hidden="true" className="size-3.5 shrink-0 border-2 border-ink/50 transition-colors group-hover:border-flame group-hover:bg-flame/80" />
               {item.label}
             </a>
           ))}
@@ -77,7 +105,7 @@ function Nangi() {
             to="/"
             className="group flex items-center gap-2.5 label-mono text-flame transition-colors hover:text-ink"
           >
-            <span className="flex size-3.5 shrink-0 items-center justify-center border-2 border-flame text-[9px] font-bold leading-none text-flame transition-colors group-hover:text-ink">
+            <span aria-hidden="true" className="flex size-3.5 shrink-0 items-center justify-center border-2 border-flame text-[9px] font-bold leading-none text-flame transition-colors group-hover:text-ink">
               ✓
             </span>
             back
@@ -90,25 +118,25 @@ function Nangi() {
 
       <header className="sticky top-0 z-40 border-b border-margin/50 bg-paper/95 px-5 py-3 backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
-          <Link to="/" className="font-display text-lg text-ink">
+          <Link to="/" aria-label="m.b. — home" className="font-display text-lg text-ink">
             m.b.
           </Link>
           <Link to="/" className="label-mono text-flame">
-            ← back to portefolio
+            <span aria-hidden="true">← </span>back to portefolio
           </Link>
         </div>
       </header>
 
-      <main className="relative md:pl-44">
+      <main id="main" tabIndex={-1} className="relative outline-none md:pl-44">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
-          <section id="about" className="relative pt-16 pb-14 sm:pt-24">
-            <div className="anim-drift absolute -top-2 right-6 size-14 rounded-full bg-flame/80 sm:size-20" />
+          <section id="about" aria-labelledby="about-title" className="relative pt-16 pb-14 sm:pt-24">
+            <div aria-hidden="true" className="anim-drift absolute -top-2 right-6 size-14 rounded-full bg-flame/80 sm:size-20" />
             <p className="label-mono anim-rise text-cyan">
               (my company) — est. 2024
             </p>
             <div className="mt-4 max-w-3xl">
-              <h1 className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
+              <h1 id="about-title" className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
                 nangi
               </h1>
             </div>
@@ -141,10 +169,10 @@ function Nangi() {
               </div>
               <div className="anim-rise [animation-delay:280ms] md:col-span-5">
                 <div className="relative mx-auto max-w-[280px] rotate-2">
-                  <div className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                  <div aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
                   <img
                     src={nangiCover}
-                    alt="Collage artwork for nangi"
+                    alt="Colourful collage artwork representing nangi, my design company"
                     width={1024}
                     height={1024}
                     className="w-full rounded-sm bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
@@ -158,36 +186,37 @@ function Nangi() {
           </section>
 
           {/* ---------- NOTES ---------- */}
-          <section id="notes" className="border-t-2 border-ink py-14">
+          <section id="notes" aria-labelledby="notes-title" className="border-t-2 border-ink py-14">
             <div className="mb-9">
               <p className="label-mono text-flame">— from the notebook</p>
-              <h2 className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
+              <h2 id="notes-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                 notes
               </h2>
               <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
                 loose pages & half-thoughts
               </p>
             </div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <ul className="grid gap-6 md:grid-cols-3">
               {NOTES.map((n) => (
+                <li key={n.kicker}>
                 <article
-                  key={n.kicker}
                   className={`rounded-sm p-6 transition-transform duration-300 hover:rotate-0 ${n.bg} ${n.rotate}`}
                 >
                   <p className="label-mono opacity-80">{n.kicker}</p>
-                  <p className="mt-4 font-display text-xl leading-snug tracking-tight">
+                  <h3 className="mt-4 font-display text-xl leading-snug tracking-tight">
                     {n.title}
-                  </p>
+                  </h3>
                   <p className="hand mt-4 text-xl opacity-80">full note soon…</p>
                 </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           {/* ---------- CONTACT ---------- */}
-          <section className="border-t-2 border-ink py-16 text-center">
+          <footer aria-labelledby="contact-title" className="border-t-2 border-ink py-16 text-center">
             <p className="label-mono text-cyan">— say hi</p>
-            <h2 className="mx-auto mt-3 max-w-[18ch] font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.9] tracking-tight">
+            <h2 id="contact-title" className="mx-auto mt-3 max-w-[18ch] font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.9] tracking-tight">
               Got a project for nangi?
             </h2>
             <a
@@ -196,10 +225,10 @@ function Nangi() {
             >
               hej@mb.dk
             </a>
-            <p className="label-mono mt-14 text-ink-soft/70">
+            <p className="label-mono mt-14 text-ink-soft">
               © 2026 nangi — a one-woman company in København
             </p>
-          </section>
+          </footer>
         </div>
       </main>
     </div>
