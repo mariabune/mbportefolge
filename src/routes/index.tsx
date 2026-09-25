@@ -6,6 +6,7 @@ import caseMotion from "@/assets/case-motion.png";
 import caseZine from "@/assets/case-zine.png";
 import caseBrand from "@/assets/case-brand.png";
 import nangiCover from "@/assets/nangi-cover.png";
+import logoMb from "@/assets/logo-mb.svg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
