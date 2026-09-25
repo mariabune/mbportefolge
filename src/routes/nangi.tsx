@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import nangiCover from "@/assets/nangi-cover.png";
+import logoMb from "@/assets/logo-mb.svg";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -90,9 +91,9 @@ function Nangi() {
 
 
       {/* To-do list menu along the red margin line */}
-      <aside aria-label="Site menu" className="fixed inset-y-0 left-0 z-40 hidden w-44 flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 md:flex">
-        <Link to="/" aria-label="m.b. — back to portefolio" className="font-display text-sm tracking-tight text-ink">
-          m.b.
+      <aside aria-label="Site menu" className="fixed inset-y-0 left-0 z-40 hidden w-[232px] flex-col border-r border-margin/60 bg-paper/95 py-8 pl-6 pr-2 md:flex">
+        <Link to="/" aria-label="m.b. — back to portefolio" className="w-fit">
+          <img src={logoMb} alt="" width={200} height={64} className="h-auto w-[200px]" />
         </Link>
         <p aria-hidden="true" className="hand mt-8 -rotate-2 text-2xl text-ink-soft">to do:</p>
         <nav aria-label="Main" className="mt-4 flex flex-col gap-4">
@@ -114,10 +115,10 @@ function Nangi() {
 
       <header className="sticky top-0 z-40 border-b border-margin/50 bg-paper/95 px-5 py-3 backdrop-blur md:hidden">
         <div className="flex items-center justify-between">
-          <Link to="/" aria-label="m.b. — home" className="font-display text-lg text-ink">
-            m.b.
+          <Link to="/" aria-label="m.b. — home" className="w-fit">
+            <img src={logoMb} alt="" width={200} height={64} className="h-6 w-auto shrink-0" />
           </Link>
-          <nav aria-label="Main" className="flex items-center gap-4">
+          <nav aria-label="Main" className="flex items-center gap-2">
             {NAV.map((item) => (
               <a
                 key={item.label}
@@ -131,7 +132,7 @@ function Nangi() {
         </div>
       </header>
 
-      <main id="main" tabIndex={-1} className="relative outline-none md:pl-44">
+      <main id="main" tabIndex={-1} className="relative outline-none md:pl-[232px]">
         <div className="mx-auto max-w-5xl px-5 sm:px-8">
           {/* ---------- HERO ---------- */}
           <section id="about" aria-labelledby="about-title" className="relative pt-16 pb-14 sm:pt-24">
