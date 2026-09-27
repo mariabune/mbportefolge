@@ -53,7 +53,7 @@
   --font-display: "Fraunces", serif;
   --font-body: "Space Grotesk", sans-serif;
   --font-mono: "Space Mono", monospace;
-  --font-hand: "Patrick Hand SC", cursive;
+  --font-hand: "Give You Glory", cursive;
 }
 
 :root {
@@ -225,8 +225,8 @@ html.a11y-contrast .grain::after {
 /* Handwritten sticker comment */
 @utility hand {
   font-family: var(--font-hand);
-  font-size: 1.15rem;
-  line-height: 1.1;
+  font-size: 1.35rem;
+  line-height: 1.15;
 }
 
 /* Tape strip */
