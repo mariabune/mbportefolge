@@ -147,9 +147,6 @@ function Index() {
           {/* ---------- HERO ---------- */}
           <section id="hello" aria-labelledby="hero-title" className="relative pt-16 pb-14 sm:pt-24">
 
-            <p className="label-mono anim-rise text-ink-soft">
-              Multimedia designer — København
-            </p>
             <div className="mt-4 max-w-3xl">
               <h1 id="hero-title" className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
                 Portefolio
@@ -207,7 +204,6 @@ function Index() {
           <section id="cases" aria-labelledby="cases-title" className="border-t-2 border-ink py-14">
             <div className="mb-9 flex items-end justify-between">
               <div>
-                <p className="label-mono text-flame">(a) — selected work</p>
                 <h2 id="cases-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                   cases
                 </h2>
@@ -265,7 +261,6 @@ function Index() {
           {/* ---------- CV ---------- */}
           <section id="cv" aria-labelledby="cv-title" className="border-t-2 border-ink py-14">
             <div className="mb-10">
-              <p className="label-mono text-flame">(b) — education & experience</p>
               <h2 id="cv-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                 cv
               </h2>
@@ -364,7 +359,6 @@ function Index() {
           <section aria-labelledby="nangi-title" className="border-t-2 border-ink py-14">
             <div className="grid items-center gap-10 md:grid-cols-12">
               <div className="md:col-span-7">
-                <p className="label-mono text-cyan">(c) — my company</p>
                 <h2 id="nangi-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                   nangi
                 </h2>
@@ -404,7 +398,6 @@ function Index() {
 
           {/* ---------- CONTACT ---------- */}
           <footer id="contact" aria-labelledby="contact-title" className="border-t-2 border-ink py-16 text-center">
-            <p className="label-mono text-flame">(d) — contact</p>
             <h2 id="contact-title" className="mx-auto mt-3 max-w-[16ch] font-display text-[clamp(2.5rem,8vw,5rem)] leading-[0.9] tracking-tight">
               Let's make something loud.
             </h2>

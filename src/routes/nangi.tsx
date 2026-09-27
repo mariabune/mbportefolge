@@ -137,9 +137,6 @@ function Nangi() {
           {/* ---------- HERO ---------- */}
           <section id="about" aria-labelledby="about-title" className="relative pt-16 pb-14 sm:pt-24">
             <div aria-hidden="true" className="anim-drift absolute -top-2 right-6 size-14 rounded-full bg-flame/80 sm:size-20" />
-            <p className="label-mono anim-rise text-cyan">
-              (my company) — est. 2024
-            </p>
             <div className="mt-4 max-w-3xl">
               <h1 id="about-title" className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
                 nangi
@@ -193,7 +190,6 @@ function Nangi() {
           {/* ---------- NOTES ---------- */}
           <section id="notes" aria-labelledby="notes-title" className="border-t-2 border-ink py-14">
             <div className="mb-9">
-              <p className="label-mono text-flame">— from the notebook</p>
               <h2 id="notes-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
                 notes
               </h2>
@@ -220,7 +216,6 @@ function Nangi() {
 
           {/* ---------- CONTACT ---------- */}
           <footer aria-labelledby="contact-title" className="border-t-2 border-ink py-16 text-center">
-            <p className="label-mono text-cyan">— say hi</p>
             <h2 id="contact-title" className="mx-auto mt-3 max-w-[18ch] font-display text-[clamp(2.25rem,7vw,4.5rem)] leading-[0.9] tracking-tight">
               Got a project for nangi?
             </h2>
