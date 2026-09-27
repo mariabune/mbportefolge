@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
-import portrait from "@/assets/portrait.png";
+import portraitAsset from "@/assets/portrait.jpg.asset.json";
 import casePoster from "@/assets/case-poster.png";
 import caseMotion from "@/assets/case-motion.png";
 import caseZine from "@/assets/case-zine.png";
@@ -189,10 +189,10 @@ function Index() {
                   <div aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-2" />
                   <div aria-hidden="true" className="tape absolute -top-2 right-2 z-10 -rotate-6" />
                   <img
-                    src={portrait}
-                    alt="Hand-drawn sketch portrait of Maria, the designer behind this portfolio"
-                    width={1024}
-                    height={1536}
+                    src={portraitAsset.url}
+                    alt="Portrait photo of Maria, the designer behind this portfolio"
+                    width={1280}
+                    height={1920}
                     className="w-full rounded-sm bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
                   />
                   <span className="sticker anim-stamp absolute -bottom-5 -right-4 bg-sun px-3 py-2 hand text-ink">
