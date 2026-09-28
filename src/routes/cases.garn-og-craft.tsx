@@ -6,6 +6,7 @@ import garnEvents from "@/assets/garn-craft-events.svg.asset.json";
 import garnCraftsalon from "@/assets/garn-craft-craftsalon.svg.asset.json";
 import garnOmos from "@/assets/garn-craft-omos.svg.asset.json";
 import garnLogoer from "@/assets/garn-craft-logoer.svg.asset.json";
+import garnIkoner from "@/assets/garn-craft-ikoner.svg.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -268,6 +269,19 @@ function GarnOgCraftCase() {
             </div>
 
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
+
+            <figure className="relative mx-auto mt-12 w-fit max-w-xl">
+              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+              <img
+                src={garnIkoner.url}
+                alt="Seks håndtegnede ikoner i farvede cirkler: et fællesskab af mennesker (grøn), en garnnøgle (grønblå), strikkepinde med garn (gul), en kat (orange), en gaveæske (lilla) og et hjerte med strikkepind (lyserød)"
+                width={1304}
+                height={1646}
+                className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                loading="lazy"
+              />
+              <figcaption className="hand mt-3 text-center text-ink-soft">ikoner til det nye udtryk</figcaption>
+            </figure>
           </section>
 
           <section aria-labelledby="process-title" className="py-14">
