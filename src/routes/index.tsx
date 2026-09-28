@@ -284,7 +284,7 @@ function Index() {
                     </div>
                     <span
                       aria-label={`Note: ${c.note}`}
-                      className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Motion" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
+                      className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Web" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
                     >
                       {c.note}
                     </span>
