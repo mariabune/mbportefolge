@@ -268,7 +268,7 @@ function AiPlaybookCase() {
                   height={595}
                   className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
                 />
-                <figcaption className="hand mt-3 text-center text-ink-soft">kunde-brand: Finn, farver & former</figcaption>
+                <figcaption className="hand mt-3 text-center text-ink-soft">Kundens visuelle elementer: Finn, farver og former</figcaption>
               </figure>
             </div>
 
