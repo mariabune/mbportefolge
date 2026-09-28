@@ -9,6 +9,7 @@ import kap1TaenkerAsset from "@/assets/ai-haandbog-kap1-saadan-taenker-en-ai.svg
 import companyFinnAsset from "@/assets/company-finn.png.asset.json";
 import myFinnAsset from "@/assets/my-finn.png.asset.json";
 import hitlAsset from "@/assets/hitl.png.asset.json";
+import glsVisuelleAsset from "@/assets/gls-visuelle-elementer.png.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -256,7 +257,20 @@ function AiPlaybookCase() {
               </div>
             </div>
 
-            <p className="mt-12 max-w-3xl text-lg leading-relaxed">Herefter gik arbejdet i gang. Første skridt blev at lægge os fast på en visuel stil. Vi brugte kundens farvepalette og visuelle elementer, og ville inkorporere deres egen AI figur Finn. En af mine roller i projektet var at stå for at skitsere en version af Finn som passede ind i vores playbook, samt designe forsiden og andre illustrationer til playbooken. Vores arbejdsproces var i høj grad præget af design thinking, da vi skitserede, lavede prototyper og gik frem og tilbage i processen for at rette til og tilføje.</p>
+            <div className="mt-12 grid items-center gap-10 lg:grid-cols-12">
+              <p className="text-lg leading-relaxed lg:col-span-7">Herefter gik arbejdet i gang. Første skridt blev at lægge os fast på en visuel stil. Vi brugte kundens farvepalette og visuelle elementer, og ville inkorporere deres egen AI figur Finn. En af mine roller i projektet var at stå for at skitsere en version af Finn som passede ind i vores playbook, samt designe forsiden og andre illustrationer til playbooken. Vores arbejdsproces var i høj grad præget af design thinking, da vi skitserede, lavede prototyper og gik frem og tilbage i processen for at rette til og tilføje.</p>
+              <figure className="relative lg:col-span-5">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                <img
+                  src={glsVisuelleAsset.url}
+                  alt="Kundens visuelle elementer: Finn-robotten omgivet af blå Former, samt GLS' brandfarver #061ab1 og #ffd100, bløde baggrundsfarver og understøttende farver"
+                  width={842}
+                  height={595}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">kunde-brand: Finn, farver & former</figcaption>
+              </figure>
+            </div>
 
             <div className="mx-auto mt-12 grid w-fit max-w-2xl grid-cols-2 gap-6 sm:gap-10">
               <figure className="relative">
