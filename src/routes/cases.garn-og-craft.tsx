@@ -130,7 +130,7 @@ function GarnOgCraftCase() {
 
       <main id="main" tabIndex={-1} className="relative outline-none md:pl-[232px] lg:pl-[184px]">
         <article className="mx-auto max-w-5xl px-5 sm:px-8">
-          <header className="relative pt-16 pb-12 sm:pt-24 sm:pb-16">
+          <header className="relative pt-16 pb-16 sm:pt-24 sm:pb-20">
             <Link to="/" hash="cases" className="label-mono inline-flex min-h-11 items-center text-ink-soft transition-colors hover:text-flame">
               ← Tilbage til cases
             </Link>
@@ -170,7 +170,7 @@ function GarnOgCraftCase() {
                 </figure>
               </div>
               <div className="flex flex-col lg:col-span-8">
-                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:-mt-[210px]">
+                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:ml-auto lg:w-[90%] lg:-mt-[170px]">
                   <figure className="relative">
                     <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                     <img
