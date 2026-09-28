@@ -130,7 +130,7 @@ function GarnOgCraftCase() {
 
       <main id="main" tabIndex={-1} className="relative outline-none md:pl-[232px] lg:pl-[184px]">
         <article className="mx-auto max-w-5xl px-5 sm:px-8">
-          <header className="relative pt-16 pb-20 sm:pt-24 sm:pb-28">
+          <header className="relative pt-16 pb-12 sm:pt-24 sm:pb-16">
             <Link to="/" hash="cases" className="label-mono inline-flex min-h-11 items-center text-ink-soft transition-colors hover:text-flame">
               ← Tilbage til cases
             </Link>
@@ -142,23 +142,35 @@ function GarnOgCraftCase() {
             </p>
           </header>
 
-          <section aria-labelledby="introduction-title" className="py-14">
+          <section aria-labelledby="introduction-title" className="pt-6 pb-14">
             <p className="label-mono text-flame">01</p>
             <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
 
-            <div className="mt-10 grid gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-4">
-                <dl className="border border-ink/25 px-6 py-3">
+            <div className="mt-8 grid gap-10 lg:grid-cols-12">
+              <div className="flex flex-col lg:col-span-4">
+                <dl className="flex flex-1 flex-col justify-between border border-ink/25 px-6 py-5">
                   {PROJECT_FACTS.map((fact) => (
-                    <div key={fact.label} className="py-3.5">
+                    <div key={fact.label} className="py-2">
                       <dt className="label-mono text-flame">{fact.label}</dt>
                       <dd className="mt-1.5 text-base leading-relaxed">{fact.value}</dd>
                     </div>
                   ))}
                 </dl>
+                <figure className="relative mt-10 w-fit">
+                  <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                  <img
+                    src={garnLogoer.url}
+                    alt="Garn og Crafts logo før og efter: til venstre det nye sort-hvide garnnøgle-logo med strikkepinde, til højre det gamle runde logo i grøn med orange hjerte af garn"
+                    width={2667}
+                    height={1382}
+                    className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                    loading="lazy"
+                  />
+                  <figcaption className="hand mt-3 text-center text-ink-soft">logoet: før og efter</figcaption>
+                </figure>
               </div>
-              <div className="lg:col-span-8">
-                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
+              <div className="flex flex-col lg:col-span-8">
+                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:-mt-[210px]">
                   <figure className="relative">
                     <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                     <img
@@ -184,26 +196,7 @@ function GarnOgCraftCase() {
                     <figcaption className="hand mt-3 text-center text-ink-soft">events-kalenderen — hver måned sin farve</figcaption>
                   </figure>
                 </div>
-              </div>
-            </div>
-
-            <div className="mt-14 grid gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-4">
-                <figure className="relative w-fit">
-                  <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
-                  <img
-                    src={garnLogoer.url}
-                    alt="Garn og Crafts logo før og efter: til venstre det nye sort-hvide garnnøgle-logo med strikkepinde, til højre det gamle runde logo i grøn med orange hjerte af garn"
-                    width={2667}
-                    height={1382}
-                    className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
-                    loading="lazy"
-                  />
-                  <figcaption className="hand mt-3 text-center text-ink-soft">logoet: før og efter</figcaption>
-                </figure>
-              </div>
-              <div className="lg:col-span-8">
-                <p className="text-lg leading-relaxed">
+                <p className="mt-10 text-lg leading-relaxed">
                   <strong className="font-bold text-flame">Kort fortalt:</strong> Garn og Craft er en lille garnbutik, der ligger i Kolding, som har en hjemmeside med webshop. Ejeren ønskede at fremme fællesskabet gennem arrangementer i butikken, og ville have hjælp til dette igennem en ny visuel identitet på tværs af platforme. Da vi vurderede at en samhørighed på tværs af alle kanaler var vigtigt for virksomheden, var det en rebranding case.
                 </p>
                 <blockquote className="relative mt-8 border-l-4 border-flame py-3 pl-6 font-display text-xl leading-snug sm:text-2xl">
