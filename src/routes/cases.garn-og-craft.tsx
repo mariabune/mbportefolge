@@ -130,7 +130,7 @@ function GarnOgCraftCase() {
 
       <main id="main" tabIndex={-1} className="relative outline-none md:pl-[232px] lg:pl-[184px]">
         <article className="mx-auto max-w-5xl px-5 sm:px-8">
-          <header className="relative pt-16 pb-14 sm:pt-24">
+          <header className="relative pt-16 pb-20 sm:pt-24 sm:pb-28">
             <Link to="/" hash="cases" className="label-mono inline-flex min-h-11 items-center text-ink-soft transition-colors hover:text-flame">
               ← Tilbage til cases
             </Link>
@@ -145,7 +145,8 @@ function GarnOgCraftCase() {
           <section aria-labelledby="introduction-title" className="py-14">
             <p className="label-mono text-flame">01</p>
             <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
-            <div className="mt-8 grid gap-10 lg:grid-cols-12">
+
+            <div className="mt-10 grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <dl className="border border-ink/25 px-6 py-3">
                   {PROJECT_FACTS.map((fact) => (
@@ -157,13 +158,7 @@ function GarnOgCraftCase() {
                 </dl>
               </div>
               <div className="lg:col-span-8">
-                <p className="text-lg leading-relaxed">
-                  <strong className="font-bold text-flame">Kort fortalt:</strong> Garn og Craft er en lille garnbutik, der ligger i Kolding, som har en hjemmeside med webshop. Ejeren ønskede at fremme fællesskabet gennem arrangementer i butikken, og ville have hjælp til dette igennem en ny visuel identitet på tværs af platforme. Da vi vurderede at en samhørighed på tværs af alle kanaler var vigtigt for virksomheden, var det en rebranding case.
-                </p>
-                <blockquote className="relative mt-8 border-l-4 border-flame py-3 pl-6 font-display text-2xl leading-snug sm:text-3xl">
-                  ”Hvordan inspirerer og engagerer vi den nuværende målgruppe samt studerende, til at blive en del af Garn og Crafts fællesskab, gennem en ny visuel identitet og diverse digitale platforme?”
-                </blockquote>
-                <div className="mt-12 grid gap-10 sm:grid-cols-2">
+                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
                   <figure className="relative">
                     <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                     <img
@@ -189,7 +184,12 @@ function GarnOgCraftCase() {
                     <figcaption className="hand mt-3 text-center text-ink-soft">events-kalenderen — hver måned sin farve</figcaption>
                   </figure>
                 </div>
-                <figure className="relative mt-12">
+              </div>
+            </div>
+
+            <div className="mt-14 grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <figure className="relative w-fit">
                   <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
                   <img
                     src={garnLogoer.url}
@@ -201,6 +201,14 @@ function GarnOgCraftCase() {
                   />
                   <figcaption className="hand mt-3 text-center text-ink-soft">logoet: før og efter</figcaption>
                 </figure>
+              </div>
+              <div className="lg:col-span-8">
+                <p className="text-lg leading-relaxed">
+                  <strong className="font-bold text-flame">Kort fortalt:</strong> Garn og Craft er en lille garnbutik, der ligger i Kolding, som har en hjemmeside med webshop. Ejeren ønskede at fremme fællesskabet gennem arrangementer i butikken, og ville have hjælp til dette igennem en ny visuel identitet på tværs af platforme. Da vi vurderede at en samhørighed på tværs af alle kanaler var vigtigt for virksomheden, var det en rebranding case.
+                </p>
+                <blockquote className="relative mt-8 border-l-4 border-flame py-3 pl-6 font-display text-xl leading-snug sm:text-2xl">
+                  ”Hvordan inspirerer og engagerer vi den nuværende målgruppe samt studerende, til at blive en del af Garn og Crafts fællesskab, gennem en ny visuel identitet og diverse digitale platforme?”
+                </blockquote>
               </div>
             </div>
           </section>
