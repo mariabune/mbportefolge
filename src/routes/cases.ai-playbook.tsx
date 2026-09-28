@@ -142,7 +142,10 @@ function AiPlaybookCase() {
                 </dl>
               </div>
               <div className="lg:col-span-8">
-                <blockquote className="relative border-l-4 border-flame py-3 pl-6 font-display text-2xl leading-snug sm:text-3xl">
+                <p className="text-lg leading-relaxed">
+                  <strong className="font-bold text-flame">Kort fortalt:</strong> GLS er en mellemstor virksomhed, der har udviklet deres egen interne AI, som kan hjælpe deres mange medarbejdere med forskellige arbejdsopgaver. Dog ser de at mange ikke bruger AI, og dermed ikke udnytter det potentiale der er. Det løste vi ved at lave en AI håndbog, som informerer, inspirerer og motiverer medarbejderne.
+                </p>
+                <blockquote className="relative mt-8 border-l-4 border-flame py-3 pl-6 font-display text-2xl leading-snug sm:text-3xl">
                   ”Hvordan kan vi designe en AI playbook til GLS, der skaber klarhed og tryghed for medarbejderne om brugen af AI på arbejdspladsen, og som samtidig både inspirerer og informerer om korrekt brug af AI?”
                 </blockquote>
                 <div className="mt-12 grid grid-cols-3 gap-5 sm:gap-8">
