@@ -226,6 +226,21 @@ function AiPlaybookCase() {
             <div className="mt-8 grid gap-10 lg:grid-cols-12">
               <div className="space-y-8 text-lg leading-relaxed lg:col-span-7">
                 <p>Processen startede med en brief med kunden, om deres virksomhed, problemstilling samt ønsker og krav til playbooken. Her handlede det om at stille spørgsmål, for at få en dybere forståelse for virksomhedens behov.</p>
+
+                <aside aria-label="Vigtige indsigter fra GLS' data" className="border-y-2 border-ink py-6">
+                  <div className="grid gap-6 sm:grid-cols-2 sm:divide-x sm:divide-ink/30">
+                    <div className="relative px-3 sm:px-6">
+                      <p className="font-display text-6xl leading-none text-flame sm:text-7xl">50–59</p>
+                      <p className="mt-3 max-w-[26ch] text-lg font-bold leading-snug">år var den aldersgruppe, der brugte AI mest</p>
+                      <span className="hand absolute right-3 top-3 -rotate-6 text-ink-soft">det overraskede os!</span>
+                    </div>
+                    <div className="px-3 sm:px-6">
+                      <p className="font-display text-6xl leading-none text-cyan sm:text-7xl">&gt; 50 %</p>
+                      <p className="mt-3 max-w-[28ch] text-lg font-bold leading-snug">af medarbejderne brugte slet ikke eller næsten aldrig AI</p>
+                    </div>
+                  </div>
+                </aside>
+
                 <p>Dernæst samles vi i gruppen, hvor vi begynder at brainstorme ideer til indhold og visuel stil. Vi brugte den første tid på at analysere data fra virksomheden, over deres interne undersøgelser af brug af AI. Vi stillede spørgsmål som Hvem bruger mest AI og hvem bruger mindst AI? Hvad er grunden til at nogen er tilbageholdne med at bruge AI på arbejdspladsen? Dataen viste at de medarbejdere, der brugte AI mest, var aldersgruppen 50-59 år, hvilket vi blev overraskede over. Desuden viste data fra virksomheden at mere end halvdelen af medarbejderne, slet ikke eller næsten aldrig brugte AI. Dataen viste desuden at medarbejderne ikke fandt det naturligt eller ikke kunne se relevansen ved at bruge AI. Derfor diskuterede vi hvordan vi kunne imødekomme disse problemstillinger.</p>
               </div>
               <div className="lg:col-span-5">
@@ -241,22 +256,10 @@ function AiPlaybookCase() {
               </div>
             </div>
 
-            <aside aria-label="Vigtige indsigter fra GLS' data" className="my-16 border-y-2 border-ink py-9">
-              <div className="grid gap-8 sm:grid-cols-2 sm:divide-x sm:divide-ink/30">
-                <div className="relative px-3 sm:px-8">
-                  <p className="font-display text-7xl leading-none text-flame sm:text-8xl">50–59</p>
-                  <p className="mt-4 max-w-[28ch] text-xl font-bold leading-snug">år var den aldersgruppe, der brugte AI mest</p>
-                  <span className="hand absolute right-3 top-3 -rotate-6 text-ink-soft">det overraskede os!</span>
-                </div>
-                <div className="px-3 sm:px-8">
-                  <p className="font-display text-7xl leading-none text-cyan sm:text-8xl">&gt; ½</p>
-                  <p className="mt-4 max-w-[30ch] text-xl font-bold leading-snug">af medarbejderne brugte slet ikke eller næsten aldrig AI</p>
-                </div>
-              </div>
-            </aside>
+            <p className="mt-12 max-w-3xl text-lg leading-relaxed">Herefter gik arbejdet i gang. Første skridt blev at lægge os fast på en visuel stil. Vi brugte kundens farvepalette og visuelle elementer, og ville inkorporere deres egen AI figur Finn. En af mine roller i projektet var at stå for at skitsere en version af Finn som passede ind i vores playbook, samt designe forsiden og andre illustrationer til playbooken. Vores arbejdsproces var i høj grad præget af design thinking, da vi skitserede, lavede prototyper og gik frem og tilbage i processen for at rette til og tilføje.</p>
 
-            <div className="grid items-start gap-10 lg:grid-cols-12">
-              <figure className="relative mx-auto w-fit max-w-[320px] lg:col-span-5 lg:mx-0 lg:w-full lg:max-w-none">
+            <div className="mx-auto mt-12 grid w-fit max-w-2xl grid-cols-2 gap-6 sm:gap-10">
+              <figure className="relative">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                 <img
                   src={companyFinnAsset.url}
@@ -267,13 +270,7 @@ function AiPlaybookCase() {
                 />
                 <figcaption className="hand mt-3 text-center text-ink-soft">GLS' egen AI-figur Finn</figcaption>
               </figure>
-              <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
-                <p>Herefter gik arbejdet i gang. Første skridt blev at lægge os fast på en visuel stil. Vi brugte kundens farvepalette og visuelle elementer, og ville inkorporere deres egen AI figur Finn. En af mine roller i projektet var at stå for at skitsere en version af Finn som passede ind i vores playbook, samt designe forsiden og andre illustrationer til playbooken. Vores arbejdsproces var i høj grad præget af design thinking, da vi skitserede, lavede prototyper og gik frem og tilbage i processen for at rette til og tilføje.</p>
-              </div>
-            </div>
-
-            <div className="mt-12 grid items-start gap-10 lg:grid-cols-12">
-              <figure className="relative mx-auto w-fit max-w-[320px] lg:col-span-5 lg:mx-0 lg:w-full lg:max-w-none">
+              <figure className="relative">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
                 <img
                   src={myFinnAsset.url}
@@ -284,7 +281,13 @@ function AiPlaybookCase() {
                 />
                 <figcaption className="hand mt-3 text-center text-ink-soft">min version af Finn!</figcaption>
               </figure>
-              <figure className="relative lg:col-span-7">
+            </div>
+
+            <div className="mt-14 grid items-start gap-10 lg:grid-cols-12">
+              <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
+                <p>En del af projektet bestod i at arbejde med AI. Derfor brugte vi arbejdsmetoder som HITL (human in the loop) og prompt engineering, til at få det optimale ud af vores tid. Undervejs blev vi selv klogere på hvad arbejdet med AI kan bidrage med, og hvordan man bruger det som værktøj uden at slippe tøjlerne helt. Vi opdelte indholdet imellem os i gruppen, så vi hver især stod for at skrive tekst til 2 kapitler. Vi brugte blandt andet AI til at brainstorme indhold, tjekke fejl, og skabe sammenhæng mellem vores tekster. Samtidig har vi forholdt os kritisk overfor outputs og taget selvstændige beslutninger.</p>
+              </div>
+              <figure className="relative lg:col-span-5">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                 <img
                   src={hitlAsset.url}
