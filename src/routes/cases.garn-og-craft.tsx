@@ -133,7 +133,7 @@ function GarnOgCraftCase() {
             <Link to="/" hash="cases" className="label-mono inline-flex min-h-11 items-center text-ink-soft transition-colors hover:text-flame">
               ← Tilbage til cases
             </Link>
-            <h1 className="anim-rise mt-8 block w-fit font-display text-5xl leading-[0.92] sm:text-7xl [animation-delay:80ms]">
+            <h1 className="pen-underline anim-rise mt-8 block w-fit pb-4 font-display text-5xl leading-[0.92] sm:text-7xl [animation-delay:80ms]">
               Hjemmeside &amp; rebranding
             </h1>
             <p className="hand anim-rise mt-4 text-2xl text-ink-soft [animation-delay:140ms] sm:text-3xl">
@@ -141,7 +141,7 @@ function GarnOgCraftCase() {
             </p>
           </header>
 
-          <section aria-labelledby="introduction-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="introduction-title" className="py-14">
             <p className="label-mono text-flame">01</p>
             <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
             <div className="mt-8 grid gap-10 lg:grid-cols-12">
@@ -204,7 +204,7 @@ function GarnOgCraftCase() {
             </div>
           </section>
 
-          <section aria-labelledby="solution-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="solution-title" className="py-14">
             <p className="label-mono text-flame">02</p>
             <h2 id="solution-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">2. Løsningen</h2>
             <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed">
@@ -270,7 +270,7 @@ function GarnOgCraftCase() {
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
           </section>
 
-          <section aria-labelledby="process-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="process-title" className="py-14">
             <p className="label-mono text-flame">03</p>
             <h2 id="process-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">3. Processen</h2>
             <p className="hand mt-3 text-2xl text-ink-soft">fra kundemøde til prototype</p>
@@ -308,7 +308,7 @@ function GarnOgCraftCase() {
             </div>
           </section>
 
-          <section aria-labelledby="learning-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="learning-title" className="py-14">
             <div className="mb-10">
               <p className="label-mono text-flame">04</p>
               <h2 id="learning-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">4. Hvad har jeg lært?</h2>
@@ -329,7 +329,7 @@ function GarnOgCraftCase() {
             </div>
           </section>
 
-          <footer className="border-t-2 border-ink py-14 text-center">
+          <footer className="py-14 text-center">
             <p className="hand text-2xl text-ink-soft">næste side i notesbogen?</p>
             <Link to="/" hash="cases" className="mt-5 inline-flex min-h-11 items-center rounded-full bg-ink px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:bg-flame">
               Se alle cases

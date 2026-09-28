@@ -127,7 +127,7 @@ function AiPlaybookCase() {
             </p>
           </header>
 
-          <section aria-labelledby="introduction-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="introduction-title" className="py-14">
             <p className="label-mono text-flame">01</p>
             <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
             <div className="mt-8 grid gap-10 lg:grid-cols-12">
@@ -185,7 +185,7 @@ function AiPlaybookCase() {
             </div>
           </section>
 
-          <section aria-labelledby="solution-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="solution-title" className="py-14">
             <p className="label-mono text-flame">02</p>
             <h2 id="solution-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">2. Løsningen</h2>
             <div className="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed">
@@ -222,7 +222,7 @@ function AiPlaybookCase() {
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden inkluderede vi konkrete arbejdsredskaber til medarbejderne såsom prompt-bibliotek, beslutningstræ og ideer til arbejdsopgaver med AI. Håndbogens design er skabt i samme visuelle stil som kunden GLS, ved brug af samme farvepalette, visuelle elementer og deres AI figur Finn.</p>
           </section>
 
-          <section aria-labelledby="process-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="process-title" className="py-14">
             <p className="label-mono text-flame">03</p>
             <h2 id="process-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">3. Processen</h2>
             <p className="hand mt-3 text-2xl text-ink-soft">fra brief til prototype</p>
@@ -319,7 +319,7 @@ function AiPlaybookCase() {
 
           </section>
 
-          <section aria-labelledby="learning-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="learning-title" className="py-14">
             <div className="mb-10">
               <p className="label-mono text-flame">04</p>
               <h2 id="learning-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">4. Hvad har jeg lært?</h2>
@@ -340,7 +340,7 @@ function AiPlaybookCase() {
             </div>
           </section>
 
-          <footer className="border-t-2 border-ink py-14 text-center">
+          <footer className="py-14 text-center">
             <p className="hand text-2xl text-ink-soft">næste side i notesbogen?</p>
             <Link to="/" hash="cases" className="mt-5 inline-flex min-h-11 items-center rounded-full bg-ink px-6 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-colors hover:bg-flame">
               Se alle cases
