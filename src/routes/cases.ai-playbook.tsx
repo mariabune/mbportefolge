@@ -137,7 +137,7 @@ function AiPlaybookCase() {
             <Link to="/" hash="cases" className="label-mono inline-flex min-h-11 items-center text-ink-soft transition-colors hover:text-flame">
               ← Tilbage til cases
             </Link>
-            <h1 className="pen-underline anim-rise mt-8 inline-block pb-4 font-display text-5xl leading-[0.92] sm:text-7xl [animation-delay:80ms]">
+            <h1 className="pen-underline anim-rise mt-8 block w-fit pb-4 font-display text-5xl leading-[0.92] sm:text-7xl [animation-delay:80ms]">
               AI playbook
             </h1>
             <p className="hand anim-rise mt-4 text-2xl text-ink-soft [animation-delay:140ms] sm:text-3xl">
