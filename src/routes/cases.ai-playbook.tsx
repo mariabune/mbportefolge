@@ -166,7 +166,7 @@ function AiPlaybookCase() {
                 </blockquote>
               </div>
             </div>
-            <div className="mt-14 grid gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-6">
+            <div className="mt-14 grid gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-0">
               <figure className="relative mx-auto w-fit max-w-[280px] sm:max-w-[320px] lg:mx-0 lg:w-full lg:max-w-none">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                 <img
