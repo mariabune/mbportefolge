@@ -171,11 +171,27 @@ function AiPlaybookCase() {
             </div>
           </section>
 
-          <section aria-labelledby="process-title" className="border-t-2 border-ink py-14">
+          <section aria-labelledby="solution-title" className="border-t-2 border-ink py-14">
             <div className="grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
                 <p className="label-mono text-flame">02</p>
-                <h2 id="process-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">2. Processen</h2>
+                <h2 id="solution-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">2. Løsningen</h2>
+              </div>
+              <div className="text-lg leading-relaxed lg:col-span-8">
+                <p>Vi endte med en playbook på 23 sider, som vi kaldte for ”AI håndbog” for at gøre det mere håndgribeligt for brugeren. Vi lavede den som en interaktiv pdf, hvor man hurtigt kunne klikke sig hjem til forsiden, og til de forskellige kapitler, for at styrke brugervenligheden. Desuden opdelte vi indholdet i 8 kapitler, med hver sin farve og tal. Dette styrker håndbogens formål som opslagsværk, da brugeren nemt kan finde netop det de leder efter. Vi sørgede for at tekststykkerne var relevante og præcise, og tilføjede godt med luft og whitespace på siderne, for at skabe ro og overblik. Desuden inkluderede vi konkrete arbejdsredskaber til medarbejderne såsom prompt-bibliotek, beslutningstræ og ideer til arbejdsopgaver med AI. Håndbogens design er skabt i samme visuelle stil som kunden GLS, ved brug af samme farvepalette, visuelle elementer og deres AI figur Finn.</p>
+              </div>
+            </div>
+            <div className="mt-14 grid gap-8 sm:grid-cols-2">
+              <ImageSpace {...IMAGE_SPACES[3]} />
+              <ImageSpace {...IMAGE_SPACES[4]} />
+            </div>
+          </section>
+
+          <section aria-labelledby="process-title" className="border-t-2 border-ink py-14">
+            <div className="grid gap-10 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <p className="label-mono text-flame">03</p>
+                <h2 id="process-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">3. Processen</h2>
                 <p className="hand mt-3 text-2xl text-ink-soft">fra brief til prototype</p>
               </div>
               <div className="space-y-8 text-lg leading-relaxed lg:col-span-8">
@@ -220,22 +236,6 @@ function AiPlaybookCase() {
               <div className="lg:col-span-5">
                 <ImageSpace {...IMAGE_SPACES[2]} />
               </div>
-            </div>
-          </section>
-
-          <section aria-labelledby="solution-title" className="border-t-2 border-ink py-14">
-            <div className="grid gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-4">
-                <p className="label-mono text-flame">03</p>
-                <h2 id="solution-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">3. Løsningen</h2>
-              </div>
-              <div className="text-lg leading-relaxed lg:col-span-8">
-                <p>Vi endte med en playbook på 23 sider, som vi kaldte for ”AI håndbog” for at gøre det mere håndgribeligt for brugeren. Vi lavede den som en interaktiv pdf, hvor man hurtigt kunne klikke sig hjem til forsiden, og til de forskellige kapitler, for at styrke brugervenligheden. Desuden opdelte vi indholdet i 8 kapitler, med hver sin farve og tal. Dette styrker håndbogens formål som opslagsværk, da brugeren nemt kan finde netop det de leder efter. Vi sørgede for at tekststykkerne var relevante og præcise, og tilføjede godt med luft og whitespace på siderne, for at skabe ro og overblik. Desuden inkluderede vi konkrete arbejdsredskaber til medarbejderne såsom prompt-bibliotek, beslutningstræ og ideer til arbejdsopgaver med AI. Håndbogens design er skabt i samme visuelle stil som kunden GLS, ved brug af samme farvepalette, visuelle elementer og deres AI figur Finn.</p>
-              </div>
-            </div>
-            <div className="mt-14 grid gap-8 sm:grid-cols-2">
-              <ImageSpace {...IMAGE_SPACES[3]} />
-              <ImageSpace {...IMAGE_SPACES[4]} />
             </div>
           </section>
 
