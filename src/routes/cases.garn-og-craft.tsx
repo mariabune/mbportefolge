@@ -269,7 +269,7 @@ function GarnOgCraftCase() {
               </div>
             </div>
 
-            <div className="mt-12 grid items-center gap-10 lg:grid-cols-12">
+            <div className="mt-10 grid items-start gap-10 lg:grid-cols-12">
               <p className="text-lg leading-relaxed lg:col-span-7">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
 
               <figure className="relative mx-auto w-fit max-w-[280px] lg:col-span-5">
