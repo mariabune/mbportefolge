@@ -219,40 +219,73 @@ function Index() {
             <ul className="grid gap-8 sm:grid-cols-2">
               {CASES.map((c) => (
                 <li key={c.title}>
-                <article
-                  className={`group relative ${c.rotate} transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
-                >
-                  <div aria-hidden="true" className="tape absolute -top-3 left-8 z-10 rotate-2" />
-                  <div className="relative bg-paper p-3 shadow-[0_12px_28px_rgb(0_0_0/0.16)] ring-1 ring-ink/10">
-                    <img
-                      src={c.img}
-                      alt={`Cover image for the case ${c.title}`}
-                      width={1024}
-                      height={768}
-                      loading="lazy"
-                      className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
-                    />
-                    <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
-                      <div>
-                        <h3 className="font-display text-lg tracking-tight sm:text-xl">
-                          {c.title}
-                        </h3>
-                        <p className="label-mono mt-1 text-ink-soft">{c.meta}</p>
+                {c === CASES[0] ? (
+                  <Link to="/cases/ai-playbook" className="block focus-visible:outline-offset-8" aria-label="Open the AI playbook case">
+                    <article
+                      className={`group relative ${c.rotate} transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
+                    >
+                      <div aria-hidden="true" className="tape absolute -top-3 left-8 z-10 rotate-2" />
+                      <div className="relative bg-paper p-3 shadow-[0_12px_28px_rgb(0_0_0/0.16)] ring-1 ring-ink/10">
+                        <img
+                          src={c.img}
+                          alt={`Cover image for the case ${c.title}`}
+                          width={1024}
+                          height={768}
+                          loading="lazy"
+                          className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
+                        />
+                        <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
+                          <div>
+                            <h3 className="font-display text-lg tracking-tight sm:text-xl">
+                              AI-playbook
+                            </h3>
+                            <p className="label-mono mt-1 text-ink-soft">{c.meta}</p>
+                          </div>
+                          <span className={`label-mono shrink-0 rounded-full px-2.5 py-1 ${c.tagColor}`}>
+                            {c.tag}
+                          </span>
+                        </div>
                       </div>
                       <span
-                        className={`label-mono shrink-0 rounded-full px-2.5 py-1 ${c.tagColor}`}
+                        aria-label={`Note: ${c.note}`}
+                        className="sticker absolute -bottom-4 -left-3 border-2 border-flame/60 bg-paper px-3 py-1.5 hand text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)]"
                       >
-                        {c.tag}
+                        {c.note}
                       </span>
-                    </div>
-                  </div>
-                  <span
-                    aria-label={`Note: ${c.note}`}
-                    className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Motion" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
+                    </article>
+                  </Link>
+                ) : (
+                  <article
+                    className={`group relative ${c.rotate} transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
                   >
-                    {c.note}
-                  </span>
-                </article>
+                    <div aria-hidden="true" className="tape absolute -top-3 left-8 z-10 rotate-2" />
+                    <div className="relative bg-paper p-3 shadow-[0_12px_28px_rgb(0_0_0/0.16)] ring-1 ring-ink/10">
+                      <img
+                        src={c.img}
+                        alt={`Cover image for the case ${c.title}`}
+                        width={1024}
+                        height={768}
+                        loading="lazy"
+                        className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
+                      />
+                      <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
+                        <div>
+                          <h3 className="font-display text-lg tracking-tight sm:text-xl">{c.title}</h3>
+                          <p className="label-mono mt-1 text-ink-soft">{c.meta}</p>
+                        </div>
+                        <span className={`label-mono shrink-0 rounded-full px-2.5 py-1 ${c.tagColor}`}>
+                          {c.tag}
+                        </span>
+                      </div>
+                    </div>
+                    <span
+                      aria-label={`Note: ${c.note}`}
+                      className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Motion" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
+                    >
+                      {c.note}
+                    </span>
+                  </article>
+                )}
                 </li>
               ))}
             </ul>
