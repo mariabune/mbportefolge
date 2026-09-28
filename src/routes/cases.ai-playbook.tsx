@@ -175,7 +175,52 @@ function AiPlaybookCase() {
                 <h2 id="solution-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">2. Løsningen</h2>
               </div>
               <div className="text-lg leading-relaxed lg:col-span-8">
-                <p>Vi endte med en playbook på 23 sider, som vi kaldte for ”AI håndbog” for at gøre det mere håndgribeligt for brugeren. Vi lavede den som en interaktiv pdf, hvor man hurtigt kunne klikke sig hjem til forsiden, og til de forskellige kapitler, for at styrke brugervenligheden. Desuden opdelte vi indholdet i 8 kapitler, med hver sin farve og tal. Dette styrker håndbogens formål som opslagsværk, da brugeren nemt kan finde netop det de leder efter. Vi sørgede for at tekststykkerne var relevante og præcise, og tilføjede godt med luft og whitespace på siderne, for at skabe ro og overblik. Desuden inkluderede vi konkrete arbejdsredskaber til medarbejderne såsom prompt-bibliotek, beslutningstræ og ideer til arbejdsopgaver med AI. Håndbogens design er skabt i samme visuelle stil som kunden GLS, ved brug af samme farvepalette, visuelle elementer og deres AI figur Finn.</p>
+                <div className="space-y-6">
+                  <p>Vi endte med en playbook på 23 sider, som vi kaldte for ”AI håndbog” for at gøre det mere håndgribeligt for brugeren. Vi lavede den som en interaktiv pdf, hvor man hurtigt kunne klikke sig hjem til forsiden, og til de forskellige kapitler, for at styrke brugervenligheden.</p>
+                  <p>Desuden opdelte vi indholdet i 8 kapitler, med hver sin farve og tal. Dette styrker håndbogens formål som opslagsværk, da brugeren nemt kan finde netop det de leder efter.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-12 grid gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-0">
+              <figure className="relative mx-auto w-fit max-w-[280px] sm:max-w-[320px] lg:mx-0 lg:w-full lg:max-w-none">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                <img
+                  src={forsideAsset.url}
+                  alt="Forsiden af AI-håndbogen: GLS' AI-figur Finn, en lyspære og teksten »Dit opslagsværk til brug af AI i dit arbejde«"
+                  width={595}
+                  height={842}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">den færdige forside!</figcaption>
+              </figure>
+              <figure className="relative mx-auto w-fit max-w-xl lg:col-span-2 lg:mx-0 lg:w-full lg:max-w-none">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                <div className="flex border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]">
+                  <img
+                    src={indhold1Asset.url}
+                    alt="Indholdsfortegnelsen, side 2: kapitlerne Kom godt i gang, Mød Finn, Hvornår bruges AI? og Datasikkerhed"
+                    width={595}
+                    height={842}
+                    className="w-1/2"
+                  />
+                  <img
+                    src={indhold2Asset.url}
+                    alt="Indholdsfortegnelsen, side 3: kapitlerne Det gode prompt, Tænk kritisk, Samarbejde med AI og Hurtig hjælp"
+                    width={595}
+                    height={842}
+                    className="w-1/2 border-l border-ink/20"
+                  />
+                </div>
+                <figcaption className="hand mt-3 text-center text-ink-soft">indholdsfortegnelsen — 8 kapitler, hver sin farve</figcaption>
+              </figure>
+            </div>
+
+            <div className="mt-12 grid gap-10 lg:grid-cols-12">
+              <div aria-hidden="true" className="hidden lg:col-span-4 lg:block" />
+              <div className="space-y-6 text-lg leading-relaxed lg:col-span-8">
+                <p>Vi sørgede for at tekststykkerne var relevante og præcise, og tilføjede godt med luft og whitespace på siderne, for at skabe ro og overblik.</p>
+                <p>Desuden inkluderede vi konkrete arbejdsredskaber til medarbejderne såsom prompt-bibliotek, beslutningstræ og ideer til arbejdsopgaver med AI. Håndbogens design er skabt i samme visuelle stil som kunden GLS, ved brug af samme farvepalette, visuelle elementer og deres AI figur Finn.</p>
               </div>
             </div>
             <div className="mt-14 grid gap-8 sm:grid-cols-2">
