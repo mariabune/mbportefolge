@@ -12,3 +12,4 @@
 - [x] Swap handbook page images to the user's SVG versions (A4_-_8.svg, A4_-_39.svg)
 - [x] Add `/cases/garn-og-craft` using the established case layout, supplied copy, image spaces, and a link from case two
 - [x] Place the first Garn og Craft images (forside, events-kalender, logo før/efter) under the quote in 1. Introduktion
+- [x] Fill image placeholder 02 with four side-by-side page screenshots (forside, events-kalender, craftsalon, om os)
