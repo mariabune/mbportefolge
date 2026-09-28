@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NangiRouteImport } from './routes/nangi'
+import { Route as CasesAiPlaybookRouteImport } from './routes/cases.ai-playbook'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const NangiRoute = NangiRouteImport.update({
   path: '/nangi',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasesAiPlaybookRoute = CasesAiPlaybookRouteImport.update({
+  id: '/cases/ai-playbook',
+  path: '/cases/ai-playbook',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/nangi': typeof NangiRoute
+  '/cases/ai-playbook': typeof CasesAiPlaybookRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/nangi': typeof NangiRoute
+  '/cases/ai-playbook': typeof CasesAiPlaybookRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/nangi': typeof NangiRoute
+  '/cases/ai-playbook': typeof CasesAiPlaybookRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/nangi'
+  fullPaths: '/' | '/nangi' | '/cases/ai-playbook'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/nangi'
-  id: '__root__' | '/' | '/nangi'
+  to: '/' | '/nangi' | '/cases/ai-playbook'
+  id: '__root__' | '/' | '/nangi' | '/cases/ai-playbook'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   NangiRoute: typeof NangiRoute
+  CasesAiPlaybookRoute: typeof CasesAiPlaybookRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NangiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cases/ai-playbook': {
+      id: '/cases/ai-playbook'
+      path: '/cases/ai-playbook'
+      fullPath: '/cases/ai-playbook'
+      preLoaderRoute: typeof CasesAiPlaybookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   NangiRoute: NangiRoute,
+  CasesAiPlaybookRoute: CasesAiPlaybookRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
