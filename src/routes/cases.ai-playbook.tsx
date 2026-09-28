@@ -150,17 +150,17 @@ function AiPlaybookCase() {
               <div className="lg:col-span-4">
                 <p className="label-mono text-flame">01</p>
                 <h2 id="introduction-title" className="mt-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
-              </div>
-              <div className="lg:col-span-8">
-                <dl className="grid border-y-2 border-ink sm:grid-cols-2">
+                <dl className="mt-8">
                   {PROJECT_FACTS.map((fact, index) => (
-                    <div key={fact.label} className={`py-5 ${index % 2 === 0 ? "sm:border-r sm:pr-6" : "sm:pl-6"} ${index < PROJECT_FACTS.length - 2 ? "border-b border-ink/25" : ""}`}>
+                    <div key={fact.label} className={`py-4 ${index < PROJECT_FACTS.length - 1 ? "border-b border-ink/25" : ""}`}>
                       <dt className="label-mono text-ink-soft">{fact.label}</dt>
-                      <dd className="mt-2 text-base leading-relaxed">{fact.value}</dd>
+                      <dd className="mt-1.5 text-base leading-relaxed">{fact.value}</dd>
                     </div>
                   ))}
                 </dl>
-                <blockquote className="relative mt-10 border-l-4 border-flame py-3 pl-6 font-display text-2xl leading-snug sm:text-3xl">
+              </div>
+              <div className="lg:col-span-8">
+                <blockquote className="relative border-l-4 border-flame py-3 pl-6 font-display text-2xl leading-snug sm:text-3xl">
                   ”Hvordan kan vi designe en AI playbook til GLS, der skaber klarhed og tryghed for medarbejderne om brugen af AI på arbejdspladsen, og som samtidig både inspirerer og informerer om korrekt brug af AI?”
                 </blockquote>
               </div>
