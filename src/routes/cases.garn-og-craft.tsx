@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import logoMb from "@/assets/logo-mb.svg";
+import garnForside from "@/assets/garn-craft-forside.svg.asset.json";
+import garnEvents from "@/assets/garn-craft-events.svg.asset.json";
+import garnLogoer from "@/assets/garn-craft-logoer.svg.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -157,7 +160,44 @@ function GarnOgCraftCase() {
                 <blockquote className="relative mt-8 border-l-4 border-flame py-3 pl-6 font-display text-2xl leading-snug sm:text-3xl">
                   ”Hvordan inspirerer og engagerer vi den nuværende målgruppe samt studerende, til at blive en del af Garn og Crafts fællesskab, gennem en ny visuel identitet og diverse digitale platforme?”
                 </blockquote>
-                <ImageSpace number="01" title="Det færdige resultat" note="hjemmesiden og den nye identitet" className="mt-12" />
+                <div className="mt-12 grid gap-10 sm:grid-cols-2">
+                  <figure className="relative">
+                    <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                    <img
+                      src={garnForside.url}
+                      alt="Den redesignede forside til Garn og Craft: navigation, foto af to kvinder der strikker sammen, afsnittet Garn & Craft KLUBBEN, vareudvalg af garn, december-events og gaveideer"
+                      width={951}
+                      height={1733}
+                      className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                      loading="lazy"
+                    />
+                    <figcaption className="hand mt-3 text-center text-ink-soft">den nye forside — meget mere end garn!</figcaption>
+                  </figure>
+                  <figure className="relative">
+                    <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                    <img
+                      src={garnEvents.url}
+                      alt="Events-siden til Garn og Craft: Overskriften EVENTS over et foto af garnnøgler, tekst om workshops og kurser, et december-montheder med events der kan tilmeldes, og månedsfaneblade fra januar til maj"
+                      width={951}
+                      height={1658}
+                      className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                      loading="lazy"
+                    />
+                    <figcaption className="hand mt-3 text-center text-ink-soft">events-kalenderen — hver måned sin farve</figcaption>
+                  </figure>
+                </div>
+                <figure className="relative mt-12">
+                  <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                  <img
+                    src={garnLogoer.url}
+                    alt="Garn og Crafts logo før og efter: til venstre det gamle runde logo i grøn med orange hjerte af garn, til højre det nye sort-hvide garnnøgle-logo med strikkepinde"
+                    width={2667}
+                    height={1382}
+                    className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                    loading="lazy"
+                  />
+                  <figcaption className="hand mt-3 text-center text-ink-soft">logoet: før og efter</figcaption>
+                </figure>
               </div>
             </div>
           </section>
