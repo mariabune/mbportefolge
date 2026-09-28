@@ -8,3 +8,4 @@
 - [x] Verify build and preview with desktop/mobile screenshots
 - [x] Add `/cases/ai-playbook` magazine-style case page with all supplied copy, five image spaces, and highlighted research data
 - [x] Place real handbook pages (cover + contents spread) on the case page, aligned in one row inside 2. Løsningen with the text broken up
+- [x] Fill all remaining case-page image slots with the real uploads: chapter-1 pages (incl. PDF page), company Finn, own Finn version, and HITL illustration
