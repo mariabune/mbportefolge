@@ -190,7 +190,7 @@ function GarnOgCraftCase() {
                   <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
                   <img
                     src={garnLogoer.url}
-                    alt="Garn og Crafts logo før og efter: til venstre det gamle runde logo i grøn med orange hjerte af garn, til højre det nye sort-hvide garnnøgle-logo med strikkepinde"
+                    alt="Garn og Crafts logo før og efter: til venstre det nye sort-hvide garnnøgle-logo med strikkepinde, til højre det gamle runde logo i grøn med orange hjerte af garn"
                     width={2667}
                     height={1382}
                     className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
