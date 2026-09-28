@@ -146,14 +146,14 @@ function AiPlaybookCase() {
           </header>
 
           <section aria-labelledby="introduction-title" className="border-t-2 border-ink py-14">
-            <div className="grid gap-10 lg:grid-cols-12">
+            <p className="label-mono text-flame">01</p>
+            <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
+            <div className="mt-8 grid gap-10 lg:grid-cols-12">
               <div className="lg:col-span-4">
-                <p className="label-mono text-flame">01</p>
-                <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
-                <dl className="mt-8">
+                <dl>
                   {PROJECT_FACTS.map((fact) => (
                     <div key={fact.label} className="py-3.5">
-                      <dt className="label-mono text-ink-soft">{fact.label}</dt>
+                      <dt className="label-mono text-flame">{fact.label}</dt>
                       <dd className="mt-1.5 text-base leading-relaxed">{fact.value}</dd>
                     </div>
                   ))}
