@@ -274,7 +274,7 @@ function GarnOgCraftCase() {
               <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
               <img
                 src={garnIkoner.url}
-                alt="Siks hand-drawn ikoner i farvede cirkler: grøn, lilla, lyserød, orange, gul og turkis — Garn og Crafts visuelle identitet"
+                alt="Seks håndtegnede ikoner i farvede cirkler: et fællesskab af mennesker (grøn), en garnnøgle (grønblå), strikkepinde med garn (gul), en kat (orange), en gaveæske (lilla) og et hjerte med strikkepind (lyserød)"
                 width={1304}
                 height={1646}
                 className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
