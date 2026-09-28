@@ -232,7 +232,7 @@ function AiPlaybookCase() {
                     <div className="relative px-3 sm:px-6">
                       <p className="font-display text-6xl leading-none text-flame sm:text-7xl">50–59</p>
                       <p className="mt-3 max-w-[26ch] text-lg font-bold leading-snug">år var den aldersgruppe, der brugte AI mest</p>
-                      <span className="hand absolute right-3 top-3 -rotate-6 text-ink-soft">det overraskede os!</span>
+                      <span className="hand absolute -top-5 right-0 -rotate-6 text-ink-soft">det overraskede os!</span>
                     </div>
                     <div className="px-3 sm:px-6">
                       <p className="font-display text-6xl leading-none text-cyan sm:text-7xl">&gt; 50 %</p>
