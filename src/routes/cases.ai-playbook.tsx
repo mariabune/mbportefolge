@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import logoMb from "@/assets/logo-mb.svg";
+import forsideAsset from "@/assets/ai-haandbog-forside.png.asset.json";
+import indhold1Asset from "@/assets/ai-haandbog-indhold-1.png.asset.json";
+import indhold2Asset from "@/assets/ai-haandbog-indhold-2.png.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -31,8 +34,6 @@ const PLAYBOOK_GOALS = [
 ] as const;
 
 const IMAGE_SPACES = [
-  { number: "01", label: "Moodboard", rotate: "md:-rotate-1" },
-  { number: "02", label: "Skitser af Finn", rotate: "md:rotate-1" },
   { number: "03", label: "Designproces", rotate: "md:-rotate-1" },
   { number: "04", label: "Sider fra håndbogen", rotate: "md:rotate-1" },
   { number: "05", label: "Det færdige resultat", rotate: "md:-rotate-1" },
@@ -165,9 +166,38 @@ function AiPlaybookCase() {
                 </blockquote>
               </div>
             </div>
-            <div className="mt-14 grid gap-8 sm:grid-cols-2">
-              <ImageSpace {...IMAGE_SPACES[0]} />
-              <ImageSpace {...IMAGE_SPACES[1]} />
+            <div className="mt-14 space-y-12">
+              <figure className="relative mx-auto w-fit max-w-[280px] md:-rotate-1 sm:max-w-[320px]">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                <img
+                  src={forsideAsset.url}
+                  alt="Forsiden af AI-håndbogen: GLS' AI-figur Finn, en lyspære og teksten »Dit opslagsværk til brug af AI i dit arbejde«"
+                  width={595}
+                  height={842}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">den færdige forside!</figcaption>
+              </figure>
+              <figure className="relative mx-auto w-fit max-w-xl md:rotate-1">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                <div className="flex border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]">
+                  <img
+                    src={indhold1Asset.url}
+                    alt="Indholdsfortegnelsen, side 2: kapitlerne Kom godt i gang, Mød Finn, Hvornår bruges AI? og Datasikkerhed"
+                    width={595}
+                    height={842}
+                    className="w-1/2"
+                  />
+                  <img
+                    src={indhold2Asset.url}
+                    alt="Indholdsfortegnelsen, side 3: kapitlerne Det gode prompt, Tænk kritisk, Samarbejde med AI og Hurtig hjælp"
+                    width={595}
+                    height={842}
+                    className="w-1/2 border-l border-ink/20"
+                  />
+                </div>
+                <figcaption className="hand mt-3 text-center text-ink-soft">indholdsfortegnelsen — 8 kapitler, hver sin farve</figcaption>
+              </figure>
             </div>
           </section>
 
@@ -182,8 +212,8 @@ function AiPlaybookCase() {
               </div>
             </div>
             <div className="mt-14 grid gap-8 sm:grid-cols-2">
-              <ImageSpace {...IMAGE_SPACES[3]} />
-              <ImageSpace {...IMAGE_SPACES[4]} />
+              <ImageSpace {...IMAGE_SPACES[1]} />
+              <ImageSpace {...IMAGE_SPACES[2]} />
             </div>
           </section>
 
@@ -234,7 +264,7 @@ function AiPlaybookCase() {
                 <p>En del af projektet bestod i at arbejde med AI. Derfor brugte vi arbejdsmetoder som HITL (human in the loop) og prompt engineering, til at få det optimale ud af vores tid. Undervejs blev vi selv klogere på hvad arbejdet med AI kan bidrage med, og hvordan man bruger det som værktøj uden at slippe tøjlerne helt. Vi opdelte indholdet imellem os i gruppen, så vi hver især stod for at skrive tekst til 2 kapitler. Vi brugte blandt andet AI til at brainstorme indhold, tjekke fejl, og skabe sammenhæng mellem vores tekster. Samtidig har vi forholdt os kritisk overfor outputs og taget selvstændige beslutninger.</p>
               </div>
               <div className="lg:col-span-5">
-                <ImageSpace {...IMAGE_SPACES[2]} />
+                <ImageSpace {...IMAGE_SPACES[0]} />
               </div>
             </div>
           </section>
