@@ -270,7 +270,7 @@ function GarnOgCraftCase() {
 
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
 
-            <figure className="relative mx-auto mt-12 w-fit max-w-xl">
+            <figure className="relative mx-auto mt-12 w-fit max-w-[280px]">
               <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
               <img
                 src={garnIkoner.url}
