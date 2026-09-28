@@ -7,6 +7,8 @@ import garnCraftsalon from "@/assets/garn-craft-craftsalon.svg.asset.json";
 import garnOmos from "@/assets/garn-craft-omos.svg.asset.json";
 import garnLogoer from "@/assets/garn-craft-logoer.svg.asset.json";
 import garnIkoner from "@/assets/garn-craft-ikoner.svg.asset.json";
+import garnMoodboard from "@/assets/garn-craft-moodboard.svg.asset.json";
+import garnStyleTile from "@/assets/garn-craft-style-tile.svg.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -311,7 +313,32 @@ function GarnOgCraftCase() {
             </div>
 
             <div className="mt-12 grid gap-10 sm:grid-cols-2">
-              <ImageSpace number="03" title="Research & visuel retning" note="fra analyse til style tile" />
+              <div className="grid gap-6 sm:col-span-2 sm:gap-8 sm:grid-cols-2">
+                <figure className="relative">
+                  <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                  <img
+                    src={garnMoodboard.url}
+                    alt="Moodboard til Garn og Craft: et collage af inspiration i grønne og orange nuancer — fotos af garnnøgler, strik, natur og butikkens stemning"
+                    width={1049}
+                    height={1009}
+                    className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                    loading="lazy"
+                  />
+                  <figcaption className="hand mt-3 text-center text-ink-soft">moodboard — butikkens stemning</figcaption>
+                </figure>
+                <figure className="relative">
+                  <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                  <img
+                    src={garnStyleTile.url}
+                    alt="Style tile til Garn og Craft: farvepalet med mørkeblå, grøn, lysegrøn, gul og orange, knapper i mørkeblå og grøn, Garn & Crafts skrifttype og håndtegnede illustrationer af garnnøgler, katte og strikkeudstyr"
+                    width={1056}
+                    height={630}
+                    className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                    loading="lazy"
+                  />
+                  <figcaption className="hand mt-3 text-center text-ink-soft">style tile — farver, knapper og udtryk</figcaption>
+                </figure>
+              </div>
               <ImageSpace number="04" title="Wireframes & prototype" note="test, ret til, test igen" />
             </div>
 
