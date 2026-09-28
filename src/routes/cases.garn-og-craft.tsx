@@ -269,20 +269,22 @@ function GarnOgCraftCase() {
               </div>
             </div>
 
-            <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
+            <div className="mt-12 grid items-center gap-10 lg:grid-cols-12">
+              <p className="text-lg leading-relaxed lg:col-span-7">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
 
-            <figure className="relative mx-auto mt-12 w-fit max-w-[280px]">
-              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
-              <img
-                src={garnIkoner.url}
-                alt="Seks håndtegnede ikoner i farvede cirkler: et fællesskab af mennesker (grøn), en garnnøgle (grønblå), strikkepinde med garn (gul), en kat (orange), en gaveæske (lilla) og et hjerte med strikkepind (lyserød)"
-                width={1304}
-                height={1646}
-                className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
-                loading="lazy"
-              />
-              <figcaption className="hand mt-3 text-center text-ink-soft">ikoner til det nye udtryk</figcaption>
-            </figure>
+              <figure className="relative mx-auto w-fit max-w-[280px] lg:col-span-5">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                <img
+                  src={garnIkoner.url}
+                  alt="Seks håndtegnede ikoner i farvede cirkler: et fællesskab af mennesker (grøn), en garnnøgle (grønblå), strikkepinde med garn (gul), en kat (orange), en gaveæske (lilla) og et hjerte med strikkepind (lyserød)"
+                  width={1304}
+                  height={1646}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                  loading="lazy"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">ikoner til det nye udtryk</figcaption>
+              </figure>
+            </div>
           </section>
 
           <section aria-labelledby="process-title" className="py-14">
