@@ -166,8 +166,8 @@ function AiPlaybookCase() {
                 </blockquote>
               </div>
             </div>
-            <div className="mt-14 space-y-12">
-              <figure className="relative mx-auto w-fit max-w-[280px] md:-rotate-1 sm:max-w-[320px]">
+            <div className="mt-14 grid gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-6">
+              <figure className="relative mx-auto w-fit max-w-[280px] sm:max-w-[320px] lg:mx-0 lg:w-full lg:max-w-none">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                 <img
                   src={forsideAsset.url}
@@ -178,7 +178,7 @@ function AiPlaybookCase() {
                 />
                 <figcaption className="hand mt-3 text-center text-ink-soft">den færdige forside!</figcaption>
               </figure>
-              <figure className="relative mx-auto w-fit max-w-xl md:rotate-1">
+              <figure className="relative mx-auto w-fit max-w-xl lg:col-span-2 lg:mx-0 lg:w-full lg:max-w-none">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
                 <div className="flex border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]">
                   <img
