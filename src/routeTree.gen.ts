@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as NangiRouteImport } from './routes/nangi'
 import { Route as CasesAiPlaybookRouteImport } from './routes/cases.ai-playbook'
+import { Route as CasesGarnOgCraftRouteImport } from './routes/cases.garn-og-craft'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -28,35 +29,45 @@ const CasesAiPlaybookRoute = CasesAiPlaybookRouteImport.update({
   path: '/cases/ai-playbook',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasesGarnOgCraftRoute = CasesGarnOgCraftRouteImport.update({
+  id: '/cases/garn-og-craft',
+  path: '/cases/garn-og-craft',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/nangi': typeof NangiRoute
   '/cases/ai-playbook': typeof CasesAiPlaybookRoute
+  '/cases/garn-og-craft': typeof CasesGarnOgCraftRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/nangi': typeof NangiRoute
   '/cases/ai-playbook': typeof CasesAiPlaybookRoute
+  '/cases/garn-og-craft': typeof CasesGarnOgCraftRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/nangi': typeof NangiRoute
   '/cases/ai-playbook': typeof CasesAiPlaybookRoute
+  '/cases/garn-og-craft': typeof CasesGarnOgCraftRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/nangi' | '/cases/ai-playbook'
+  fullPaths: '/' | '/nangi' | '/cases/ai-playbook' | '/cases/garn-og-craft'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/nangi' | '/cases/ai-playbook'
-  id: '__root__' | '/' | '/nangi' | '/cases/ai-playbook'
+  to: '/' | '/nangi' | '/cases/ai-playbook' | '/cases/garn-og-craft'
+  id:
+    '__root__' | '/' | '/nangi' | '/cases/ai-playbook' | '/cases/garn-og-craft'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   NangiRoute: typeof NangiRoute
   CasesAiPlaybookRoute: typeof CasesAiPlaybookRoute
+  CasesGarnOgCraftRoute: typeof CasesGarnOgCraftRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -82,6 +93,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CasesAiPlaybookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cases/garn-og-craft': {
+      id: '/cases/garn-og-craft'
+      path: '/cases/garn-og-craft'
+      fullPath: '/cases/garn-og-craft'
+      preLoaderRoute: typeof CasesGarnOgCraftRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -89,6 +107,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   NangiRoute: NangiRoute,
   CasesAiPlaybookRoute: CasesAiPlaybookRoute,
+  CasesGarnOgCraftRoute: CasesGarnOgCraftRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

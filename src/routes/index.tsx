@@ -59,11 +59,11 @@ const CASES = [
   },
   {
     img: caseMotion,
-    title: "Motion — “Puls”",
-    meta: "2024 · Motion / Web",
-    tag: "Motion",
+    title: "Hjemmeside & rebranding",
+    meta: "Skoleprojekt · Web / Rebranding",
+    tag: "Web",
     tagColor: "bg-cyan text-paper",
-    note: "so many keyframes",
+    note: "Garn og Craft",
     rotate: "md:rotate-1",
   },
   {
@@ -219,8 +219,12 @@ function Index() {
             <ul className="grid gap-8 sm:grid-cols-2">
               {CASES.map((c) => (
                 <li key={c.title}>
-                {c === CASES[0] ? (
-                  <Link to="/cases/ai-playbook" className="block focus-visible:outline-offset-8" aria-label="Open the AI playbook case">
+                {c === CASES[0] || c === CASES[1] ? (
+                  <Link
+                    to={c === CASES[0] ? "/cases/ai-playbook" : "/cases/garn-og-craft"}
+                    className="block focus-visible:outline-offset-8"
+                    aria-label={c === CASES[0] ? "Open the AI playbook case" : "Open the Garn og Craft case"}
+                  >
                     <article
                       className={`group relative ${c.rotate} transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
                     >
@@ -237,7 +241,7 @@ function Index() {
                         <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
                           <div>
                             <h3 className="font-display text-lg tracking-tight sm:text-xl">
-                              AI-playbook
+                              {c === CASES[0] ? "AI-playbook" : c.title}
                             </h3>
                             <p className="label-mono mt-1 text-ink-soft">{c.meta}</p>
                           </div>
@@ -280,7 +284,7 @@ function Index() {
                     </div>
                     <span
                       aria-label={`Note: ${c.note}`}
-                      className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Motion" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
+                      className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Web" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
                     >
                       {c.note}
                     </span>

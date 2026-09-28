@@ -10,3 +10,4 @@
 - [x] Place real handbook pages (cover + contents spread) on the case page, aligned in one row inside 2. Løsningen with the text broken up
 - [x] Fill all remaining case-page image slots with the real uploads: chapter-1 pages (incl. PDF page), company Finn, own Finn version, and HITL illustration
 - [x] Swap handbook page images to the user's SVG versions (A4_-_8.svg, A4_-_39.svg)
+- [x] Add `/cases/garn-og-craft` using the established case layout, supplied copy, image spaces, and a link from case two
