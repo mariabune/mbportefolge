@@ -4,6 +4,11 @@ import logoMb from "@/assets/logo-mb.svg";
 import forsideAsset from "@/assets/ai-haandbog-forside.png.asset.json";
 import indhold1Asset from "@/assets/ai-haandbog-indhold-1.png.asset.json";
 import indhold2Asset from "@/assets/ai-haandbog-indhold-2.png.asset.json";
+import kap1KomGodtAsset from "@/assets/ai-haandbog-kap1-kom-godt-i-gang.svg.asset.json";
+import kap1TaenkerAsset from "@/assets/ai-haandbog-kap1-saadan-taenker-en-ai.svg.asset.json";
+import companyFinnAsset from "@/assets/company-finn.png.asset.json";
+import myFinnAsset from "@/assets/my-finn.png.asset.json";
+import hitlAsset from "@/assets/hitl.png.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -31,13 +36,6 @@ const PLAYBOOK_GOALS = [
   "Inspirere og motivere medarbejderne til at bruge AI",
   "Klæde medarbejderne på til at forholde sig kritisk og tage ansvar",
   "Give medarbejdere konkrete redskaber til brug af AI",
-] as const;
-
-const IMAGE_SPACES = [
-  { number: "01", label: "Moodboard", rotate: "md:-rotate-1", aspect: "aspect-[4/3]" },
-  { number: "02", label: "Skitser af Finn", rotate: "md:rotate-1", aspect: "aspect-[4/3]" },
-  { number: "03", label: "Designproces", rotate: "md:-rotate-1", aspect: "aspect-[2/1]" },
-  { number: "04", label: "Sider fra håndbogen", rotate: "md:rotate-1", aspect: "aspect-[5/7]" },
 ] as const;
 
 export const Route = createFileRoute("/cases/ai-playbook")({
@@ -77,26 +75,6 @@ export const Route = createFileRoute("/cases/ai-playbook")({
   }),
   component: AiPlaybookCase,
 });
-
-function ImageSpace({
-  number,
-  label,
-  rotate,
-  aspect,
-}: (typeof IMAGE_SPACES)[number]) {
-  return (
-    <figure className={`relative ${rotate}`}>
-      <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
-      <div className={`grid-paper flex ${aspect} items-center justify-center border border-ink/20 bg-paper-deep px-6 text-center shadow-[0_10px_24px_rgb(0_0_0/0.12)]`}>
-        <div>
-          <span className="label-mono text-ink-soft">Billede {number}</span>
-          <p className="mt-3 font-display text-2xl">{label}</p>
-        </div>
-      </div>
-      <figcaption className="hand mt-3 text-center text-ink-soft">{label}</figcaption>
-    </figure>
-  );
-}
 
 function AiPlaybookCase() {
   return (
@@ -212,12 +190,29 @@ function AiPlaybookCase() {
             </div>
 
             <div className="mt-12 grid items-start gap-10 lg:grid-cols-12">
-              <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
+              <div className="space-y-6 text-lg leading-relaxed lg:col-span-5">
                 <p>Vi sørgede for at tekststykkerne var relevante og præcise, og tilføjede godt med luft og whitespace på siderne, for at skabe ro og overblik.</p>
               </div>
-              <div className="lg:col-span-5">
-                <ImageSpace {...IMAGE_SPACES[3]} />
-              </div>
+              <figure className="relative lg:col-span-7">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                <div className="flex border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]">
+                  <img
+                    src={kap1KomGodtAsset.url}
+                    alt="Kapitel 1 i AI-håndbogen, »Kom godt i gang«: indholdslisten Hvad kan du bruge denne guide til?, Hvad er AI? og Sådan ”tænker” en AI"
+                    width={595}
+                    height={842}
+                    className="w-1/2"
+                  />
+                  <img
+                    src={kap1TaenkerAsset.url}
+                    alt="Siden Sådan ”tænker” en AI fra kapitel 1: en illustration af et neuralt netværk med input-lag, skjulte lag og output-lag inde i en tankeboble over Finn"
+                    width={1240}
+                    height={1755}
+                    className="w-1/2 border-l border-ink/20"
+                  />
+                </div>
+                <figcaption className="hand mt-3 text-center text-ink-soft">sider fra kapitel 1 — kom godt i gang</figcaption>
+              </figure>
             </div>
 
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden inkluderede vi konkrete arbejdsredskaber til medarbejderne såsom prompt-bibliotek, beslutningstræ og ideer til arbejdsopgaver med AI. Håndbogens design er skabt i samme visuelle stil som kunden GLS, ved brug af samme farvepalette, visuelle elementer og deres AI figur Finn.</p>
@@ -261,21 +256,45 @@ function AiPlaybookCase() {
             </aside>
 
             <div className="grid items-start gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-5">
-                <ImageSpace {...IMAGE_SPACES[0]} />
-              </div>
+              <figure className="relative mx-auto w-fit max-w-[320px] lg:col-span-5 lg:mx-0 lg:w-full lg:max-w-none">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                <img
+                  src={companyFinnAsset.url}
+                  alt="GLS' egen AI-figur Finn: en blå robot med slipsemønster, og Finn sammen med den gule robot ALY"
+                  width={595}
+                  height={842}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">GLS' egen AI-figur Finn</figcaption>
+              </figure>
               <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
                 <p>Herefter gik arbejdet i gang. Første skridt blev at lægge os fast på en visuel stil. Vi brugte kundens farvepalette og visuelle elementer, og ville inkorporere deres egen AI figur Finn. En af mine roller i projektet var at stå for at skitsere en version af Finn som passede ind i vores playbook, samt designe forsiden og andre illustrationer til playbooken. Vores arbejdsproces var i høj grad præget af design thinking, da vi skitserede, lavede prototyper og gik frem og tilbage i processen for at rette til og tilføje.</p>
               </div>
             </div>
 
             <div className="mt-12 grid items-start gap-10 lg:grid-cols-12">
-              <div className="lg:col-span-5">
-                <ImageSpace {...IMAGE_SPACES[1]} />
-              </div>
-              <div className="lg:col-span-7">
-                <ImageSpace {...IMAGE_SPACES[2]} />
-              </div>
+              <figure className="relative mx-auto w-fit max-w-[320px] lg:col-span-5 lg:mx-0 lg:w-full lg:max-w-none">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                <img
+                  src={myFinnAsset.url}
+                  alt="Min version af Finn: seks skitser af Finn-robotten i blå og gul, siddende og som portræt"
+                  width={595}
+                  height={842}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">min version af Finn!</figcaption>
+              </figure>
+              <figure className="relative lg:col-span-7">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                <img
+                  src={hitlAsset.url}
+                  alt="Min illustration af HITL-metoden: cirklerne Du sætter opgaven, Finn foreslår, Du tjekker og Godkendt, hvor røde cirkler er dig og blå er Finn"
+                  width={1115}
+                  height={794}
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">min illustration af HITL-metoden</figcaption>
+              </figure>
             </div>
 
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">En del af projektet bestod i at arbejde med AI. Derfor brugte vi arbejdsmetoder som HITL (human in the loop) og prompt engineering, til at få det optimale ud af vores tid. Undervejs blev vi selv klogere på hvad arbejdet med AI kan bidrage med, og hvordan man bruger det som værktøj uden at slippe tøjlerne helt. Vi opdelte indholdet imellem os i gruppen, så vi hver især stod for at skrive tekst til 2 kapitler. Vi brugte blandt andet AI til at brainstorme indhold, tjekke fejl, og skabe sammenhæng mellem vores tekster. Samtidig har vi forholdt os kritisk overfor outputs og taget selvstændige beslutninger.</p>
