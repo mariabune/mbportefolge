@@ -143,13 +143,12 @@ function GarnOgCraftCase() {
           </header>
 
           <section aria-labelledby="introduction-title" className="pt-6 pb-14">
-            <div className="grid gap-10 lg:grid-cols-12">
-              <div className="flex flex-col lg:col-span-4 lg:pt-24">
-                <div>
-                  <p className="label-mono text-flame">01</p>
-                  <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
-                </div>
-                <dl className="mt-8 flex flex-1 flex-col justify-between border border-ink/25 px-6 py-5">
+            <p className="label-mono text-flame">01</p>
+            <h2 id="introduction-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
+
+            <div className="mt-8 grid gap-10 lg:grid-cols-12">
+              <div className="flex flex-col lg:col-span-4">
+                <dl className="flex flex-1 flex-col justify-between border border-ink/25 px-6 py-5">
                   {PROJECT_FACTS.map((fact) => (
                     <div key={fact.label} className="py-2">
                       <dt className="label-mono text-flame">{fact.label}</dt>
@@ -171,7 +170,7 @@ function GarnOgCraftCase() {
                 </figure>
               </div>
               <div className="flex flex-col lg:col-span-8">
-                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
+                <div className="grid gap-6 sm:gap-8 sm:grid-cols-2 lg:-mt-20">
                   <figure className="relative">
                     <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                     <img
