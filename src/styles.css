@@ -217,9 +217,9 @@ html.a11y-contrast .grain::after {
 /* Small uppercase mono label */
 @utility label-mono {
   font-family: var(--font-mono);
-  font-size: 0.6875rem;
+  font-size: 0.8125rem;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.14em;
 }
 
 /* Handwritten sticker comment */

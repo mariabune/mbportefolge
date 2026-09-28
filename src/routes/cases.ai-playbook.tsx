@@ -151,8 +151,8 @@ function AiPlaybookCase() {
                 <p className="label-mono text-flame">01</p>
                 <h2 id="introduction-title" className="mt-2 font-display text-4xl sm:text-5xl">1. Introduktion</h2>
                 <dl className="mt-8">
-                  {PROJECT_FACTS.map((fact, index) => (
-                    <div key={fact.label} className={`py-4 ${index < PROJECT_FACTS.length - 1 ? "border-b border-ink/25" : ""}`}>
+                  {PROJECT_FACTS.map((fact) => (
+                    <div key={fact.label} className="py-3.5">
                       <dt className="label-mono text-ink-soft">{fact.label}</dt>
                       <dd className="mt-1.5 text-base leading-relaxed">{fact.value}</dd>
                     </div>
