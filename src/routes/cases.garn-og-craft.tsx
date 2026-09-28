@@ -3,6 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import logoMb from "@/assets/logo-mb.svg";
 import garnForside from "@/assets/garn-craft-forside.svg.asset.json";
 import garnEvents from "@/assets/garn-craft-events.svg.asset.json";
+import garnCraftsalon from "@/assets/garn-craft-craftsalon.svg.asset.json";
+import garnOmos from "@/assets/garn-craft-omos.svg.asset.json";
 import garnLogoer from "@/assets/garn-craft-logoer.svg.asset.json";
 
 const NAV = [
@@ -215,7 +217,54 @@ function GarnOgCraftCase() {
                 <p>Vi redesignede desuden logoet til at matche hjemmesidens nye visuelle identitet og farver, og foreslog hvordan man kunne engagere flere studerende igennem sociale medier.</p>
                 <p>Vi lavede, gennem vores research, desuden en guide til hvordan man opbygger sociale fællesskaber online, da vi så et stort kundepotentiale derigennem. Det handler blandt andet om at følge trends, og lave relevant indhold der får folk til at reagere, kommentere og reposte.</p>
               </div>
-              <ImageSpace number="02" title="Hjemmeside & events" note="events frem i det visuelle hierarki" className="lg:col-span-7" />
+              <div className="lg:col-span-7">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+                  <figure className="relative">
+                    <span aria-hidden="true" className="tape absolute -top-2 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                    <img
+                      src={garnForside.url}
+                      alt="Forsiden til Garn og Craft: navigation, foto af to kvinder der strikker sammen, afsnittet Garn & Craft KLUBBEN, vareudvalg af garn, december-events og gaveideer"
+                      width={951}
+                      height={1733}
+                      className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure className="relative">
+                    <span aria-hidden="true" className="tape absolute -top-2 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                    <img
+                      src={garnEvents.url}
+                      alt="Events-siden til Garn og Craft: overskriften EVENTS over et foto af garnnøgler, tekst om workshops og kurser, december-montheder med events der kan tilmeldes, og månedsfaneblade fra januar til maj"
+                      width={951}
+                      height={1658}
+                      className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure className="relative">
+                    <span aria-hidden="true" className="tape absolute -top-2 left-1/2 z-10 -translate-x-1/2 rotate-1" />
+                    <img
+                      src={garnCraftsalon.url}
+                      alt="Craftsalon-siden til Garn og Craft: overskriften Craftsalon, dato, gratis beskrivelse, tilmeld-knap, relaterede events og footer med navigation, åbningstider og kontakt"
+                      width={951}
+                      height={1237}
+                      className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <figure className="relative">
+                    <span aria-hidden="true" className="tape absolute -top-2 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                    <img
+                      src={garnOmos.url}
+                      alt="Om os-siden til Garn og Craft: overskriften Om os, hilsenen Hej jeg hedder Helle, beskrivelse af Garn & Craft KLUBBEN, og afsnittet Om butikken med adresse i Kolding"
+                      width={951}
+                      height={1419}
+                      className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                      loading="lazy"
+                    />
+                  </figure>
+                </div>
+              </div>
             </div>
 
             <p className="mt-12 max-w-3xl text-lg leading-relaxed">Desuden gav vi forslag til hvordan dette kunne hænge sammen med virksomhedens markedsføring på sociale medier. Resultatet blev en rebranding af hjemmesiden og sociale medier, der engagerer studerende på en måde så den også hænger sammen med hendes fysiske butik, samtidig med at vi beholdt Garn og Crafts stemning og identitet.</p>
