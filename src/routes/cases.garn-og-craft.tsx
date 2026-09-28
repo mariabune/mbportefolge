@@ -313,7 +313,7 @@ function GarnOgCraftCase() {
             </div>
 
             <div className="mt-12 grid gap-10 sm:grid-cols-2">
-              <div className="grid gap-6 sm:gap-8 sm:grid-cols-2">
+              <div className="grid gap-6 sm:col-span-2 sm:gap-8 sm:grid-cols-2">
                 <figure className="relative">
                   <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 rotate-1" />
                   <img
