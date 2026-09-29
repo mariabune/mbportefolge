@@ -61,7 +61,7 @@ const CASES = [
     rotate: "md:-rotate-1",
   },
   {
-    img: caseMotion,
+    img: garnCraftGalleri.url,
     title: "Hjemmeside & rebranding",
     meta: "Skoleprojekt · Web / Rebranding",
     tag: "Web",
