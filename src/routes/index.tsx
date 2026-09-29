@@ -37,7 +37,7 @@ export const Route = createFileRoute("/")({
           name: "Maria",
           alternateName: "m.b.",
           jobTitle: "Multimedia design student",
-          email: "mailto:hej@mb.dk",
+          email: "mailto:Maria.bune@gmail.com",
           address: { "@type": "PostalAddress", addressLocality: "København", addressCountry: "DK" },
           knowsAbout: ["Multimedia design", "Print", "Motion design", "Visual identity", "Editorial design"],
         }),
@@ -498,11 +498,14 @@ function Index() {
               write me a note — I always answer
             </p>
             <a
-              href="mailto:hej@mb.dk"
+              href="mailto:Maria.bune@gmail.com"
               className="mt-8 inline-block rounded-full bg-ink px-6 py-4 font-mono text-sm uppercase tracking-[0.15em] text-paper transition-colors hover:bg-flame"
             >
-              hej@mb.dk
+              Maria.bune@gmail.com
             </a>
+            <p className="label-mono mt-4 text-ink-soft">
+              +45 42 54 95 64
+            </p>
             <ul aria-label="Social profiles" className="mt-8 flex justify-center gap-6">
               {["Instagram", "Behance", "LinkedIn"].map((s) => (
                 <li key={s}>
