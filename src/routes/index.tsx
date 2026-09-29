@@ -72,6 +72,62 @@ const CASES = [
   },
 ] as const;
 
+const JOBS = [
+  {
+    role: "Stifter & Designer",
+    place: "Nangi Company",
+    period: "est. 2025",
+    accent: "border-flame",
+    bullets: [
+      "Opstart og drift af lille etisk produktion i Sri Lanka",
+      "Design, sociale medier, photoshoots, salg og kommunikation",
+    ],
+  },
+  {
+    role: "Barista",
+    place: "Zephyr Wainui",
+    period: "2025",
+    accent: "border-cyan",
+    bullets: [
+      "Træning i kaffekunsten",
+      "Samarbejde i et lille team",
+      "Daglig kontakt med mange forskellige kunder",
+    ],
+  },
+  {
+    role: "Yoga instructor",
+    place: "Lapoint Surfcamp",
+    period: "2024",
+    accent: "border-flame",
+    bullets: [
+      "Afholde daglige yogatimer for gæster i campen",
+      "Sørge for at alle gæster føler sig godt tilpas",
+    ],
+  },
+  {
+    role: "Stoke rep and host",
+    place: "Stoke Travel",
+    period: "2023",
+    accent: "border-cyan",
+    bullets: [
+      "Afholde vinsmagninger i intime omgivelser",
+      "Skabe en god stemning til arrangementet",
+    ],
+  },
+  {
+    role: "Rejseleder",
+    place: "Bravo Tours",
+    period: "2021–2022",
+    accent: "border-flame",
+    bullets: [
+      "Have mange hatte på",
+      "Holde hovedet koldt i stressede situationer",
+      "Løse problemer for gæster",
+      "Guide på udflugter, velkomstmøder og daglig interaktion",
+    ],
+  },
+] as const;
+
 const NAV = [
   { label: "HELLO", href: "#hello" },
   { label: "CASES", href: "#cases" },
