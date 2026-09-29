@@ -391,20 +391,36 @@ function Index() {
               <div>
                 <h3 className="label-mono mb-4 text-ink-soft">Færdigheder</h3>
                 <ul className="flex flex-wrap gap-2">
-                  {["Digital/grafisk design", "Branding", "SEO", "Brugertest", "Basal kodning", "Wordpress", "Vibecoding"].map((skill, i) => (
+                  {[
+                    "Visuel design",
+                    "Branding & rebranding",
+                    "Webdesign & developement",
+                    "UX/UI & prototyping",
+                    "Content creation",
+                    "SEO & digital marketing",
+                    "AI & digitale workflows",
+                  ].map((skill, i) => (
                     <li
                       key={skill}
-                      className={`label-mono rounded-full px-3 py-1.5 ${
-                        i === 0
-                          ? "bg-ink text-paper"
-                          : i === 1
-                            ? "bg-flame text-paper"
-                            : i === 2
-                              ? "bg-cyan text-paper"
-                              : "ring-1 ring-ink/20"
+                      className={`label-mono rounded-full border-2 px-3 py-1.5 text-ink ${
+                        i % 3 === 0 ? "border-flame" : i % 3 === 1 ? "border-cyan" : "border-sun"
                       }`}
                     >
                       {skill}
+                    </li>
+                  ))}
+                </ul>
+
+                <h3 className="label-mono mt-10 mb-4 text-ink-soft">Tools</h3>
+                <ul className="flex flex-wrap gap-2">
+                  {["Figma", "Adobe Creative Cloud", "Wordpress", "VSC", "AI tools"].map((tool, i) => (
+                    <li
+                      key={tool}
+                      className={`label-mono rounded-full border-2 px-3 py-1.5 text-ink ${
+                        i % 3 === 0 ? "border-flame" : i % 3 === 1 ? "border-cyan" : "border-sun"
+                      }`}
+                    >
+                      {tool}
                     </li>
                   ))}
                 </ul>
