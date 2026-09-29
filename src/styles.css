@@ -9,7 +9,8 @@
  *
  * The whole site is a living notebook page: ruled horizontal lines,
  * one red margin line down the left, notes taped on with stickers
- * carrying small handwritten comments. Riso accents (flame + cyan).
+ * carrying small handwritten comments. The palette uses marigold,
+ * deep olive and vermilion throughout.
  */
 
 @theme inline {
@@ -58,17 +59,17 @@
 
 :root {
   --radius: 0.5rem;
-  --paper: oklch(0.962 0.011 92);
-  --paper-deep: oklch(0.937 0.013 92);
+  --paper: #edcb62;
+  --paper-deep: #edcb62;
 
-  --ink: oklch(0.235 0.02 80);
-  --ink-soft: oklch(0.45 0.02 80);
-  --flame: oklch(0.63 0.216 32.5);
-  --riso-cyan: oklch(0.53 0.1 247);
-  --sun: oklch(0.85 0.13 92);
-  --margin: oklch(0.63 0.19 25);
-  --rule: oklch(0.72 0.05 250);
-  --tape: oklch(0.94 0.03 95);
+  --ink: #39432a;
+  --ink-soft: #39432a;
+  --flame: #f04020;
+  --riso-cyan: #39432a;
+  --sun: #edcb62;
+  --margin: #f04020;
+  --rule: #39432a;
+  --tape: #edcb62;
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -86,18 +87,24 @@
   --accent-foreground: var(--ink);
   --destructive: var(--flame);
   --destructive-foreground: var(--paper);
-  --border: oklch(0.8 0.02 85);
-  --input: oklch(0.8 0.02 85);
+  --border: #39432a;
+  --input: #39432a;
   --ring: var(--flame);
 }
 
 .dark {
-  --paper: oklch(0.235 0.02 80);
-  --paper-deep: oklch(0.28 0.02 80);
-  --ink: oklch(0.94 0.02 88);
-  --ink-soft: oklch(0.7 0.02 85);
-  --rule: oklch(0.42 0.03 250);
-  --margin: oklch(0.68 0.19 25);
+  --paper: #39432a;
+  --paper-deep: #39432a;
+  --ink: #edcb62;
+  --ink-soft: #edcb62;
+  --flame: #f04020;
+  --riso-cyan: #edcb62;
+  --sun: #edcb62;
+  --margin: #f04020;
+  --rule: #edcb62;
+  --tape: #edcb62;
+  --border: #edcb62;
+  --input: #edcb62;
   --background: var(--paper);
   --foreground: var(--ink);
 }
