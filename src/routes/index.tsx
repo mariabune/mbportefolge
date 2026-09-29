@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
 import aiPlaybookCover from "@/assets/ai-playbook-cover.png.asset.json";
 import aiPlaybookIndhold from "@/assets/ai-playbook-indhold.png.asset.json";
-import caseMotion from "@/assets/case-motion.png";
+import garnCraftGalleri from "@/assets/garn-og-craft-galleri.png.asset.json";
 import nangiCover from "@/assets/nangi-cover.png";
 import logoMb from "@/assets/logo-mb.svg";
 
@@ -61,7 +61,7 @@ const CASES = [
     rotate: "md:-rotate-1",
   },
   {
-    img: caseMotion,
+    img: garnCraftGalleri.url,
     title: "Hjemmeside & rebranding",
     meta: "Skoleprojekt · Web / Rebranding",
     tag: "Web",
