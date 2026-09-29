@@ -371,20 +371,24 @@ function Nangi() {
                     {step.step}
                   </h3>
                   <div className="lg:col-span-8">
-                    <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
-                    {"img" in step && step.img && (
-                      <figure className="relative mt-6 max-w-md -rotate-1">
-                        <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
-                        <img
-                          src={step.img}
-                          alt={step.alt}
-                          width={1024}
-                          height={768}
-                          loading="lazy"
-                          className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
-                        />
-                        <figcaption className="hand mt-2 text-center text-ink-soft">{step.caption}</figcaption>
-                      </figure>
+                    {"img" in step && step.img ? (
+                      <div className="grid items-start gap-6 sm:grid-cols-[1fr,260px]">
+                        <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
+                        <figure className="relative max-w-[260px] -rotate-1 justify-self-start sm:justify-self-end">
+                          <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
+                          <img
+                            src={step.img}
+                            alt={step.alt}
+                            width={1024}
+                            height={768}
+                            loading="lazy"
+                            className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                          />
+                          <figcaption className="hand mt-2 text-center text-ink-soft">{step.caption}</figcaption>
+                        </figure>
+                      </div>
+                    ) : (
+                      <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
                     )}
                   </div>
                 </article>
