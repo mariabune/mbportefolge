@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import nangiCover from "@/assets/nangi-photoshoot.jpg.asset.json";
 import logoMb from "@/assets/logo-mb.svg";
+import nangiSketches from "@/assets/nangi-sketches.jpg.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -38,6 +39,9 @@ const PROCESS = [
   {
     step: "1. Ideation",
     text: "Processen starter med at jeg designer et stykke tøj. Inpspiration kan kome fra farvekombinationer jeg ser, naturen, noget stof, trends eller noget tøj jeg holder af. Jeg foretrækker at skitsere i hånden med pen og papir, og elsker at lægge de sidste detaljer på og farvelægge.",
+    img: nangiSketches.url,
+    alt: "Håndtegnede modetegninger af Nangi-styles i farver, spredt ud på et bord med farveblyanter, tusser og sticky notes",
+    caption: "Skitser fra tegnebrættet — i hånden, med pen og farver",
   },
   {
     step: "2. Prototype",
