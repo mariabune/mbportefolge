@@ -402,8 +402,12 @@ function Index() {
                   ].map((skill, i) => (
                     <li
                       key={skill}
-                      className={`label-mono rounded-full border-2 px-3 py-1.5 text-ink ${
-                        i % 3 === 0 ? "border-flame" : i % 3 === 1 ? "border-cyan" : "border-sun"
+                      className={`label-mono cursor-default rounded-full border-2 bg-paper px-3 py-1.5 text-ink transition-[transform,background-color,color] duration-200 ease-out hover:scale-105 ${
+                        i % 3 === 0
+                          ? "border-flame hover:bg-flame hover:text-paper"
+                          : i % 3 === 1
+                            ? "border-cyan hover:bg-cyan hover:text-paper"
+                            : "border-sun hover:bg-sun hover:text-ink"
                       }`}
                     >
                       {skill}
@@ -416,8 +420,12 @@ function Index() {
                   {["Figma", "Adobe Creative Cloud", "Wordpress", "VSC", "AI tools"].map((tool, i) => (
                     <li
                       key={tool}
-                      className={`label-mono rounded-full border-2 px-3 py-1.5 text-ink ${
-                        i % 3 === 0 ? "border-flame" : i % 3 === 1 ? "border-cyan" : "border-sun"
+                      className={`label-mono cursor-default rounded-full border-2 bg-paper px-3 py-1.5 text-ink transition-[transform,background-color,color] duration-200 ease-out hover:scale-105 ${
+                        i % 3 === 0
+                          ? "border-flame hover:bg-flame hover:text-paper"
+                          : i % 3 === 1
+                            ? "border-cyan hover:bg-cyan hover:text-paper"
+                            : "border-sun hover:bg-sun hover:text-ink"
                       }`}
                     >
                       {tool}
