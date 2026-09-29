@@ -357,17 +357,19 @@ function Nangi() {
               Hvordan gør vi?
             </h2>
             <p className="hand mt-4 text-2xl text-ink-soft">fra skitse til tøj på kroppen</p>
-            <ol className="mt-10 grid gap-8 md:grid-cols-2">
+            <div className="mt-10 space-y-10">
               {PROCESS.map((step, i) => (
-                <li
+                <article
                   key={step.step}
-                  className={`rounded-sm p-6 ring-1 ring-ink/15 ${i % 2 === 0 ? "-rotate-1 bg-paper" : "rotate-1 bg-paper-deep"}`}
+                  className={`grid gap-6 lg:grid-cols-12 ${i > 0 ? "pt-10" : ""}`}
                 >
-                  <p className="label-mono text-flame">{step.step}</p>
-                  <p className="mt-3 text-base leading-relaxed">{step.text}</p>
-                </li>
+                  <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
+                    {step.step}
+                  </h3>
+                  <p className="text-base leading-relaxed lg:col-span-8 sm:text-lg">{step.text}</p>
+                </article>
               ))}
-            </ol>
+            </div>
           </section>
 
           {/* ---------- PROJEKTER ---------- */}
@@ -376,19 +378,27 @@ function Nangi() {
             <h2 id="projekter-title" className="pen-underline mt-2 w-fit pb-2 font-display text-4xl tracking-tight sm:text-5xl">
               Projekter jeg har lavet med Nangi
             </h2>
-            <div className="mt-10 space-y-10">
+            <ul className="mt-10 grid gap-8 md:grid-cols-2">
               {PROJECTS.map((project, i) => (
-                <article
-                  key={project.title}
-                  className={`grid gap-6 lg:grid-cols-12 ${i > 0 ? "pt-10" : ""}`}
-                >
-                  <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
-                    {project.title}
-                  </h3>
-                  <p className="text-base leading-relaxed lg:col-span-8 sm:text-lg">{project.text}</p>
-                </article>
+                <li key={project.title}>
+                  <article
+                    className={`rounded-sm bg-paper p-6 ring-1 ring-ink/15 transition-transform duration-300 hover:rotate-0 sm:p-8 ${i % 2 === 0 ? "-rotate-1" : "rotate-1"}`}
+                  >
+                    <h3 className="font-display text-2xl leading-snug tracking-tight">{project.title}</h3>
+                    <p className="mt-4 text-base leading-relaxed">{project.text}</p>
+                    <div className="mt-8 grid grid-cols-2 gap-5">
+                      {[0, 1].map((slot) => (
+                        <figure key={slot} className="relative">
+                          <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${slot === 0 ? "rotate-2" : "-rotate-2"}`} />
+                          <div className="aspect-[4/3] rounded-sm border border-dashed border-ink/30 bg-paper-deep" />
+                          <figcaption className="hand mt-2 text-center text-ink-soft">billede kommer…</figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           {/* ---------- WHAT'S NEXT ---------- */}
