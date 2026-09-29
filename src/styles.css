@@ -165,7 +165,7 @@ html.a11y-contrast {
   --margin: #f04020;
   --riso-cyan: #39432a;
   --sun: #edcb62;
-  --rule: #edcb62;
+  --rule: oklch(0.85 0 0);
   --border: #edcb62;
   --input: #edcb62;
 }
