@@ -59,17 +59,17 @@
 
 :root {
   --radius: 0.5rem;
-  --paper: #edcb62;
-  --paper-deep: #edcb62;
+  --paper: oklch(0.962 0.011 92);
+  --paper-deep: oklch(0.937 0.013 92);
 
-  --ink: #39432a;
-  --ink-soft: #39432a;
+  --ink: oklch(0.235 0.02 80);
+  --ink-soft: oklch(0.45 0.02 80);
   --flame: #f04020;
   --riso-cyan: #39432a;
   --sun: #edcb62;
   --margin: #f04020;
   --rule: #39432a;
-  --tape: #edcb62;
+  --tape: oklch(0.94 0.03 95);
 
   --background: var(--paper);
   --foreground: var(--ink);
@@ -93,16 +93,16 @@
 }
 
 .dark {
-  --paper: #39432a;
-  --paper-deep: #39432a;
-  --ink: #edcb62;
-  --ink-soft: #edcb62;
+  --paper: oklch(0.235 0.02 80);
+  --paper-deep: oklch(0.28 0.02 80);
+  --ink: oklch(0.94 0.02 88);
+  --ink-soft: oklch(0.7 0.02 85);
   --flame: #f04020;
   --riso-cyan: #edcb62;
   --sun: #edcb62;
   --margin: #f04020;
   --rule: #edcb62;
-  --tape: #edcb62;
+  --tape: oklch(0.94 0.03 95);
   --border: #edcb62;
   --input: #edcb62;
   --background: var(--paper);
