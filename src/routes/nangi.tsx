@@ -446,7 +446,7 @@ function Nangi() {
               +45 42 54 95 64
             </p>
             <p className="label-mono mt-14 text-ink-soft">
-              © 2026 nangi — a one-woman company in København
+              © 2026 nangi — a one-woman company
             </p>
           </footer>
         </div>
