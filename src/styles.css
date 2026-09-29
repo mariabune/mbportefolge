@@ -187,8 +187,8 @@ html.a11y-contrast .grain::after {
     to bottom,
     transparent 0px,
     transparent 31px,
-    color-mix(in oklab, var(--rule) 70%, transparent) 31px,
-    color-mix(in oklab, var(--rule) 70%, transparent) 32px
+    color-mix(in oklab, var(--rule) 30%, transparent) 31px,
+    color-mix(in oklab, var(--rule) 30%, transparent) 32px
   );
 }
 
