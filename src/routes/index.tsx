@@ -6,6 +6,7 @@ import aiPlaybookIndhold from "@/assets/ai-playbook-indhold.png.asset.json";
 import garnCraftGalleri from "@/assets/garn-og-craft-galleri.png.asset.json";
 import nangiCover from "@/assets/nangi-cover.png";
 import logoMb from "@/assets/logo-mb.svg";
+import cvPdfAsset from "@/assets/cv-maria-bune.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,6 +69,62 @@ const CASES = [
     tagColor: "bg-cyan text-paper",
     note: "Garn og Craft",
     rotate: "md:rotate-1",
+  },
+] as const;
+
+const JOBS = [
+  {
+    role: "Stifter & Designer",
+    place: "Nangi Company",
+    period: "est. 2025",
+    accent: "border-flame",
+    bullets: [
+      "Opstart og drift af lille etisk produktion i Sri Lanka",
+      "Design, sociale medier, photoshoots, salg og kommunikation",
+    ],
+  },
+  {
+    role: "Barista",
+    place: "Zephyr Wainui",
+    period: "2025",
+    accent: "border-cyan",
+    bullets: [
+      "Træning i kaffekunsten",
+      "Samarbejde i et lille team",
+      "Daglig kontakt med mange forskellige kunder",
+    ],
+  },
+  {
+    role: "Yoga instructor",
+    place: "Lapoint Surfcamp",
+    period: "2024",
+    accent: "border-flame",
+    bullets: [
+      "Afholde daglige yogatimer for gæster i campen",
+      "Sørge for at alle gæster føler sig godt tilpas",
+    ],
+  },
+  {
+    role: "Stoke rep and host",
+    place: "Stoke Travel",
+    period: "2023",
+    accent: "border-cyan",
+    bullets: [
+      "Afholde vinsmagninger i intime omgivelser",
+      "Skabe en god stemning til arrangementet",
+    ],
+  },
+  {
+    role: "Rejseleder",
+    place: "Bravo Tours",
+    period: "2021–2022",
+    accent: "border-flame",
+    bullets: [
+      "Have mange hatte på",
+      "Holde hovedet koldt i stressede situationer",
+      "Løse problemer for gæster",
+      "Guide på udflugter, velkomstmøder og daglig interaktion",
+    ],
   },
 ] as const;
 
@@ -263,65 +320,80 @@ function Index() {
 
           {/* ---------- CV ---------- */}
           <section id="cv" aria-labelledby="cv-title" className="border-t-2 border-ink py-14">
-            <div className="mb-10">
-              <h2 id="cv-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
-                cv
-              </h2>
-              <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
-                just for the record
-              </p>
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-6">
+              <div>
+                <h2 id="cv-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
+                  cv
+                </h2>
+                <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
+                  just for the record
+                </p>
+              </div>
+              <a
+                href={cvPdfAsset.url}
+                download="CV_Maria_Bune.pdf"
+                className="rounded-full bg-flame px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5"
+              >
+                Download CV
+              </a>
             </div>
+
+            <p className="mb-10 max-w-[62ch] text-lg leading-relaxed">
+              Jeg hedder <span className="font-bold">Maria</span>, og jeg studerer multimediedesign på IBA Kolding Online. Jeg elsker at designe kreative løsninger og grafiske elementer, men har en baggrund indenfor yoga og turisme. Desuden er jeg en team-player — det ses bl.a. i studiet, hvor jeg sætter stor pris på en god gruppe, og hvordan det bidrager til det bedste resultat.
+            </p>
 
             <div className="grid gap-12 md:grid-cols-2">
               <div>
-                <h3 className="label-mono mb-4 text-ink-soft">Education</h3>
+                <h3 className="label-mono mb-4 text-ink-soft">Uddannelse</h3>
                 <ul className="space-y-5">
-                  <li className="border-l-2 border-flame pl-4">
-                    <p className="font-bold">Multimedia Design, BA</p>
-                    <p className="label-mono mt-0.5 text-ink-soft">
-                      Designskolen — 2022–2026
-                    </p>
-                  </li>
                   <li className="border-l-2 border-cyan pl-4">
-                    <p className="font-bold">Foundation in Graphic Design</p>
+                    <p className="font-bold">Multimediedesign — studerende</p>
                     <p className="label-mono mt-0.5 text-ink-soft">
-                      København — 2021–2022
+                      IBA Kolding Online
                     </p>
                   </li>
                 </ul>
 
-                <h3 className="label-mono mt-10 mb-4 text-ink-soft">
-                  Experience
-                </h3>
+                <h3 className="label-mono mt-10 mb-4 text-ink-soft">Erfaring</h3>
+                <ul className="space-y-5">
+                  {JOBS.map((j) => (
+                    <li key={`${j.place} ${j.period}`} className={`border-l-2 ${j.accent} pl-4`}>
+                      <p className="font-bold">{j.role} — {j.place}</p>
+                      <p className="label-mono mt-0.5 text-ink-soft">{j.period}</p>
+                      <ul className="mt-2 space-y-1">
+                        {j.bullets.map((b) => (
+                          <li key={b} className="label-mono text-ink-soft">
+                            — {b}
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+
+                <h3 className="label-mono mt-10 mb-4 text-ink-soft">Certifikater</h3>
                 <ul className="space-y-5">
                   <li className="border-l-2 border-flame pl-4">
-                    <p className="font-bold">Design Intern</p>
+                    <p className="font-bold">Yoga Teacher Training</p>
                     <p className="label-mono mt-0.5 text-ink-soft">
-                      Studio Nord — 2024
+                      Vinyasa Yogashala, India — 2023
                     </p>
                   </li>
                   <li className="border-l-2 border-cyan pl-4">
-                    <p className="font-bold">Freelance Poster Design</p>
+                    <p className="font-bold">Rejselederbevis</p>
                     <p className="label-mono mt-0.5 text-ink-soft">
-                      Self-employed — 2023–now
+                      Service &amp; Co, Malta — 2021
                     </p>
                   </li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="label-mono mb-4 text-ink-soft">Tools</h3>
+                <h3 className="label-mono mb-4 text-ink-soft">Færdigheder</h3>
                 <ul className="flex flex-wrap gap-2">
-                  {[
-                    "Figma",
-                    "After Effects",
-                    "Blender",
-                    "InDesign",
-                    "Procreate",
-                    "Premiere Pro",
-                  ].map((tool, i) => (
+                  {["Digital/grafisk design", "Branding", "SEO", "Brugertest", "Basal kodning", "Wordpress", "Vibecoding"].map((skill, i) => (
                     <li
-                      key={tool}
+                      key={skill}
                       className={`label-mono rounded-full px-3 py-1.5 ${
                         i === 0
                           ? "bg-ink text-paper"
@@ -332,27 +404,45 @@ function Index() {
                               : "ring-1 ring-ink/20"
                       }`}
                     >
-                      {tool}
+                      {skill}
                     </li>
                   ))}
                 </ul>
 
-                <h3 className="label-mono mt-10 mb-4 text-ink-soft">
-                  Achievements
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-baseline justify-between gap-4 border-b border-dashed border-ink/25 pb-2">
-                    <span className="font-bold">Student Print Prize</span>
-                    <span className="label-mono shrink-0 text-ink-soft">
-                      2024
-                    </span>
+                <h3 className="label-mono mt-10 mb-4 text-ink-soft">Sprog</h3>
+                <ul className="flex flex-wrap gap-2">
+                  {["Dansk", "Engelsk"].map((lang) => (
+                    <li key={lang} className="label-mono rounded-full bg-sun px-3 py-1.5">
+                      {lang}
+                    </li>
+                  ))}
+                </ul>
+
+                <h3 className="label-mono mt-10 mb-4 text-ink-soft">Kontakt</h3>
+                <ul className="space-y-2">
+                  <li className="label-mono">+45 42 54 95 64</li>
+                  <li>
+                    <a
+                      href="mailto:Maria.bune@gmail.com"
+                      className="label-mono transition-colors hover:text-flame"
+                    >
+                      Maria.bune@gmail.com
+                    </a>
                   </li>
-                  <li className="flex items-baseline justify-between gap-4 border-b border-dashed border-ink/25 pb-2">
-                    <span className="font-bold">Young Designer Nominee</span>
-                    <span className="label-mono shrink-0 text-ink-soft">
-                      2023
-                    </span>
-                  </li>
+                </ul>
+
+                <h3 className="label-mono mt-10 mb-4 text-ink-soft">Andre ansættelser</h3>
+                <ul className="space-y-2">
+                  {[
+                    "Kiwiplukker og pakker, New Zealand",
+                    "Pædagogisk assistent, Skovbuen Silkeborg",
+                    "Tjener og barista, Cafe Valsen Silkeborg",
+                    "Vikararbejde hos Sport24 lager, Funder",
+                  ].map((a) => (
+                    <li key={a} className="label-mono text-ink-soft">
+                      — {a}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
