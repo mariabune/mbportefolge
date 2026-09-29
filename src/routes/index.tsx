@@ -54,10 +54,10 @@ const CASES = [
       "Contents page of the GLS AI handbook with colour-coded chapters",
     ],
     title: "Poster Series — “Støj”",
-    meta: "2024 · Print / Identity",
-    tag: "Print",
+    meta: "2026 · Ai-assisted content",
+    tag: "Illustrationer",
     tagColor: "bg-flame text-paper",
-    note: "my first riso print!",
+    note: "GLS",
     rotate: "md:-rotate-1",
   },
   {
