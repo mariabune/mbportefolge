@@ -59,7 +59,7 @@
 
 :root {
   --radius: 0.5rem;
-  --paper: oklch(0.962 0.011 92);
+  --paper: oklch(0.982 0.005 92);
   --paper-deep: oklch(0.937 0.013 92);
 
   --ink: oklch(0.235 0.02 80);
