@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 
 import nangiCover from "@/assets/nangi-photoshoot.jpg.asset.json";
 import logoMb from "@/assets/logo-mb.svg";
+import nangiSketches from "@/assets/nangi-sketches.jpg.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -38,6 +39,9 @@ const PROCESS = [
   {
     step: "1. Ideation",
     text: "Processen starter med at jeg designer et stykke tøj. Inpspiration kan kome fra farvekombinationer jeg ser, naturen, noget stof, trends eller noget tøj jeg holder af. Jeg foretrækker at skitsere i hånden med pen og papir, og elsker at lægge de sidste detaljer på og farvelægge.",
+    img: nangiSketches.url,
+    alt: "Håndtegnede modetegninger af Nangi-styles i farver, spredt ud på et bord med farveblyanter, tusser og sticky notes",
+    caption: "Skitser fra tegnebrættet — i hånden, med pen og farver",
   },
   {
     step: "2. Prototype",
@@ -366,7 +370,23 @@ function Nangi() {
                   <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
                     {step.step}
                   </h3>
-                  <p className="text-base leading-relaxed lg:col-span-8 sm:text-lg">{step.text}</p>
+                  <div className="lg:col-span-8">
+                    <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
+                    {"img" in step && step.img && (
+                      <figure className="relative mt-6 max-w-md -rotate-1">
+                        <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
+                        <img
+                          src={step.img}
+                          alt={step.alt}
+                          width={1024}
+                          height={768}
+                          loading="lazy"
+                          className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                        />
+                        <figcaption className="hand mt-2 text-center text-ink-soft">{step.caption}</figcaption>
+                      </figure>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>
