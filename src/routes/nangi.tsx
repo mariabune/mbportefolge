@@ -279,7 +279,7 @@ function Nangi() {
                     className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
                   />
                   <span className="sticker anim-stamp absolute -bottom-5 -right-4 bg-sun px-3 py-2 hand text-ink">
-                    work in progress
+                    the boss
                   </span>
                 </div>
               </div>
