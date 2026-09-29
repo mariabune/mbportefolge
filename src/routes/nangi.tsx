@@ -300,9 +300,7 @@ function Nangi() {
                 Lanka, både i butikker og på markeder. Vi er modsvaret til
                 fast-fashion, da vi er et lille team, der lader tingene tage
                 den tid det tager. Dermed opnår vi det bedste resultat, og den
-                største tilfredshed ved vores medarbejdere. Dem der køber Nangi
-                er primært yngre kvinder, der rejser til Sri Lanka og kan se
-                sig selv i den afslappede og farverige stil som Nangi har.
+                største tilfredshed ved vores medarbejdere.
               </p>
               <p>
                 Nangi betyder lillesøster på sinhala, og vores vision er at
