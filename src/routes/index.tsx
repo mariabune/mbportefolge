@@ -6,6 +6,7 @@ import aiPlaybookIndhold from "@/assets/ai-playbook-indhold.png.asset.json";
 import garnCraftGalleri from "@/assets/garn-og-craft-galleri.png.asset.json";
 import nangiCover from "@/assets/nangi-cover.png";
 import logoMb from "@/assets/logo-mb.svg";
+import cvPdfAsset from "@/assets/cv-maria-bune.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
