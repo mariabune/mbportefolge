@@ -372,7 +372,7 @@ function Nangi() {
                   </h3>
                   <div className="lg:col-span-8">
                     {"img" in step && step.img ? (
-                      <div className="grid items-start gap-6 sm:grid-cols-[1fr,260px]">
+                      <div className="grid items-start gap-6 sm:grid-cols-[1fr_260px]">
                         <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
                         <figure className="relative max-w-[260px] -rotate-1 justify-self-start sm:justify-self-end">
                           <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
