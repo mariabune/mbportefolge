@@ -214,14 +214,28 @@ function Index() {
                     >
                       <div aria-hidden="true" className="tape absolute -top-3 left-8 z-10 rotate-2" />
                       <div className="relative bg-paper p-3 shadow-[0_12px_28px_rgb(0_0_0/0.16)] ring-1 ring-ink/10">
-                        <img
-                          src={c.img}
-                          alt={`Cover image for the case ${c.title}`}
-                          width={1024}
-                          height={768}
-                          loading="lazy"
-                          className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
-                        />
+                        {"imgs" in c ? (
+                          <div className="flex aspect-[4/3] w-full gap-1 overflow-hidden rounded-sm bg-paper-deep">
+                            {c.imgs.map((src, i) => (
+                              <img
+                                key={src}
+                                src={src}
+                                alt={c.alts[i]}
+                                loading="lazy"
+                                className="h-full w-1/2 object-cover"
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <img
+                            src={c.img}
+                            alt={`Cover image for the case ${c.title}`}
+                            width={1024}
+                            height={768}
+                            loading="lazy"
+                            className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
+                          />
+                        )}
                         <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
                           <div>
                             <h3 className="font-display text-lg tracking-tight sm:text-xl">
