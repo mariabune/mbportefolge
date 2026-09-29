@@ -11,18 +11,18 @@ import cvPdfAsset from "@/assets/cv-maria-bune.pdf.asset.json";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "m.b. — Portefolio of a multimedia design student in København" },
+      { title: "m.b. — Portefølje fra en multimediedesigner-studerende i København" },
       {
         name: "description",
         content:
-          "The notebook portfolio of a multimedia design student in Copenhagen — selected cases in print, motion and identity, a CV and the design company nangi.",
+          "Porteføljen fra en multimediedesigner-studerende i København — udvalgte cases, et CV og mit eget lille firma Nangi.",
       },
       { property: "og:url", content: "/" },
-      { property: "og:title", content: "m.b. — Portefolio" },
+      { property: "og:title", content: "m.b. — Portefølje" },
       {
         property: "og:description",
         content:
-          "A living notebook of a multimedia design student: selected cases, a CV, and notes from the making.",
+          "Hej, jeg hedder Maria og jeg er multimediedesigner studerende. Tag et kig på mine projekter!",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
