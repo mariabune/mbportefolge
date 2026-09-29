@@ -161,10 +161,13 @@ html.a11y-contrast {
   --paper-deep: oklch(0.96 0 0);
   --ink: oklch(0 0 0);
   --ink-soft: oklch(0 0 0);
-  --flame: oklch(0.45 0.2 30);
-  --riso-cyan: oklch(0.35 0.12 250);
-  --rule: oklch(0.85 0 0);
-  --border: oklch(0 0 0);
+  --flame: #f04020;
+  --margin: #f04020;
+  --riso-cyan: #39432a;
+  --sun: #edcb62;
+  --rule: #edcb62;
+  --border: #edcb62;
+  --input: #edcb62;
 }
 html.a11y-contrast .grain::after {
   display: none;
