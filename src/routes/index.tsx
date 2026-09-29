@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
-import casePoster from "@/assets/case-poster.png";
+import aiPlaybookCover from "@/assets/ai-playbook-cover.png.asset.json";
+import aiPlaybookIndhold from "@/assets/ai-playbook-indhold.png.asset.json";
 import caseMotion from "@/assets/case-motion.png";
 import nangiCover from "@/assets/nangi-cover.png";
 import logoMb from "@/assets/logo-mb.svg";
