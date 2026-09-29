@@ -48,7 +48,11 @@ export const Route = createFileRoute("/")({
 
 const CASES = [
   {
-    img: casePoster,
+    imgs: [aiPlaybookCover.url, aiPlaybookIndhold.url],
+    alts: [
+      "Front cover of the GLS AI handbook: a robot balloon leading to a lightbulb over a thinking head",
+      "Contents page of the GLS AI handbook with colour-coded chapters",
+    ],
     title: "Poster Series — “Støj”",
     meta: "2024 · Print / Identity",
     tag: "Print",
