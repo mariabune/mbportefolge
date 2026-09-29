@@ -236,7 +236,7 @@ function Index() {
                             className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
                           />
                         )}
-                        <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
+                        <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-6">
                           <div>
                             <h3 className="font-display text-lg tracking-tight sm:text-xl">
                               {c === CASES[0] ? "AI-playbook" : c.title}
