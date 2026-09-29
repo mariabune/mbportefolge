@@ -39,7 +39,7 @@ export const Route = createFileRoute("/nangi")({
           "@type": "Organization",
           name: "nangi",
           description: "A one-woman design company in København.",
-          email: "mailto:hej@mb.dk",
+          email: "mailto:Maria.bune@gmail.com",
           founder: { "@type": "Person", name: "Maria", alternateName: "m.b." },
           foundingDate: "2024",
         }),
@@ -220,11 +220,14 @@ function Nangi() {
               Got a project for nangi?
             </h2>
             <a
-              href="mailto:hej@mb.dk"
+              href="mailto:Maria.bune@gmail.com"
               className="mt-8 inline-block rounded-full bg-ink px-6 py-4 font-mono text-sm uppercase tracking-[0.15em] text-paper transition-colors hover:bg-flame"
             >
-              hej@mb.dk
+              Maria.bune@gmail.com
             </a>
+            <p className="label-mono mt-4 text-ink-soft">
+              +45 42 54 95 64
+            </p>
             <p className="label-mono mt-14 text-ink-soft">
               © 2026 nangi — a one-woman company in København
             </p>
