@@ -3,8 +3,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import portraitAsset from "@/assets/portrait.jpg.asset.json";
 import casePoster from "@/assets/case-poster.png";
 import caseMotion from "@/assets/case-motion.png";
-import caseZine from "@/assets/case-zine.png";
-import caseBrand from "@/assets/case-brand.png";
 import nangiCover from "@/assets/nangi-cover.png";
 import logoMb from "@/assets/logo-mb.svg";
 
@@ -65,24 +63,6 @@ const CASES = [
     tagColor: "bg-cyan text-paper",
     note: "Garn og Craft",
     rotate: "md:rotate-1",
-  },
-  {
-    img: caseZine,
-    title: "Zine — “Hænder”",
-    meta: "2023 · Editorial",
-    tag: "Editorial",
-    tagColor: "bg-cyan text-paper",
-    note: "hand-bound, 50 copies",
-    rotate: "md:rotate-1",
-  },
-  {
-    img: caseBrand,
-    title: "Brand — “Kaffebar”",
-    meta: "2023 · Identity / Space",
-    tag: "Identity",
-    tagColor: "bg-flame text-paper",
-    note: "the local favourite",
-    rotate: "md:-rotate-1",
   },
 ] as const;
 
@@ -212,14 +192,13 @@ function Index() {
                 </p>
               </div>
               <span className="label-mono hidden text-ink-soft sm:block">
-                04 pieces
+                02 pieces
               </span>
             </div>
 
             <ul className="grid gap-8 sm:grid-cols-2">
               {CASES.map((c) => (
                 <li key={c.title}>
-                {c === CASES[0] || c === CASES[1] ? (
                   <Link
                     to={c === CASES[0] ? "/cases/ai-playbook" : "/cases/garn-og-craft"}
                     className="block focus-visible:outline-offset-8"
@@ -258,38 +237,6 @@ function Index() {
                       </span>
                     </article>
                   </Link>
-                ) : (
-                  <article
-                    className={`group relative ${c.rotate} transition-transform duration-300 hover:rotate-0 hover:-translate-y-1`}
-                  >
-                    <div aria-hidden="true" className="tape absolute -top-3 left-8 z-10 rotate-2" />
-                    <div className="relative bg-paper p-3 shadow-[0_12px_28px_rgb(0_0_0/0.16)] ring-1 ring-ink/10">
-                      <img
-                        src={c.img}
-                        alt={`Cover image for the case ${c.title}`}
-                        width={1024}
-                        height={768}
-                        loading="lazy"
-                        className="aspect-[4/3] w-full rounded-sm bg-paper-deep object-cover"
-                      />
-                      <div className="mt-3 flex items-center justify-between gap-3 px-1 pb-1">
-                        <div>
-                          <h3 className="font-display text-lg tracking-tight sm:text-xl">{c.title}</h3>
-                          <p className="label-mono mt-1 text-ink-soft">{c.meta}</p>
-                        </div>
-                        <span className={`label-mono shrink-0 rounded-full px-2.5 py-1 ${c.tagColor}`}>
-                          {c.tag}
-                        </span>
-                      </div>
-                    </div>
-                    <span
-                      aria-label={`Note: ${c.note}`}
-                      className={`sticker absolute -bottom-4 -left-3 hand bg-paper px-3 py-1.5 text-ink shadow-[0_2px_5px_rgb(0_0_0/0.18)] ${c.tag === "Web" || c.tag === "Editorial" ? "border-2 border-cyan/60" : "border-2 border-flame/60"}`}
-                    >
-                      {c.note}
-                    </span>
-                  </article>
-                )}
                 </li>
               ))}
             </ul>
