@@ -191,20 +191,22 @@ function Index() {
 
             <div className="mt-4 max-w-3xl">
               <h1 id="hero-title" className="pen-underline anim-rise inline-block pb-4 font-display text-[clamp(3rem,11vw,7.5rem)] leading-[0.9] tracking-tight [animation-delay:80ms]">
-                Portefolio
+                Portefølje
               </h1>
             </div>
             <p className="hand anim-rise mt-2 text-2xl text-ink-soft [animation-delay:140ms] sm:text-3xl">
-              — from a multimedia design student
+              — fra en multimediedesigner-studerende
             </p>
 
             <div className="mt-10 grid items-start gap-10 md:grid-cols-12">
               <div className="anim-rise [animation-delay:200ms] md:col-span-7">
                 <p className="max-w-[46ch] text-lg leading-relaxed sm:text-xl">
-                  I'm <span className="font-bold">Maria</span> — a multimedia
-                  design student turning ideas into posters, motion and small
-                  digital worlds. This site is my notebook: pinned, taped and
-                  stamped as I grow.
+                  Hej, jeg hedder <span className="font-bold">Maria</span> og jeg er
+                  multimediedesigner studerende. Jeg elsker den kreative process
+                  fra ide, til prototype til færdigt produkt. Når jeg ikke
+                  studerer, bruger jeg tid i mit eget lille firma, Nangi, hvor
+                  jeg designer, producerer og sælger tøj i Sri Lanka. Tag et
+                  kig på nogle af mine projekter herunder!
                 </p>
                 <div className="mt-7 flex flex-wrap gap-3">
                   <a
