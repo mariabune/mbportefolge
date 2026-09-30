@@ -541,7 +541,7 @@ function Index() {
               +45 42 54 95 64
             </p>
             <ul aria-label="Social profiles" className="mt-8 flex justify-center gap-6">
-              {["Instagram", "Behance", "LinkedIn"].map((s) => (
+              {["Instagram", "LinkedIn"].map((s) => (
                 <li key={s}>
                   <a
                     href="#contact"
