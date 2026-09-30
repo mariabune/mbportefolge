@@ -97,7 +97,7 @@ const PROCESS = [
     imgs: [
       {
         img: nangiInokaSewing.url,
-        alt: "Skrædderen Inoka står ved sin overlockmaskine og syer hvidt stof, med et målebånd om halsen",
+        alt: "Skrædderen Inoka står ved sin overlockmaskine og syer hvidt stof, med målebåndet om halsen",
         caption: "Inoka ved symaskinen",
       },
     ],
@@ -120,8 +120,8 @@ const PROCESS = [
     imgs: [
       {
         img: nangiStockBook.url,
-        alt: "Buku catatan dengan catatan persediaan tangan untuk setiap model dan warna Nangi",
-        caption: "catatan stok di buku",
+        alt: "Bogen med håndskrevne notater om alle Nangi-modeller og -farver",
+        caption: "stokken på skriver i bogen",
       },
     ],
   },
