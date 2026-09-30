@@ -515,48 +515,6 @@ function Index() {
             </div>
           </section>
 
-          {/* ---------- NANGI TEASER ---------- */}
-          <section aria-labelledby="nangi-title" className="border-t-2 border-ink py-14">
-            <div className="grid items-center gap-10 md:grid-cols-12">
-              <div className="md:col-span-7">
-                <h2 id="nangi-title" className="mt-2 font-display text-4xl tracking-tight sm:text-5xl">
-                  nangi
-                </h2>
-                <p className="hand mt-3 text-2xl text-ink-soft">
-                  my little design company
-                </p>
-                <p className="mt-5 max-w-[46ch] text-lg leading-relaxed">
-                  On the nangi page I share the work I make on my own terms —
-                  experiments, process notes and the things I learn along the
-                  way.
-                </p>
-                <Link
-                  to="/nangi"
-                  className="mt-7 inline-block rounded-full bg-cyan px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5"
-                >
-                  Open the nangi page
-                </Link>
-              </div>
-              <div className="md:col-span-5">
-                <div className="relative mx-auto max-w-[280px] rotate-2">
-                  <div aria-hidden="true" className="tape absolute -top-3 left-6 z-10 -rotate-3" />
-                  <img
-                    src={nangiCover}
-                    alt="Colourful collage artwork representing nangi, my design company"
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="w-full rounded-sm bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
-                  />
-                  <span className="sticker anim-stamp absolute -right-3 -top-3 bg-flame px-3 py-2 hand text-paper">
-                    new page!
-                  </span>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* ---------- CONTACT ---------- */}
           <footer id="contact" aria-labelledby="contact-title" className="border-t-2 border-ink py-16 text-center">
             <h2 id="contact-title" className="mx-auto mt-3 max-w-[16ch] font-display text-[clamp(2.5rem,8vw,5rem)] leading-[0.9] tracking-tight">
               Let's make something loud.
