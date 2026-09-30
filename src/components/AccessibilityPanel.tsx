@@ -40,7 +40,7 @@ export function AccessibilityPanel() {
     }
   }, [prefs]);
 
-  // Escape closes and returns focus; move focus into panel on open
+  // Escape or click outside closes the panel; focus moves back to the button
   useEffect(() => {
     if (!open) return;
     panelRef.current?.querySelector<HTMLButtonElement>("button")?.focus();
@@ -50,8 +50,20 @@ export function AccessibilityPanel() {
         buttonRef.current?.focus();
       }
     };
+    // Close when clicking anywhere outside the panel and its toggle button
+    const onPointerDown = (e: PointerEvent) => {
+      const target = e.target as Node | null;
+      if (!target) return;
+      if (panelRef.current?.contains(target)) return;
+      if (buttonRef.current?.contains(target)) return;
+      setOpen(false);
+    };
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointerDown);
+    };
   }, [open]);
 
   return (
