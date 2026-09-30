@@ -437,6 +437,8 @@ function Nangi() {
                 const hasImgs = !!imgs && imgs.length > 0;
                 // Steps 1, 3, 5, 7: pictures on the right — steps 2, 4, 6: pictures on the left
                 const imgSide = i % 2 === 0 ? "right" : "left";
+                // Steps 4, 5 and 7 have slightly smaller pictures
+                const smallerImg = i === 3 || i === 4 || i === 6;
 
                 const renderFigure = (im: { img: string; alt: string; caption: string }, k: number) => (
                   <figure key={im.img} className={`relative ${k % 2 === 0 ? "-rotate-1" : "rotate-1"}`}>
