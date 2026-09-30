@@ -475,8 +475,8 @@ function Nangi() {
                   <div
                     className={`order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start ${
                       imgs!.length > 1 ? "lg:grid-cols-2" : ""
-                    } ${smallerImg ? "md:col-span-4 md:mt-6" : ""} ${
-                      smallerImg && imgSide === "right" ? "md:col-start-9" : ""
+                    } ${smallerImg ? "md:col-span-4 lg:col-span-3 md:mt-6" : ""} ${
+                      smallerImg && imgSide === "right" ? "md:col-start-9 lg:col-start-10" : ""
                     }`}
                   >
                     {imgs!.map((im, k) => renderFigure(im, k))}
