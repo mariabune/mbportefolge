@@ -419,7 +419,7 @@ function Nangi() {
             </div>
 
             {/* Photoshoot photos, taped on and slightly tilted — wide one in the middle */}
-            <div className="mt-12 grid gap-6 sm:grid-cols-3 sm:items-center">
+            <div className="mt-12 grid gap-6 sm:grid-cols-[1fr_2fr_1fr]">
               <figure className="relative rotate-1">
                 <span className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 -rotate-2" />
                 <img
