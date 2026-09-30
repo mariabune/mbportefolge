@@ -252,7 +252,7 @@ function Index() {
                   cases
                 </h2>
                 <p className="hand mt-1.5 text-xl text-ink-soft sm:text-2xl">
-                  pinned while the ink is still wet
+                  Se noget af mit arbejde her
                 </p>
               </div>
               <span className="label-mono hidden text-ink-soft sm:block">
