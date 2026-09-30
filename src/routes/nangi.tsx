@@ -3,6 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import nangiCover from "@/assets/nangi-photoshoot.jpg.asset.json";
 import logoMb from "@/assets/logo-mb.svg";
 import nangiSketches from "@/assets/nangi-sketches.jpg.asset.json";
+import nangiPrototypePatterns from "@/assets/nangi-prototype-patterns.jpg.asset.json";
+import nangiPrototypeFitting from "@/assets/nangi-prototype-fitting.jpg.asset.json";
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
