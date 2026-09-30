@@ -5,6 +5,8 @@ import aiPlaybookCover from "@/assets/ai-playbook-cover.png.asset.json";
 import aiPlaybookIndhold from "@/assets/ai-playbook-indhold.png.asset.json";
 import garnCraftGalleri from "@/assets/garn-og-craft-galleri.png.asset.json";
 import nangiCover from "@/assets/nangi-cover.png";
+import nangiPhotoshoot from "@/assets/nangi-photoshoot.jpg.asset.json";
+import nangiIgLogo from "@/assets/nangi-ig-logo.png.asset.json";
 import logoMb from "@/assets/logo-mb.svg";
 import cvPdfAsset from "@/assets/cv-maria-bune.pdf.asset.json";
 
