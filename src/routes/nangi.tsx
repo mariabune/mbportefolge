@@ -11,6 +11,7 @@ import nangiCollection from "@/assets/nangi-collection.jpg.asset.json";
 
 import nangiInokaSewing from "@/assets/nangi-inoka-sewing.jpg.asset.json";
 import nangiStockBook from "@/assets/nangi-stock-book.jpg.asset.json";
+import nangiGiveback from "@/assets/nangi-giveback.jpg.asset.json";
 
 
 
@@ -128,6 +129,13 @@ const PROCESS = [
   {
     step: "7. Give tilbage",
     text: "Hver anden måned donerer vi 10% af vores profit tilbage til samfundet i Sri Lanka. Det kan være til organisationer der hjælper kvinder og børn i Sri Lanka, men senest donerede vi en masse madposer og legetøj til de fattigste i landsbyen hvor jeg bor. Inflationen er enormt høj i Sri Lanka, og det er svært for mange at få mad på bordet, især hvis man er ældre, syg, ikke har en uddannelse eller har mange børn.",
+    imgs: [
+      {
+        img: nangiGiveback.url,
+        alt: "Mange poser pakket med mad og legetøj, der skal doneres til familier i Sri Lanka",
+        caption: "poser klar til at blive delt ud",
+      },
+    ],
   },
 ] as const;
 
