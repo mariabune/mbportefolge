@@ -12,6 +12,8 @@ import nangiCollection from "@/assets/nangi-collection.jpg.asset.json";
 import nangiInokaSewing from "@/assets/nangi-inoka-sewing.jpg.asset.json";
 import nangiStockBook from "@/assets/nangi-stock-book.jpg.asset.json";
 import nangiGiveback from "@/assets/nangi-giveback.jpg.asset.json";
+import nangiMarketStall from "@/assets/nangi-market-stall.jpg.asset.json";
+import nangiMarketSketches from "@/assets/nangi-market-sketches.jpg.asset.json";
 
 
 
@@ -147,6 +149,18 @@ const PROJECTS = [
   {
     title: "Markeder",
     text: "Hver anden lørdag afholdes der markeder, i den landsby jeg bor. Her har jeg haft den fantastiske mulighed at stille en Nangi-bod op, og sælge tøj. Markederne fungerer som mere end en salgskanal. De giver mig muligheden for direkte feedback fra de besøgende, som jeg kan bruge til at videreudvikle produkterne. Jeg arbejder også bevidst med brugeroplevelsen omkring boden, og hvordan tøjet bliver præsenteret. Jeg tager altid et stort spejl med, friske blomster, og mine skitser og stofprøver, så folk kan se lidt bag om facaden på Nangi. Desuden er det et fantastisk sted at netværke og mødes med andre sælgere, udveksle viden og erfaring og blive en del af det lokale fællesskab.",
+    imgs: [
+      {
+        img: nangiMarketStall.url,
+        alt: "Maria præsenterer Nangi-tøjet ved boden på markedet, med kjoler og togbukser på bøjler og palmearter i baggrunden",
+        caption: "min bod på markedet",
+      },
+      {
+        img: nangiMarketSketches.url,
+        alt: "Bordet i Nangi-boden med håndtegnede modetegninger, Nangi-prismærker, sakse og friske blomster",
+        caption: "skitser og stofprøver",
+      },
+    ],
   },
   {
     title: "Logo, labels og tags design",
@@ -524,13 +538,26 @@ function Nangi() {
                     <h3 className="font-display text-2xl leading-snug tracking-tight">{project.title}</h3>
                     <p className="mt-4 text-base leading-relaxed">{project.text}</p>
                     <div className="mt-8 grid grid-cols-2 gap-5">
-                      {[0, 1].map((slot) => (
-                        <figure key={slot} className="relative">
-                          <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${slot === 0 ? "rotate-2" : "-rotate-2"}`} />
-                          <div className="aspect-[4/3] rounded-sm border border-dashed border-ink/30 bg-paper-deep" />
-                          <figcaption className="hand mt-2 text-center text-ink-soft">billede kommer…</figcaption>
-                        </figure>
-                      ))}
+                      {"imgs" in project && project.imgs
+                        ? project.imgs.map((im) => (
+                            <figure key={im.img} className="relative">
+                              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 rotate-2" />
+                              <img
+                                src={im.img}
+                                alt={im.alt}
+                                loading="lazy"
+                                className="aspect-[4/5] w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                              />
+                              <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
+                            </figure>
+                          ))
+                        : [0, 1].map((slot) => (
+                            <figure key={slot} className="relative">
+                              <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${slot === 0 ? "rotate-2" : "-rotate-2"}`} />
+                              <div className="aspect-[4/3] rounded-sm border border-dashed border-ink/30 bg-paper-deep" />
+                              <figcaption className="hand mt-2 text-center text-ink-soft">billede kommer…</figcaption>
+                            </figure>
+                          ))}
                     </div>
                   </article>
                 </li>
