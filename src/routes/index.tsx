@@ -220,7 +220,7 @@ function Index() {
                     href="#cv"
                     className="rounded-full border-2 border-ink px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] transition-colors hover:bg-ink hover:text-paper"
                   >
-                    Read the CV
+                    Læs mit CV
                   </a>
                 </div>
               </div>
