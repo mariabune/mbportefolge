@@ -122,7 +122,7 @@ const PROCESS = [
       {
         img: nangiStockBook.url,
         alt: "Bogen med håndskrevne notater om alle Nangi-modeller og -farver",
-        caption: "stokken noteret i bogen",
+        caption: "noter, tal og data",
       },
     ],
   },
