@@ -533,7 +533,7 @@ function Index() {
             </p>
             <a
               href="mailto:Maria.bune@gmail.com"
-              className="mt-8 inline-block rounded-full bg-ink px-6 py-4 font-mono text-sm uppercase tracking-[0.15em] text-paper transition-colors hover:bg-flame"
+              className="mt-8 inline-block rounded-full bg-cyan px-6 py-4 font-mono text-sm uppercase tracking-[0.15em] text-paper transition-colors hover:bg-flame"
             >
               Maria.bune@gmail.com
             </a>
