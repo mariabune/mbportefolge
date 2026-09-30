@@ -14,6 +14,8 @@ import nangiStockBook from "@/assets/nangi-stock-book.jpg.asset.json";
 import nangiGiveback from "@/assets/nangi-giveback.jpg.asset.json";
 import nangiMarketStall from "@/assets/nangi-market-stall.jpg.asset.json";
 import nangiMarketSketches from "@/assets/nangi-market-sketches.jpg.asset.json";
+import nangiLogoSketches from "@/assets/nangi-logo-sketches.jpg.asset.json";
+import nangiHangtag from "@/assets/nangi-hangtag.jpg.asset.json";
 
 
 
@@ -165,6 +167,18 @@ const PROJECTS = [
   {
     title: "Logo, labels og tags design",
     text: "Et af de første vigtige skridt inden jeg kunne sælge, var at designe et logo. Jeg skitserede flere forskellige logos i hånden, og arbejdede med mange forskellige farvekombinationer. Derefter valgte jeg et rundt logo til prismærkerne og instagram, da jeg var vild med det visuelle udtryk. Jeg valgte et firkantet til labels inde i tøjet af praktiske årsager. Derefter brugte jeg Adobe Illustrator til at tegne en digital version ovenpå et billede af min håndskitse. Jeg tilføjede tekst og informationer på prisskiltene, blandt andet en lille hyldest til skrædderen Inoka. For mig er det vigtigt, at folk kan se mennesket bag produktet. Da jeg slutvis havde filerne, valgte jeg en printforhandler, som printede prisskilte og labels til mig.",
+    imgs: [
+      {
+        img: nangiLogoSketches.url,
+        alt: "Væggen med håndmalede Nangi-logo skitser — runde og firkantede varianter i mange farver, lamineret på papir på en hvid væg",
+        caption: "logo skitser i hånden",
+      },
+      {
+        img: nangiHangtag.url,
+        alt: "Nærmafotografi af et Nangi-hangtag: rundt håndtrykt logo på gult papir på en træknude og rosa yndecrepe-kjole på bøjle",
+        caption: "hangtag på tøjet",
+      },
+    ],
   },
   {
     title: "Sociale medier",
