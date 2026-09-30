@@ -398,7 +398,7 @@ function Nangi() {
                                 loading="lazy"
                                 className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
                               />
-                              <figcaption className="hand mt-2 text-center text-ink-soft">{im.caption}</figcaption>
+                              <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
                             </figure>
                           ))}
                         </div>
