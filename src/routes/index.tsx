@@ -329,18 +329,17 @@ function Index() {
                   nangi
                 </h2>
                 <p className="hand mt-3 text-2xl text-ink-soft">
-                  my little design company
+                  mit lille univers
                 </p>
                 <p className="mt-5 max-w-[46ch] text-lg leading-relaxed">
-                  On the nangi page I share the work I make on my own terms —
-                  experiments, process notes and the things I learn along the
-                  way.
+                  Her deler jeg ud af mit arbejde, I mit eget lille tøjfirma i
+                  Sri Lanka, og hvad jeg lærer undervejs.
                 </p>
                 <Link
                   to="/nangi"
                   className="mt-7 inline-block rounded-full bg-cyan px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5"
                 >
-                  Open the nangi page
+                  Læs mere om Nangi
                 </Link>
               </div>
               <div className="md:col-span-5">
