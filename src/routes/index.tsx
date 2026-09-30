@@ -216,12 +216,12 @@ function Index() {
                   >
                     Se mine cases
                   </a>
-                  <a
-                    href="#cv"
-                    className="rounded-full border-2 border-ink px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] transition-colors hover:bg-ink hover:text-paper"
+                  <Link
+                    to="/nangi"
+                    className="rounded-full bg-cyan px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5"
                   >
-                    Læs mit CV
-                  </a>
+                    Læs om Nangi
+                  </Link>
                 </div>
               </div>
 
