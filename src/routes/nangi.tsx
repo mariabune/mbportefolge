@@ -437,6 +437,8 @@ function Nangi() {
                 const hasImgs = !!imgs && imgs.length > 0;
                 // Steps 1, 3, 5, 7: pictures on the right — steps 2, 4, 6: pictures on the left
                 const imgSide = i % 2 === 0 ? "right" : "left";
+                // Steps 4, 5 and 7 have slightly smaller pictures
+                const smallerImg = i === 3 || i === 4 || i === 6;
 
                 const renderFigure = (im: { img: string; alt: string; caption: string }, k: number) => (
                   <figure key={im.img} className={`relative ${k % 2 === 0 ? "-rotate-1" : "rotate-1"}`}>
@@ -473,6 +475,8 @@ function Nangi() {
                   <div
                     className={`order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start ${
                       imgs!.length > 1 ? "lg:grid-cols-2" : ""
+                    } ${smallerImg ? "md:col-span-4 md:mt-6" : ""} ${
+                      smallerImg && imgSide === "right" ? "md:col-start-9" : ""
                     }`}
                   >
                     {imgs!.map((im, k) => renderFigure(im, k))}
