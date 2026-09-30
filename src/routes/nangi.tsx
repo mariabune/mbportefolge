@@ -437,7 +437,7 @@ function Nangi() {
 
                 const imageCol = (
                   <div
-                    className={`order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start lg:col-span-4 ${
+                    className={`order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start ${
                       imgs!.length > 1 ? "lg:grid-cols-2" : ""
                     }`}
                   >
@@ -445,7 +445,7 @@ function Nangi() {
                   </div>
                 );
                 const textCol = (
-                  <div className={`order-1 md:col-span-7 lg:col-span-8 ${imgSide === "left" ? "md:order-2" : ""}`}>
+                  <div className={`order-1 md:col-span-7 ${imgSide === "left" ? "md:order-2" : ""}`}>
                     <h3 className="font-display text-2xl tracking-tight">{step.step}</h3>
                     <p className="mt-3 text-base leading-relaxed sm:text-lg">{step.text}</p>
                   </div>
