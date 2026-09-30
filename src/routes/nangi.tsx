@@ -5,6 +5,9 @@ import logoMb from "@/assets/logo-mb.svg";
 import nangiSketches from "@/assets/nangi-sketches.jpg.asset.json";
 import nangiPrototypePatterns from "@/assets/nangi-prototype-patterns.jpg.asset.json";
 import nangiPrototypeFitting from "@/assets/nangi-prototype-fitting.jpg.asset.json";
+import nangiFabricMarket from "@/assets/nangi-fabric-market.jpg.asset.json";
+import nangiFabricRolls from "@/assets/nangi-fabric-rolls.jpg.asset.json";
+
 
 const NAV = [
   { label: "HELLO", href: "/#hello" },
@@ -41,9 +44,14 @@ const PROCESS = [
   {
     step: "1. Ideation",
     text: "Processen starter med at jeg designer et stykke tøj. Inpspiration kan kome fra farvekombinationer jeg ser, naturen, noget stof, trends eller noget tøj jeg holder af. Jeg foretrækker at skitsere i hånden med pen og papir, og elsker at lægge de sidste detaljer på og farvelægge.",
-    img: nangiSketches.url,
-    alt: "Håndtegnede modetegninger af Nangi-styles i farver, spredt ud på et bord med farveblyanter, tusser og sticky notes",
-    caption: "Skitser fra tegnebrættet — i hånden, med pen og farver",
+    imgs: [
+      {
+        img: nangiSketches.url,
+        alt: "Håndtegnede modetegninger af Nangi-styles i farver, spredt ud på et bord med farveblyanter, tusser og sticky notes",
+        caption: "Skitser fra tegnebrættet — i hånden, med pen og farver",
+      },
+    ],
+
   },
   {
     step: "2. Prototype",
@@ -64,11 +72,20 @@ const PROCESS = [
   {
     step: "3. Materialer",
     text: "Når jeg har besluttet hvor mange stykker tøj vi skal lave, og i hvilke farver, planlægger jeg sammen med Inoka hvor meget stof hun skal bruge af hver farve. Jeg køber selv stof ind på det lokale stofmarked i den nærmeste by, tæt på hvor jeg bor, og det kan desuden være at Inoka også mangler tråd eller en ny saks.",
+    imgs: [
+      {
+        img: nangiFabricMarket.url,
+        alt: "Inoka står mellem reoler fyldt med farverige stofruller i en stofbutik på det lokale stofmarked",
+        caption: "stofindkøb på markedet",
+      },
+      {
+        img: nangiFabricRolls.url,
+        alt: "Stofruller i mange farver — gult, rødt, brunt og blåt — stablet uden for stofbutikken",
+        caption: "stof i alle farver",
+      },
+    ],
   },
-  {
-    step: "4. Produktion",
-    text: "Inoka får stoffet og så går hun og et lille team af andre kvinder i gang med at sy ordren. Hun kontakter mig undervejs hvis der opstår problemer eller hun er i tvivl om noget. Jeg kommer tit forbi da vi bor 2 minutter fra hinanden, både til at tjekke om alt går fint eller bare for at drikke en kop te.",
-  },
+
   {
     step: "5. Salg",
     text: "Når ordren er færdig henter jeg det hele, og tjekker alt igennem. Tøjet afleverer jeg i diverse butikker der forhandler vores produkter, eller sælger det på markeder som foregår hver anden uge.",
