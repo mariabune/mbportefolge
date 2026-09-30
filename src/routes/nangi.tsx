@@ -392,7 +392,7 @@ function Nangi() {
                     alt="Nangi-logo i orange håndskrevne bogstaver på creme cirkel"
                     width={200}
                     height={200}
-                    className="absolute -right-12 -top-12 z-20 w-32 rounded-full shadow-[0_10px_24px_rgb(0_0_0/0.18)] sm:w-36"
+                    className="absolute -right-16 -top-16 z-20 w-32 rounded-full shadow-[0_10px_24px_rgb(0_0_0/0.18)] sm:w-36"
                   />
                 </div>
               </div>
