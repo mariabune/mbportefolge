@@ -553,7 +553,7 @@ function Index() {
               ))}
             </ul>
             <p className="label-mono mt-14 text-ink-soft">
-              © 2026 m.b. — made in København, on actual paper first
+              © 2026 m.b.
             </p>
           </footer>
         </div>
