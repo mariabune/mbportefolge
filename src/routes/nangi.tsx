@@ -10,6 +10,7 @@ import nangiFabricRolls from "@/assets/nangi-fabric-rolls.jpg.asset.json";
 import nangiCollection from "@/assets/nangi-collection.jpg.asset.json";
 
 import nangiInokaSewing from "@/assets/nangi-inoka-sewing.jpg.asset.json";
+import nangiStockBook from "@/assets/nangi-stock-book.jpg.asset.json";
 
 
 
