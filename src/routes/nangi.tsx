@@ -7,6 +7,8 @@ import nangiPrototypePatterns from "@/assets/nangi-prototype-patterns.jpg.asset.
 import nangiPrototypeFitting from "@/assets/nangi-prototype-fitting.jpg.asset.json";
 import nangiFabricMarket from "@/assets/nangi-fabric-market.jpg.asset.json";
 import nangiFabricRolls from "@/assets/nangi-fabric-rolls.jpg.asset.json";
+import nangiCollection from "@/assets/nangi-collection.jpg.asset.json";
+
 import nangiInokaSewing from "@/assets/nangi-inoka-sewing.jpg.asset.json";
 
 
@@ -102,8 +104,14 @@ const PROCESS = [
   },
   {
     step: "5. Salg",
-
     text: "Når ordren er færdig henter jeg det hele, og tjekker alt igennem. Tøjet afleverer jeg i diverse butikker der forhandler vores produkter, eller sælger det på markeder som foregår hver anden uge.",
+    imgs: [
+      {
+        img: nangiCollection.url,
+        alt: "Færdige Nangi-produkter i mange farver med Nangi-tagget i træ",
+        caption: "klar til at blive solgt",
+      },
+    ],
   },
   {
     step: "6. Feedback",
