@@ -11,11 +11,11 @@ import garnMoodboard from "@/assets/garn-craft-moodboard.svg.asset.json";
 import garnStyleTile from "@/assets/garn-craft-style-tile.svg.asset.json";
 
 const NAV = [
-  { label: "HELLO", href: "/#hello" },
+  { label: "HEJ", href: "/#hello" },
   { label: "CASES", href: "/#cases" },
   { label: "NANGI", href: "/nangi" },
   { label: "CV", href: "/#cv" },
-  { label: "CONTACT", href: "/#contact" },
+  { label: "KONTAKT", href: "/#contact" },
 ] as const;
 
 const PROJECT_FACTS = [

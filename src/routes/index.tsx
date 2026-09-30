@@ -129,11 +129,11 @@ const JOBS = [
 ] as const;
 
 const NAV = [
-  { label: "HELLO", href: "#hello" },
+  { label: "HEJ", href: "#hello" },
   { label: "CASES", href: "#cases" },
   { label: "NANGI", href: "/nangi" },
   { label: "CV", href: "#cv" },
-  { label: "CONTACT", href: "#contact" },
+  { label: "KONTAKT", href: "#contact" },
 ] as const;
 
 function Index() {
