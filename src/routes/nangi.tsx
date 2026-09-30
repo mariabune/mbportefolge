@@ -381,30 +381,58 @@ function Nangi() {
                   key={step.step}
                   className={`grid gap-6 lg:grid-cols-12 ${i > 0 ? "pt-10" : ""}`}
                 >
-                  <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
-                    {step.step}
-                  </h3>
-                  <div className="lg:col-span-8">
-                    {"img" in step && step.img ? (
-                      <div className="grid items-start gap-6 sm:grid-cols-[1fr_260px]">
-                        <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
-                        <figure className="relative max-w-[260px] -rotate-1 justify-self-start sm:justify-self-end">
-                          <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
-                          <img
-                            src={step.img}
-                            alt={step.alt}
-                            width={1024}
-                            height={768}
-                            loading="lazy"
-                            className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
-                          />
-                          <figcaption className="hand mt-2 text-center text-ink-soft">{step.caption}</figcaption>
-                        </figure>
+                  {"imgs" in step && step.imgs ? (
+                    <>
+                      {/* Desktop/tablet: photos side by side on the left, header + text right */}
+                      <div className="order-2 grid gap-4 sm:grid-cols-2 lg:order-1 lg:col-span-5 lg:items-start">
+                        {step.imgs.map((im, k) => (
+                          <figure key={im.img} className={`relative ${k % 2 === 0 ? "-rotate-1" : "rotate-1"}`}>
+                            <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
+                            <img
+                              src={im.img}
+                              alt={im.alt}
+                              width={800}
+                              height={1067}
+                              loading="lazy"
+                              className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                            />
+                            <figcaption className="hand mt-2 text-center text-ink-soft">{im.caption}</figcaption>
+                          </figure>
+                        ))}
                       </div>
-                    ) : (
-                      <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
-                    )}
-                  </div>
+                      <div className="order-1 lg:order-2 lg:col-span-7">
+                        <h3 className="font-display text-2xl tracking-tight">{step.step}</h3>
+                        <p className="mt-3 text-base leading-relaxed sm:text-lg">{step.text}</p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
+                        {step.step}
+                      </h3>
+                      <div className="lg:col-span-8">
+                        {"img" in step && step.img ? (
+                          <div className="grid items-start gap-6 sm:grid-cols-[1fr_260px]">
+                            <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
+                            <figure className="relative max-w-[260px] -rotate-1 justify-self-start sm:justify-self-end">
+                              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
+                              <img
+                                src={step.img}
+                                alt={step.alt}
+                                width={1024}
+                                height={768}
+                                loading="lazy"
+                                className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                              />
+                              <figcaption className="hand mt-2 text-center text-ink-soft">{step.caption}</figcaption>
+                            </figure>
+                          </div>
+                        ) : (
+                          <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
+                        )}
+                      </div>
+                    </>
+                  )}
                 </article>
               ))}
             </div>
