@@ -538,13 +538,26 @@ function Nangi() {
                     <h3 className="font-display text-2xl leading-snug tracking-tight">{project.title}</h3>
                     <p className="mt-4 text-base leading-relaxed">{project.text}</p>
                     <div className="mt-8 grid grid-cols-2 gap-5">
-                      {[0, 1].map((slot) => (
-                        <figure key={slot} className="relative">
-                          <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${slot === 0 ? "rotate-2" : "-rotate-2"}`} />
-                          <div className="aspect-[4/3] rounded-sm border border-dashed border-ink/30 bg-paper-deep" />
-                          <figcaption className="hand mt-2 text-center text-ink-soft">billede kommer…</figcaption>
-                        </figure>
-                      ))}
+                      {"imgs" in project && project.imgs
+                        ? project.imgs.map((im) => (
+                            <figure key={im.img} className="relative">
+                              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 rotate-2" />
+                              <img
+                                src={im.img}
+                                alt={im.alt}
+                                loading="lazy"
+                                className="aspect-[4/5] w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                              />
+                              <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
+                            </figure>
+                          ))
+                        : [0, 1].map((slot) => (
+                            <figure key={slot} className="relative">
+                              <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${slot === 0 ? "rotate-2" : "-rotate-2"}`} />
+                              <div className="aspect-[4/3] rounded-sm border border-dashed border-ink/30 bg-paper-deep" />
+                              <figcaption className="hand mt-2 text-center text-ink-soft">billede kommer…</figcaption>
+                            </figure>
+                          ))}
                     </div>
                   </article>
                 </li>
