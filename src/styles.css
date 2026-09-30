@@ -239,6 +239,12 @@ html.a11y-contrast .grain::after {
   line-height: 1.15;
 }
 
+/* Smaller handwritten caption for narrow photo columns */
+.hand-sm {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
 /* Tape strip */
 @utility tape {
   position: absolute;
