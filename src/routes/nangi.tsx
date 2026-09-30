@@ -492,7 +492,6 @@ function Nangi() {
                   </p>
                 </div>
               </div>
-              </div>
             </div>
           </section>
 
