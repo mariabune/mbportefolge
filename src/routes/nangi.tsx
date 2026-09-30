@@ -10,6 +10,7 @@ import nangiFabricRolls from "@/assets/nangi-fabric-rolls.jpg.asset.json";
 import nangiCollection from "@/assets/nangi-collection.jpg.asset.json";
 
 import nangiInokaSewing from "@/assets/nangi-inoka-sewing.jpg.asset.json";
+import nangiStockBook from "@/assets/nangi-stock-book.jpg.asset.json";
 
 
 
@@ -96,7 +97,7 @@ const PROCESS = [
     imgs: [
       {
         img: nangiInokaSewing.url,
-        alt: "Skrædderen Inoka står ved sin overlockmaskine og syer hvidt stof, med et målebånd om halsen",
+        alt: "Skrædderen Inoka står ved sin overlockmaskine og syer hvidt stof, med målebåndet om halsen",
         caption: "Inoka ved symaskinen",
       },
     ],
@@ -116,6 +117,13 @@ const PROCESS = [
   {
     step: "6. Feedback",
     text: "På baggrund af markeder og salgsdata fra butikkerne, analyserer jeg hele tiden på hvad der fungerer og hvad der kan forbedres. Det kan både være på farver, styles, pasform og størrelser. Jeg elsker at være på markederne hvor jeg får lov til at møde kunderne og få direkte feedback på vores tøj.",
+    imgs: [
+      {
+        img: nangiStockBook.url,
+        alt: "Bogen med håndskrevne notater om alle Nangi-modeller og -farver",
+        caption: "stokken noteret i bogen",
+      },
+    ],
   },
   {
     step: "7. Give tilbage",
