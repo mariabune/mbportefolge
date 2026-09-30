@@ -117,6 +117,13 @@ const PROCESS = [
   {
     step: "6. Feedback",
     text: "På baggrund af markeder og salgsdata fra butikkerne, analyserer jeg hele tiden på hvad der fungerer og hvad der kan forbedres. Det kan både være på farver, styles, pasform og størrelser. Jeg elsker at være på markederne hvor jeg får lov til at møde kunderne og få direkte feedback på vores tøj.",
+    imgs: [
+      {
+        img: nangiStockBook.url,
+        alt: "Buku catatan dengan catatan persediaan tangan untuk setiap model dan warna Nangi",
+        caption: "catatan stok di buku",
+      },
+    ],
   },
   {
     step: "7. Give tilbage",
