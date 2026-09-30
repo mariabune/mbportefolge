@@ -14,6 +14,8 @@ import nangiStockBook from "@/assets/nangi-stock-book.jpg.asset.json";
 import nangiGiveback from "@/assets/nangi-giveback.jpg.asset.json";
 import nangiMarketStall from "@/assets/nangi-market-stall.jpg.asset.json";
 import nangiMarketSketches from "@/assets/nangi-market-sketches.jpg.asset.json";
+import nangiLogoSketches from "@/assets/nangi-logo-sketches.jpg.asset.json";
+import nangiHangtag from "@/assets/nangi-hangtag.jpg.asset.json";
 
 
 
