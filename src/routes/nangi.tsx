@@ -7,6 +7,8 @@ import nangiPrototypePatterns from "@/assets/nangi-prototype-patterns.jpg.asset.
 import nangiPrototypeFitting from "@/assets/nangi-prototype-fitting.jpg.asset.json";
 import nangiFabricMarket from "@/assets/nangi-fabric-market.jpg.asset.json";
 import nangiFabricRolls from "@/assets/nangi-fabric-rolls.jpg.asset.json";
+import nangiInokaSewing from "@/assets/nangi-inoka-sewing.jpg.asset.json";
+
 
 
 const NAV = [
@@ -89,6 +91,14 @@ const PROCESS = [
   {
     step: "4. Produktion",
     text: "Inoka får stoffet og så går hun og et lille team af andre kvinder i gang med at sy ordren. Hun kontakter mig undervejs hvis der opstår problemer eller hun er i tvivl om noget. Jeg kommer tit forbi da vi bor 2 minutter fra hinanden, både til at tjekke om alt går fint eller bare for at drikke en kop te.",
+    imgs: [
+      {
+        img: nangiInokaSewing.url,
+        alt: "Skrædderen Inoka står ved sin overlockmaskine og syer hvidt stof, med et målebånd om halsen",
+        caption: "Inoka ved symaskinen",
+      },
+    ],
+
   },
   {
     step: "5. Salg",
