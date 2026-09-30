@@ -214,7 +214,7 @@ function Index() {
                     href="#cases"
                     className="rounded-full bg-flame px-5 py-3 font-mono text-xs uppercase tracking-[0.15em] text-paper transition-transform hover:-translate-y-0.5"
                   >
-                    See the cases
+                    Se mine cases
                   </a>
                   <a
                     href="#cv"
