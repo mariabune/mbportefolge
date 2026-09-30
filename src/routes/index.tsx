@@ -526,10 +526,10 @@ function Index() {
 
           <footer id="contact" aria-labelledby="contact-title" className="border-t-2 border-ink py-16 text-center">
             <h2 id="contact-title" className="mx-auto mt-3 max-w-[16ch] font-display text-[clamp(2.5rem,8vw,5rem)] leading-[0.9] tracking-tight">
-              Let's make something loud.
+              Har du et spørgsmål, projekt eller en ide?
             </h2>
             <p className="hand mt-4 text-2xl text-ink-soft">
-              write me a note — I always answer
+              Jeg vil gerne høre fra dig.
             </p>
             <a
               href="mailto:Maria.bune@gmail.com"
@@ -541,7 +541,7 @@ function Index() {
               +45 42 54 95 64
             </p>
             <ul aria-label="Social profiles" className="mt-8 flex justify-center gap-6">
-              {["Instagram", "Behance", "LinkedIn"].map((s) => (
+              {["Instagram", "LinkedIn"].map((s) => (
                 <li key={s}>
                   <a
                     href="#contact"
@@ -553,7 +553,7 @@ function Index() {
               ))}
             </ul>
             <p className="label-mono mt-14 text-ink-soft">
-              © 2026 m.b. — made in København, on actual paper first
+              © 2026 m.b.
             </p>
           </footer>
         </div>
