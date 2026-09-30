@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import nangiCover from "@/assets/nangi-photoshoot.jpg.asset.json";
+import nangiIgLogo from "@/assets/nangi-ig-logo.png.asset.json";
 import logoMb from "@/assets/logo-mb.svg";
 import nangiSketches from "@/assets/nangi-sketches.jpg.asset.json";
 import nangiPrototypePatterns from "@/assets/nangi-prototype-patterns.jpg.asset.json";
@@ -386,6 +387,13 @@ function Nangi() {
                   <span className="sticker anim-stamp absolute -bottom-5 -right-4 bg-sun px-3 py-2 hand text-ink">
                     the boss
                   </span>
+                  <img
+                    src={nangiIgLogo.url}
+                    alt="Nangi-logo i orange håndskrevne bogstaver på creme cirkel"
+                    width={200}
+                    height={200}
+                    className="absolute -right-10 -top-10 z-20 w-24 rounded-full shadow-[0_10px_24px_rgb(0_0_0/0.18)] sm:w-28"
+                  />
                 </div>
               </div>
             </div>
