@@ -399,67 +399,75 @@ function Nangi() {
             <p className="hand mt-4 text-2xl text-ink-soft">fra skitse til tøj på kroppen</p>
             <div className="mt-10 space-y-10">
               {PROCESS.map((step, i) => {
-                const hasImgs = "imgs" in step && step.imgs;
-                return (
-                  <article
-                    key={step.step}
-                    className={`grid gap-6 ${hasImgs ? "md:grid-cols-12" : "lg:grid-cols-12"} ${i > 0 ? "pt-10" : ""}`}
+                const imgs = "imgs" in step ? step.imgs : null;
+                const hasImgs = !!imgs && imgs.length > 0;
+                // Steps 1, 3, 5, 7: pictures on the right — steps 2, 4, 6: pictures on the left
+                const imgSide = i % 2 === 0 ? "right" : "left";
+
+                const renderFigure = (im: { img: string; alt: string; caption: string }, k: number) => (
+                  <figure key={im.img} className={`relative ${k % 2 === 0 ? "-rotate-1" : "rotate-1"}`}>
+                    <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
+                    <img
+                      src={im.img}
+                      alt={im.alt}
+                      width={800}
+                      height={1067}
+                      loading="lazy"
+                      className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                    />
+                    <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
+                  </figure>
+                );
+
+                if (!hasImgs) {
+                  return (
+                    <article
+                      key={step.step}
+                      className={`grid gap-6 lg:grid-cols-12 ${i > 0 ? "pt-10" : ""}`}
+                    >
+                      <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
+                        {step.step}
+                      </h3>
+                      <div className="lg:col-span-8">
+                        <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
+                      </div>
+                    </article>
+                  );
+                }
+
+                const imageCol = (
+                  <div
+                    className={`order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start lg:col-span-4 ${
+                      imgs!.length > 1 ? "lg:grid-cols-2" : ""
+                    }`}
                   >
-                    {hasImgs ? (
+                    {imgs!.map((im, k) => renderFigure(im, k))}
+                  </div>
+                );
+                const textCol = (
+                  <div className={`order-1 md:col-span-7 lg:col-span-8 ${imgSide === "left" ? "md:order-2" : ""}`}>
+                    <h3 className="font-display text-2xl tracking-tight">{step.step}</h3>
+                    <p className="mt-3 text-base leading-relaxed sm:text-lg">{step.text}</p>
+                  </div>
+                );
+
+                return (
+                  <article key={step.step} className={`grid gap-6 md:grid-cols-12 ${i > 0 ? "pt-10" : ""}`}>
+                    {imgSide === "left" ? (
                       <>
-                        {/* Desktop/tablet: photos side by side on the left, header + text right */}
-                        <div className="order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start lg:grid-cols-2">
-                          {step.imgs.map((im, k) => (
-                            <figure key={im.img} className={`relative ${k % 2 === 0 ? "-rotate-1" : "rotate-1"}`}>
-                              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
-                              <img
-                                src={im.img}
-                                alt={im.alt}
-                                width={800}
-                                height={1067}
-                                loading="lazy"
-                                className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
-                              />
-                              <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
-                            </figure>
-                          ))}
-                        </div>
-                        <div className="order-1 md:order-2 md:col-span-7">
-                          <h3 className="font-display text-2xl tracking-tight">{step.step}</h3>
-                          <p className="mt-3 text-base leading-relaxed sm:text-lg">{step.text}</p>
-                        </div>
+                        {imageCol}
+                        {textCol}
                       </>
                     ) : (
                       <>
-                        <h3 className={`font-display text-2xl tracking-tight lg:col-span-4 ${i % 2 === 1 ? "lg:text-right" : ""}`}>
-                          {step.step}
-                        </h3>
-                        <div className="lg:col-span-8">
-                          {"img" in step && step.img ? (
-                            <div className="grid items-start gap-6 sm:grid-cols-[1fr_260px]">
-                              <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
-                              <figure className="relative max-w-[260px] -rotate-1 justify-self-start sm:justify-self-end">
-                                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
-                                <img
-                                  src={step.img}
-                                  alt={step.alt}
-                                  width={1024}
-                                  height={768}
-                                  loading="lazy"
-                                  className="w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
-                                />
-                                <figcaption className="hand mt-2 text-center text-ink-soft">{step.caption}</figcaption>
-                              </figure>
-                            </div>
-                          ) : (
-                            <p className="text-base leading-relaxed sm:text-lg">{step.text}</p>
-                          )}
-                        </div>
+                        {textCol}
+                        {imageCol}
                       </>
                     )}
                   </article>
                 );
               })}
+
             </div>
           </section>
 
