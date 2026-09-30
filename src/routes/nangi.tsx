@@ -451,9 +451,9 @@ function Nangi() {
                     styling, og gør at du aldrig bliver træt af hverdagen.
                   </p>
                 </div>
-                {/* Collage of photoshoot photos */}
-                <div className="mt-10 flex items-start" aria-hidden="false">
-                  <figure className="relative z-10 w-[52%] -rotate-2">
+                {/* Photoshoot photos, taped on and slightly tilted */}
+                <div className="mt-10">
+                  <figure className="relative -rotate-1">
                     <span className="tape absolute -top-3 left-1/3 z-10 h-4 w-12 -translate-x-1/2 rotate-2" />
                     <img
                       src={nangiCollageSkate.url}
@@ -465,30 +465,32 @@ function Nangi() {
                       kollektionen i alle farver
                     </figcaption>
                   </figure>
-                  <figure className="relative z-20 -ml-[10%] mt-8 w-[46%] rotate-1">
-                    <span className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 -rotate-2" />
-                    <img
-                      src={nangiCollageBeach.url}
-                      alt="To kvinder på stranden i matchende Nangi-sets — en i rosa top med blå bukser, en i blå top med rosa bukser"
-                      loading="lazy"
-                      className="aspect-[2/3] w-full rounded-sm bg-paper-deep object-cover shadow-[0_10px_24px_rgb(0_0_0/0.18)]"
-                    />
-                    <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">
-                      mix &amp; match
-                    </figcaption>
-                  </figure>
-                  <figure className="relative z-30 -ml-[14%] mt-2 w-[44%] -rotate-1">
-                    <span className="tape absolute -top-3 left-2/3 z-10 h-4 w-12 -translate-x-1/2 rotate-3" />
-                    <img
-                      src={nangiCollageTop.url}
-                      alt="Nærmafotografi af en gul Nangi-top med bindebånd foran, båret med skalkæde af skaller og perler"
-                      loading="lazy"
-                      className="aspect-[2/3] w-full rounded-sm bg-paper-deep object-cover shadow-[0_10px_24px_rgb(0_0_0/0.18)]"
-                    />
-                    <figcaption className="hand hand-sm mt-2 text-right text-ink-soft">
-                      bånd og detaljer
-                    </figcaption>
-                  </figure>
+                  <div className="mt-6 grid grid-cols-2 gap-6">
+                    <figure className="relative rotate-1">
+                      <span className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 -rotate-2" />
+                      <img
+                        src={nangiCollageBeach.url}
+                        alt="To kvinder på stranden i matchende Nangi-sets — en i rosa top med blå bukser, en i blå top med rosa bukser"
+                        loading="lazy"
+                        className="aspect-[2/3] w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                      />
+                      <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">
+                        mix &amp; match
+                      </figcaption>
+                    </figure>
+                    <figure className="relative -rotate-1">
+                      <span className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 rotate-3" />
+                      <img
+                        src={nangiCollageTop.url}
+                        alt="Nærmafotografi af en gul Nangi-top med bindebånd foran, båret med skalkæde af skaller og perler"
+                        loading="lazy"
+                        className="aspect-[2/3] w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                      />
+                      <figcaption className="hand hand-sm mt-2 text-right text-ink-soft">
+                        bånd og detaljer
+                      </figcaption>
+                    </figure>
+                  </div>
                 </div>
               </div>
             </div>
