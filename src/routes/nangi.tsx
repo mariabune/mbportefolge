@@ -149,6 +149,18 @@ const PROJECTS = [
   {
     title: "Markeder",
     text: "Hver anden lørdag afholdes der markeder, i den landsby jeg bor. Her har jeg haft den fantastiske mulighed at stille en Nangi-bod op, og sælge tøj. Markederne fungerer som mere end en salgskanal. De giver mig muligheden for direkte feedback fra de besøgende, som jeg kan bruge til at videreudvikle produkterne. Jeg arbejder også bevidst med brugeroplevelsen omkring boden, og hvordan tøjet bliver præsenteret. Jeg tager altid et stort spejl med, friske blomster, og mine skitser og stofprøver, så folk kan se lidt bag om facaden på Nangi. Desuden er det et fantastisk sted at netværke og mødes med andre sælgere, udveksle viden og erfaring og blive en del af det lokale fællesskab.",
+    imgs: [
+      {
+        img: nangiMarketStall.url,
+        alt: "Maria præsenterer Nangi-tøjet ved boden på markedet, med kjoler og togbukser på bøjler og palmearter i baggrunden",
+        caption: "min bod på markedet",
+      },
+      {
+        img: nangiMarketSketches.url,
+        alt: "Bordet i Nangi-boden med håndtegnede modetegninger, Nangi-prismærker, sakse og friske blomster",
+        caption: "skitser og stofprøver",
+      },
+    ],
   },
   {
     title: "Logo, labels og tags design",
