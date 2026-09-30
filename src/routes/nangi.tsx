@@ -48,6 +48,18 @@ const PROCESS = [
   {
     step: "2. Prototype",
     text: "Dernæst tager jeg over til min skrædder Inoka, hvor vi begynder at tegne et mønster op, enten i fri hånd eller med guidelines fra et stykke tøj der passer i pasformen. Dernæst syr Inoka en prototype som jeg prøver på. Vi retter pasformen til, og justerer derefter mønsteret. Det kan tage mange forsøg at ramme den helt rigtige facon, men nogle gange opstår der gode ideer gennem fejl, og inspiration kan komme når man står med stoffet i hænderne. Når jeg er tilfreds godkendes mønsteret og vi er klar til at producere",
+    imgs: [
+      {
+        img: nangiPrototypePatterns.url,
+        alt: "Mønstre klippet i papir på lyserødt stof, ved siden af håndtegnede modetegninger af Nangi-styles",
+        caption: "papirmønstre & skitser",
+      },
+      {
+        img: nangiPrototypeFitting.url,
+        alt: "Maria prøver en hvid Nangi-top, mens skrædderen Inoka justerer pasformen",
+        caption: "prøvepasning hos Inoka",
+      },
+    ],
   },
   {
     step: "3. Materialer",
