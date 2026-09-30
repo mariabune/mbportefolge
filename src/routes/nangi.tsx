@@ -386,7 +386,7 @@ function Nangi() {
                     {hasImgs ? (
                       <>
                         {/* Desktop/tablet: photos side by side on the left, header + text right */}
-                        <div className="order-2 grid gap-6 sm:grid-cols-2 md:order-1 md:col-span-5 md:items-start">
+                        <div className="order-2 grid gap-6 md:order-1 md:col-span-5 md:items-start lg:grid-cols-2">
                           {step.imgs.map((im, k) => (
                             <figure key={im.img} className={`relative ${k % 2 === 0 ? "-rotate-1" : "rotate-1"}`}>
                               <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-14 -translate-x-1/2 rotate-2" />
