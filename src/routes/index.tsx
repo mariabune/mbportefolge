@@ -4,7 +4,8 @@ import portraitAsset from "@/assets/portrait.jpg.asset.json";
 import aiPlaybookCover from "@/assets/ai-playbook-cover.png.asset.json";
 import aiPlaybookIndhold from "@/assets/ai-playbook-indhold.png.asset.json";
 import garnCraftGalleri from "@/assets/garn-og-craft-galleri.png.asset.json";
-import nangiCover from "@/assets/nangi-cover.png";
+import nangiPhotoshoot from "@/assets/nangi-photoshoot.jpg.asset.json";
+import nangiIgLogo from "@/assets/nangi-ig-logo.png.asset.json";
 import logoMb from "@/assets/logo-mb.svg";
 import cvPdfAsset from "@/assets/cv-maria-bune.pdf.asset.json";
 
@@ -346,15 +347,24 @@ function Index() {
                 <div className="relative mx-auto max-w-[280px] rotate-2">
                   <div aria-hidden="true" className="tape absolute -top-3 left-6 z-10 -rotate-3" />
                   <img
-                    src={nangiCover}
-                    alt="Colourful collage artwork representing nangi, my design company"
-                    width={1024}
-                    height={1024}
+                    src={nangiPhotoshoot.url}
+                    alt="Maria in a blue Nangi outfit standing among palm leaves"
+                    width={800}
+                    height={1067}
                     loading="lazy"
                     className="w-full rounded-sm bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
                   />
-                  <span className="sticker anim-stamp absolute -right-3 -top-3 bg-flame px-3 py-2 hand text-paper">
-                    new page!
+                  <img
+                    src={nangiIgLogo.url}
+                    alt=""
+                    aria-hidden="true"
+                    width={512}
+                    height={512}
+                    loading="lazy"
+                    className="absolute -right-10 -top-10 z-20 w-28 rounded-full shadow-[0_10px_24px_rgb(0_0_0/0.18)]"
+                  />
+                  <span className="sticker anim-stamp absolute -bottom-2 right-4 bg-sun px-3 py-2 hand text-ink">
+                    the boss
                   </span>
                 </div>
               </div>
