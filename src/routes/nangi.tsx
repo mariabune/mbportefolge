@@ -108,8 +108,8 @@ const PROCESS = [
     imgs: [
       {
         img: nangiCollection.url,
-        alt: "Koleksi produk Nangi dengan berbagai warna dan tag kayu bertuliskan Nangi",
-        caption: "koleksi siap dijual",
+        alt: "Færdige Nangi-produkter i mange farver med Nangi-tagget i træ",
+        caption: "klar til at blive solgt",
       },
     ],
   },
