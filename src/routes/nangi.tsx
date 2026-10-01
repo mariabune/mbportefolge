@@ -20,6 +20,7 @@ import nangiHangtag from "@/assets/nangi-hangtag.jpg.asset.json";
 import nangiCollageSkate from "@/assets/nangi-collage-skate.jpg.asset.json";
 import nangiCollageBeach from "@/assets/nangi-collage-beach.jpg.asset.json";
 import nangiCollageTop from "@/assets/nangi-collage-top.jpg.asset.json";
+import nangiTojdesignSketches from "@/assets/nangi-tojdesign-sketches.jpg.asset.json";
 
 
 
