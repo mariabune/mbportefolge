@@ -20,6 +20,7 @@ import nangiHangtag from "@/assets/nangi-hangtag.jpg.asset.json";
 import nangiCollageSkate from "@/assets/nangi-collage-skate.jpg.asset.json";
 import nangiCollageBeach from "@/assets/nangi-collage-beach.jpg.asset.json";
 import nangiCollageTop from "@/assets/nangi-collage-top.jpg.asset.json";
+import nangiTojdesignSketches from "@/assets/nangi-tojdesign-sketches.jpg.asset.json";
 
 
 
@@ -191,6 +192,13 @@ const PROJECTS = [
   {
     title: "Tøjdesign",
     text: "En af mine yndlingsopgaver ved Nangi, er at tegne, designe og udvikle nye styles. Jeg skitserer alle modeller i hånden på papir, med blyant og tusser. Jeg har lært at tegne modeller gennem lånte biblioteksbøger og Youtube tutorials, og har løbende udviklet min egen måde at skitsere på. Tegningerne er første led i designprocessen, og dermed vigtige for den videre proces. Da jeg er en visuel person, elsker jeg at få en ide ud af hovedet og ned på papiret. Det giver mig et godt overblik at have fysiske tegninger.",
+    imgs: [
+      {
+        img: nangiTojdesignSketches.url,
+        alt: "Håndtegnede modetegninger på papir: en farvelagt skitse af en model i lilla bluse og hvide vidbenede bukser, og en blyantskitse af en model med propotionslinjer",
+        caption: "skitser fra tegnebogen",
+      },
+    ],
   },
   {
     title: "Kommunikation og forhandlinger",
@@ -604,14 +612,17 @@ function Nangi() {
                     <p className="mt-4 text-base leading-relaxed">{project.text}</p>
                     <div className="mt-8 grid grid-cols-2 gap-5">
                       {"imgs" in project && project.imgs
-                        ? project.imgs.map((im) => (
-                            <figure key={im.img} className="relative">
-                              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 rotate-2" />
+                        ? project.imgs.map((im, k) => (
+                            <figure
+                              key={im.img}
+                              className={`relative ${project.imgs.length === 1 ? "col-span-2" : ""}`}
+                            >
+                              <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${k === 0 ? "rotate-2" : "-rotate-2"}`} />
                               <img
                                 src={im.img}
                                 alt={im.alt}
                                 loading="lazy"
-                                className="aspect-[4/5] w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)]"
+                                className={`w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)] ${project.imgs.length === 1 ? "aspect-[4/3]" : "aspect-[4/5]"}`}
                               />
                               <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
                             </figure>
