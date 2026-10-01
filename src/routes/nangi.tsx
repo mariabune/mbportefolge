@@ -23,6 +23,8 @@ import nangiCollageTop from "@/assets/nangi-collage-top.jpg.asset.json";
 import nangiTojdesignSketches from "@/assets/nangi-tojdesign-sketches.jpg.asset.json";
 import nangiInstagramGrid from "@/assets/nangi-instagram-grid.jpg.asset.json";
 import nangiWhatsappForhandling from "@/assets/nangi-whatsapp-forhandling.jpg.asset.json";
+import nangiPhotoshootHaender from "@/assets/nangi-photoshoot-haender.jpg.asset.json";
+import nangiPhotoshootScrunchie from "@/assets/nangi-photoshoot-scrunchie.jpg.asset.json";
 
 
 
