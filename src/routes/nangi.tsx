@@ -21,6 +21,7 @@ import nangiCollageSkate from "@/assets/nangi-collage-skate.jpg.asset.json";
 import nangiCollageBeach from "@/assets/nangi-collage-beach.jpg.asset.json";
 import nangiCollageTop from "@/assets/nangi-collage-top.jpg.asset.json";
 import nangiTojdesignSketches from "@/assets/nangi-tojdesign-sketches.jpg.asset.json";
+import nangiInstagramGrid from "@/assets/nangi-instagram-grid.jpg.asset.json";
 
 
 
