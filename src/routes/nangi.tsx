@@ -156,6 +156,18 @@ const PROJECTS = [
   {
     title: "Photoshoot",
     text: "Jeg har afholdt 2 større og 2 mindre photoshoots til at tage billeder af tøjet til sociale medier. Jeg har hyret lokale fotografer 2 gange, og brugt mine veninder som modeller. Derefter har jeg valgt lokation, style og havde ansvaret for det kreative udtryk. Jeg oplevede at de bedste billeder opstod, når shootet ikke blev for kontrolleret. Slutvis brugte jeg Adobe Lightroom til at redigere billederne, til de fik det udtryk jeg gerne ville have.",
+    imgs: [
+      {
+        img: nangiPhotoshootHaender.url,
+        alt: "To kvinder holder i hånd på stranden: den ene i lyseblå Nangi-top og bukser med prikmønster, den anden i lyserød Nangi-top og lysegule bukser",
+        caption: "hånd i hånd ved havet",
+      },
+      {
+        img: nangiPhotoshootScrunchie.url,
+        alt: "Nærmafotografi af model i lyserødt Nangi-sæt med en blå strikket scrunchie på armen",
+        caption: "scrunchie i museblåt",
+      },
+    ],
   },
   {
     title: "Markeder",
