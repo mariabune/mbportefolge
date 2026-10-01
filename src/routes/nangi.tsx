@@ -612,9 +612,12 @@ function Nangi() {
                     <p className="mt-4 text-base leading-relaxed">{project.text}</p>
                     <div className="mt-8 grid grid-cols-2 gap-5">
                       {"imgs" in project && project.imgs
-                        ? project.imgs.map((im) => (
-                            <figure key={im.img} className="relative">
-                              <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 rotate-2" />
+                        ? project.imgs.map((im, k) => (
+                            <figure
+                              key={im.img}
+                              className={`relative ${project.imgs.length === 1 ? "col-span-2" : ""}`}
+                            >
+                              <span aria-hidden="true" className={`tape absolute -top-3 left-1/2 z-10 h-4 w-12 -translate-x-1/2 ${k === 0 ? "rotate-2" : "-rotate-2"}`} />
                               <img
                                 src={im.img}
                                 alt={im.alt}
