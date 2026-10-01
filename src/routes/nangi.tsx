@@ -188,6 +188,13 @@ const PROJECTS = [
   {
     title: "Sociale medier",
     text: "Sociale medier fungerer som mit online visitkort. Jeg har planlagt content og arbejdet med en strategi der viser en livsstil og ikke kun produktbilleder fra et tøjbrand. Det er instagram som jeg bruger som den primære platform, pga. de visuelle muligheder samt muligheden for at have kontakt med kunder. Da jeg ikke sælger tøj online, har det ikke været min største prioritet indtil videre, men jeg ser et stort potentiale der, og vil løbende videreudvikle på den front.",
+    imgs: [
+      {
+        img: nangiInstagramGrid.url,
+        alt: "Samling af Nangi-billeder fra Instagram: tøj fra kollektionen, markedsbod, hangtags, skitser, strikkede scrunchies og solnedgange med palmer",
+        caption: "udsnit fra vores instagram-profil",
+      },
+    ],
   },
   {
     title: "Tøjdesign",
