@@ -639,7 +639,7 @@ function Nangi() {
                                 src={im.img}
                                 alt={im.alt}
                                 loading="lazy"
-                                className={`w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)] ${project.imgs.length === 1 ? "aspect-[4/3]" : "aspect-[4/5]"}`}
+                                className={`w-full rounded-sm bg-paper-deep object-cover shadow-[0_8px_20px_rgb(0_0_0/0.14)] ${"tall" in im && im.tall ? "h-auto" : project.imgs.length === 1 ? "aspect-[4/3]" : "aspect-[4/5]"}`}
                               />
                               <figcaption className="hand hand-sm mt-2 text-center text-ink-soft">{im.caption}</figcaption>
                             </figure>
