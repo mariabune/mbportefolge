@@ -211,6 +211,14 @@ const PROJECTS = [
   {
     title: "Kommunikation og forhandlinger",
     text: "Som ejer af Nangi har jeg mange forskellige hatte på. En stor del af arbejdet - især i opstartsfasen - har været, at skabe kontakt til butikker, leverandører og andre samarbejdspartnere. Jeg har blandt andet kontaktet butikker, der kunne være interesseret i at forhandle Nangi, og forhandlet aftaler om kommission og salg. Hvordan kontakter man en butiksindehaver? Hvad er en rimelig kommission til dem? Hvordan sælger jeg Nangi bedst? Det er nogle af de spørgsmål jeg stod overfor. Jeg lægger stor vægt på en tydelig og venlig kommunikation, og på at overholde de aftaler, jeg indgår. For mig handler et godt samarbejde ikke kun om at få Nangi ind i en butik, men at skabe et samarbejde der fungerer på længere sigt.",
+    imgs: [
+      {
+        img: nangiWhatsappForhandling.url,
+        alt: "WhatsApp-samtale fra 24. februar 2026: besked til en butikskontakt om at sætte Nangi-labels i udvalgte butikker, med svaret Yes can - LMK when u want to have a chat",
+        caption: "forhandlinger i chatten",
+        tall: true,
+      },
+    ],
   },
 ] as const;
 
