@@ -192,6 +192,13 @@ const PROJECTS = [
   {
     title: "Tøjdesign",
     text: "En af mine yndlingsopgaver ved Nangi, er at tegne, designe og udvikle nye styles. Jeg skitserer alle modeller i hånden på papir, med blyant og tusser. Jeg har lært at tegne modeller gennem lånte biblioteksbøger og Youtube tutorials, og har løbende udviklet min egen måde at skitsere på. Tegningerne er første led i designprocessen, og dermed vigtige for den videre proces. Da jeg er en visuel person, elsker jeg at få en ide ud af hovedet og ned på papiret. Det giver mig et godt overblik at have fysiske tegninger.",
+    imgs: [
+      {
+        img: nangiTojdesignSketches.url,
+        alt: "Håndtegnede modetegninger på papir: en farvelagt skitse af en model i lilla bluse og hvide vidbenede bukser, og en blyantskitse af en model med propotionslinjer",
+        caption: "skitser fra tegnebogen",
+      },
+    ],
   },
   {
     title: "Kommunikation og forhandlinger",
