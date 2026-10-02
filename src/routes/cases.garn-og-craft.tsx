@@ -352,13 +352,10 @@ function GarnOgCraftCase() {
               </figure>
             </div>
 
-            <div className="mt-14 grid items-start gap-10 lg:grid-cols-12">
-              <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
+            <div className="mt-14 space-y-6 text-lg leading-relaxed">
                 <p>Derefter gik vi i gang med den visuelle del. Vi undersøgte forskellige farvepaletter, redesignede logoet, lavede wireframes og prototyper.</p>
                 <p>Hele processen var præget af <strong className="font-bold text-flame">design thinking</strong>, blandt andet gennem flere brugertests som vi lavede undervejs i form af testen 5-second-test og gangster-testen. Det var meget brugbart, og vigtigt for det endelige resultat.</p>
                 <p>Vi udviklede også bud på hvordan hun skabte samhørighed mellem butik, hjemmeside og sociale medier (omnichannel), da vi gennem research og brugeroplevelser ved hvor vigtigt det er, at der er genkendelighed mellem alle platforme.</p>
-              </div>
-              <ImageSpace number="05" title="Identitet på tværs" note="butik, hjemmeside og sociale medier" className="lg:col-span-5" />
             </div>
           </section>
 
