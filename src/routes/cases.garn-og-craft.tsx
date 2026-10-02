@@ -35,27 +35,6 @@ const SOLUTION_GOALS = [
   "Match-strategi: gør konkurrenter til samarbejdspartnere",
 ] as const;
 
-type ImageSpaceProps = {
-  number: string;
-  title: string;
-  note: string;
-  className?: string;
-};
-
-function ImageSpace({ number, title, note, className = "" }: ImageSpaceProps) {
-  return (
-    <figure className={`relative ${className}`}>
-      <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
-      <div className="flex aspect-[4/3] items-center justify-center border border-ink/25 bg-paper-deep px-6 text-center shadow-[0_10px_24px_rgb(0_0_0/0.14)]">
-        <div>
-          <span className="label-mono text-flame">Billede {number}</span>
-          <p className="mt-3 font-display text-2xl">{title}</p>
-        </div>
-      </div>
-      <figcaption className="hand mt-3 text-center text-ink-soft">{note}</figcaption>
-    </figure>
-  );
-}
 
 export const Route = createFileRoute("/cases/garn-og-craft")({
   head: () => ({
