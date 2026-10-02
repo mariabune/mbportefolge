@@ -319,7 +319,7 @@ function GarnOgCraftCase() {
                   <figcaption className="hand mt-3 text-center text-ink-soft">style tile — farver, knapper og udtryk</figcaption>
                 </figure>
               </div>
-              <figure className="relative sm:col-span-2 -rotate-1">
+              <figure className="relative -rotate-1">
                 <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
                 <img
                   src={garnWireframe.url}
