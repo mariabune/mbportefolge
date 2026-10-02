@@ -35,27 +35,6 @@ const SOLUTION_GOALS = [
   "Match-strategi: gør konkurrenter til samarbejdspartnere",
 ] as const;
 
-type ImageSpaceProps = {
-  number: string;
-  title: string;
-  note: string;
-  className?: string;
-};
-
-function ImageSpace({ number, title, note, className = "" }: ImageSpaceProps) {
-  return (
-    <figure className={`relative ${className}`}>
-      <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
-      <div className="flex aspect-[4/3] items-center justify-center border border-ink/25 bg-paper-deep px-6 text-center shadow-[0_10px_24px_rgb(0_0_0/0.14)]">
-        <div>
-          <span className="label-mono text-flame">Billede {number}</span>
-          <p className="mt-3 font-display text-2xl">{title}</p>
-        </div>
-      </div>
-      <figcaption className="hand mt-3 text-center text-ink-soft">{note}</figcaption>
-    </figure>
-  );
-}
 
 export const Route = createFileRoute("/cases/garn-og-craft")({
   head: () => ({
@@ -352,13 +331,10 @@ function GarnOgCraftCase() {
               </figure>
             </div>
 
-            <div className="mt-14 grid items-start gap-10 lg:grid-cols-12">
-              <div className="space-y-6 text-lg leading-relaxed lg:col-span-7">
+            <div className="mt-14 space-y-6 text-lg leading-relaxed">
                 <p>Derefter gik vi i gang med den visuelle del. Vi undersøgte forskellige farvepaletter, redesignede logoet, lavede wireframes og prototyper.</p>
                 <p>Hele processen var præget af <strong className="font-bold text-flame">design thinking</strong>, blandt andet gennem flere brugertests som vi lavede undervejs i form af testen 5-second-test og gangster-testen. Det var meget brugbart, og vigtigt for det endelige resultat.</p>
                 <p>Vi udviklede også bud på hvordan hun skabte samhørighed mellem butik, hjemmeside og sociale medier (omnichannel), da vi gennem research og brugeroplevelser ved hvor vigtigt det er, at der er genkendelighed mellem alle platforme.</p>
-              </div>
-              <ImageSpace number="05" title="Identitet på tværs" note="butik, hjemmeside og sociale medier" className="lg:col-span-5" />
             </div>
           </section>
 
