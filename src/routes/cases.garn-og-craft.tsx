@@ -9,6 +9,7 @@ import garnLogoer from "@/assets/garn-craft-logoer.svg.asset.json";
 import garnIkoner from "@/assets/garn-craft-ikoner.svg.asset.json";
 import garnMoodboard from "@/assets/garn-craft-moodboard.svg.asset.json";
 import garnStyleTile from "@/assets/garn-craft-style-tile.svg.asset.json";
+import garnWireframe from "@/assets/garn-wireframe-kalender.svg.asset.json";
 
 const NAV = [
   { label: "HEJ", href: "/#hello" },
@@ -339,7 +340,16 @@ function GarnOgCraftCase() {
                   <figcaption className="hand mt-3 text-center text-ink-soft">style tile — farver, knapper og udtryk</figcaption>
                 </figure>
               </div>
-              <ImageSpace number="04" title="Wireframes & prototype" note="test, ret til, test igen" />
+              <figure className="relative sm:col-span-2 -rotate-1">
+                <span aria-hidden="true" className="tape absolute -top-3 left-1/2 z-10 -translate-x-1/2 -rotate-2" />
+                <img
+                  src={garnWireframe.url}
+                  alt="Wireframe af kalendersiden til Garn og Craft: header med logo og menu, en overskrift med to tekstlinjer, og en events-boks med fire kvadratiske billedpladser oven på listerækker med datoer"
+                  className="w-full border border-ink/20 bg-paper-deep shadow-[0_10px_24px_rgb(0_0_0/0.14)]"
+                  loading="lazy"
+                />
+                <figcaption className="hand mt-3 text-center text-ink-soft">wireframe — test, ret til, test igen</figcaption>
+              </figure>
             </div>
 
             <div className="mt-14 grid items-start gap-10 lg:grid-cols-12">
