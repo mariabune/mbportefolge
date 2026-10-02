@@ -13,3 +13,5 @@
 - [x] Add `/cases/garn-og-craft` using the established case layout, supplied copy, image spaces, and a link from case two
 - [x] Place the first Garn og Craft images (forside, events-kalender, logo før/efter) under the quote in 1. Introduktion
 - [x] Fill image placeholder 02 with four side-by-side page screenshots (forside, events-kalender, craftsalon, om os)
+- [ ] Add wireframe upload (Kalender_1_dropdown_menu_wireframe.svg) to Garn og Craft placeholder 04 "Wireframes & prototype"
+- [x] Fix typecheck error in __root.tsx ErrorComponent
