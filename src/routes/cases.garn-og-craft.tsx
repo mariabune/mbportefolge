@@ -9,6 +9,7 @@ import garnLogoer from "@/assets/garn-craft-logoer.svg.asset.json";
 import garnIkoner from "@/assets/garn-craft-ikoner.svg.asset.json";
 import garnMoodboard from "@/assets/garn-craft-moodboard.svg.asset.json";
 import garnStyleTile from "@/assets/garn-craft-style-tile.svg.asset.json";
+import garnWireframe from "@/assets/garn-wireframe-kalender.svg.asset.json";
 
 const NAV = [
   { label: "HEJ", href: "/#hello" },
